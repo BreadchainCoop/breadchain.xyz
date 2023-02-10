@@ -1,0 +1,8 @@
+@tailwind base;
+
+@layer base {
+  body {
+    @apply bg-breadgray-200;
+    @apply text-neutral-400;
+  }
+}

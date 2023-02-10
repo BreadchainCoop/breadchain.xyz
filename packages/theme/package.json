@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "name": "@breadchain.xyz/theme",
+  "description": "BREADCHAIN theme",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}
