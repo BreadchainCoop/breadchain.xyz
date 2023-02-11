@@ -4,11 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "website": "pnpm --filter @breadchain.xyz/website",
     "site": "pnpm --filter @breadchain.xyz/site",
     "site-ui": "pnpm --filter @breadchain.xyz/site-ui",
-    "website:prod": "pnpm website run build && pnpm website run export",
-    "website:export": "pnpm --filter @breadchain.xyz/website run export",
+    "site:deploy": "pnpm install && pnpm site run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
