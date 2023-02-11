@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@breadchain.xyz/theme": "workspace:*",
+    "@breadchain.xyz/website-ui": "workspace:*",
     "@next/font": "13.1.6",
     "@types/node": "18.13.0",
     "@types/react": "18.0.27",
