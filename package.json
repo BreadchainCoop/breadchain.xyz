@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "website": "pnpm --filter @breadchain.xyz/website",
+    "website:build": "pnpm --filter @breadchain.xyz/website run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
