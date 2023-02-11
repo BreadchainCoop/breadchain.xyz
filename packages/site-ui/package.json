@@ -1,5 +1,5 @@
 {
-  "name": "@breadchain.xyz/website-ui",
+  "name": "@breadchain.xyz/site-ui",
   "private": true,
   "version": "1.0.0",
   "description": "",
@@ -15,5 +15,8 @@
     "next": "13.1.6",
     "react": "18.2.0",
     "typescript": "4.9.5"
+  },
+  "dependencies": {
+    "@breadchain.xyz/utils": "workspace:*"
   }
 }
