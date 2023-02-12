@@ -23,11 +23,11 @@ export function CTASectionLink({
 
 export function CTASection() {
   return (
-    <section className="py-16 px-4 sm:px-6 md:px-8">
+    <section className="pt-16 pb-32 px-4 sm:px-6 md:px-8">
       <div
         className={classNames(
           "max-w-4xl m-auto",
-          "bg-breadgray-700 p-12 flex flex-col gap-8"
+          "bg-breadgray-700 px-6 py-12 sm:px-12 flex flex-col gap-8"
         )}
       >
         <h2 className="text-breadgray-200 font-pressstart text-2xl leading-relaxed">
@@ -38,7 +38,7 @@ export function CTASection() {
           baking (minting) bread. If you’re a like-minded project creating a
           more progressive future, join us.
         </p>
-        <div className="flex gap-6 items-center">
+        <div className="flex flex-wrap gap-6 items-center">
           <ButtonLink href="#">Get Bread</ButtonLink>
           <TertiaryLink href="#">Join the guild</TertiaryLink>
         </div>
