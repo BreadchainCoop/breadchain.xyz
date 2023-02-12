@@ -2,7 +2,8 @@
 
 @layer base {
   body {
-    @apply bg-breadgray-200;
+    @apply bg-breadgray-800;
     @apply text-neutral-400;
+    @apply font-redhat;
   }
 }

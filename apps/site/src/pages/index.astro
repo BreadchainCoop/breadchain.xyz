@@ -1,9 +1,55 @@
 ---
-import { Hero } from "@breadchain.xyz/site-ui";
+import {
+  CheckmarkIcon,
+  CTASection,
+  Hero,
+  HeroCTA,
+  HeroCTALink,
+  HeroHeading,
+  HeroSubHeading,
+  HeroTagline,
+  InfoCards,
+  Members,
+  Principles,
+} from "@breadchain.xyz/site-ui";
+import { ButtonLink } from "@breadchain.xyz/site-ui/components/ButtonLink";
 
 import Layout from "../layouts/Layout.astro";
+
+const members = [
+  {
+    name: "PactDAO",
+    info: "A NYC-based DAO building dual power through mutual aid, education and organizing.",
+    logo: "/img/pact.png",
+  },
+  {
+    name: "LaborDAO",
+    info: "A DAO supporting workers who want to organize, strike and collectively bargain.",
+    logo: "/img/labordao.png",
+  },
+  {
+    name: "Crypto Commons Association",
+    info: "An accelerator and Austria-based hub for progressive web3 projects. ",
+    logo: "/img/cca.png",
+  },
+];
 ---
 
 <Layout title="Welcome to Astro.">
-  <Hero>Home</Hero>
+  <Hero>
+    <HeroTagline>breadchain</HeroTagline>
+    <HeroHeading>The currency for solidarity</HeroHeading>
+    <HeroSubHeading>
+      Get $BREAD and use it anywhere – all while supporting a post-capitalist
+      future.
+    </HeroSubHeading>
+    <HeroCTA>
+      <ButtonLink href="#">Get Bread</ButtonLink>
+      <HeroCTALink href="#">Learn more</HeroCTALink>
+    </HeroCTA>
+  </Hero>
+  <InfoCards />
+  <Members members={members} />
+  <Principles />
+  <CTASection />
 </Layout>

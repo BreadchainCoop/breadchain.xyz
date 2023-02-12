@@ -10,11 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/image": "^0.14.1",
     "@astrojs/react": "^2.0.2",
     "@astrojs/tailwind": "^3.0.1",
+    "@breadchain.xyz/site-ui": "workspace:*",
     "@breadchain.xyz/theme": "workspace:*",
     "@breadchain.xyz/utils": "workspace:*",
-    "@breadchain.xyz/site-ui": "workspace:*",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "astro": "^2.0.10",
