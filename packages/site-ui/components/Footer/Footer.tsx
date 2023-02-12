@@ -40,9 +40,7 @@ function FooterGrid({ children }: { children: ReactNode }) {
 export function Footer() {
   return (
     <footer className="border-t-[1.5px] border-breadpink-300">
-      <div
-        className={classNames(pageWrapPadding, "pt-12 pb-16 max-w-6xl m-auto")}
-      >
+      <div className={classNames(pageWrap, pageWrapPadding, "pt-12 pb-16")}>
         <FooterGrid>
           <FooterLogoSection>
             <Logo />
