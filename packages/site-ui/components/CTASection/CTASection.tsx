@@ -39,8 +39,12 @@ export function CTASection() {
           more progressive future, join us.
         </p>
         <div className="flex flex-wrap gap-6 items-center">
-          <ButtonLink href="#">Get Bread</ButtonLink>
-          <TertiaryLink href="#">Join the guild</TertiaryLink>
+          <ButtonLink href="https://app.breadchain.xyz" isExternal>
+            Get Bread
+          </ButtonLink>
+          <TertiaryLink href="https://guild.xyz/breadchain" isExternal>
+            Join the guild
+          </TertiaryLink>
         </div>
       </div>
     </section>

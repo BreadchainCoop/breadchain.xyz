@@ -5,8 +5,8 @@ import { pageWrap, pageWrapPadding } from "./classStrings";
 import { DesktopNavigation } from "./DesktopNavigation";
 import MobileNavigation from "./MobileNavigation";
 import MobileNavigationToggle from "./MobileNavigation/MobileNavigationToggle";
-import { ButtonLink } from "./ButtonLink";
 import { Logo } from "./Logo/Logo";
+import { ButtonLink } from "./ButtonLink";
 
 export function Header() {
   const [isMobNavOpen, setIsMobNavOpen] = useState(false);
@@ -31,6 +31,11 @@ export function Header() {
         <Logo />
         <div className="grow">
           <DesktopNavigation />
+        </div>
+        <div className="hidden md:block">
+          <ButtonLink href="https://app.breadchain.xyz" isExternal>
+            Get Bread
+          </ButtonLink>
         </div>
         {/* <ButtonLink href="https://app.breadchain.xyz">Get Bread</ButtonLink> */}
         <MobileNavigationToggle handleClick={handleNavToggle} />
