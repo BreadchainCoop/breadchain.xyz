@@ -15,7 +15,7 @@ export function MobileNavigation({ isOpen, handleNavToggle }: IProps) {
       <Overlay closeMenu={() => handleNavToggle()} isOpen={isOpen} />
       <nav
         className={classNames(
-          "fixed right-0 top-0 z-10 flex h-screen w-auto transform flex-col gap-12 px-12 pl-12 pt-32 transition-transform md:hidden font-pressstart",
+          "fixed right-0 top-0 z-10 flex w-auto transform flex-col gap-12 px-12 pl-12 pt-32 transition-transform md:hidden",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >

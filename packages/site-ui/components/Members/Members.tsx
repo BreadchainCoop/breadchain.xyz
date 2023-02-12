@@ -15,7 +15,7 @@ interface IMember {
 export function Members({ members }: { members: IMember[] }) {
   return (
     <section id="projects" className={classNames(pageWrap, "py-16")}>
-      <div className="flex flex-col items-center md:items-start">
+      <div className="flex flex-col gap-4 items-center md:items-start">
         <SectionTitle>Co-operative</SectionTitle>
         <SectionSubTitle>
           Learn more about the project you would support.{" "}

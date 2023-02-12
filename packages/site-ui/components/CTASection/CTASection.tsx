@@ -22,7 +22,7 @@ export function CTASectionLink({
 
 export function CTASection() {
   return (
-    <section>
+    <section className="py-16 px-4 sm:px-6 md:px-8">
       <div
         className={classNames(
           "max-w-4xl m-auto",
@@ -39,7 +39,7 @@ export function CTASection() {
         </p>
         <div className="flex gap-6 items-center">
           <ButtonLink href="#">Get Bread</ButtonLink>
-          <CTASectionLink href="#">Join the pantry</CTASectionLink>
+          <CTASectionLink href="#">Join the guild</CTASectionLink>
         </div>
       </div>
     </section>

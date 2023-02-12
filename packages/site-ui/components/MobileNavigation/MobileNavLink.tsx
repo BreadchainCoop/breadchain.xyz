@@ -19,20 +19,24 @@ export function MobileNavigationLink({
     }
   }
 
+  const classes =
+    "font-pressstart text-breadgray-300 hover:text-breadgray-200 active:text-breadgray-200";
+
   if (isExternal) {
     return (
       <a
         href={href}
-        onClick={handleClick}
         target="_blank"
         rel="noopener noreferer"
+        className={classes}
+        onClick={handleClick}
       >
         {children}
       </a>
     );
   }
   return (
-    <a href={href} onClick={handleClick}>
+    <a href={href} className={classes} onClick={handleClick}>
       {children}
     </a>
   );

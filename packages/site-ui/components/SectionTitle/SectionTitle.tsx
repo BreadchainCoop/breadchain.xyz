@@ -4,10 +4,12 @@ import { classNames } from "@breadchain.xyz/utils";
 
 export function SectionTitle({ children }: { children: ReactNode }) {
   return (
-    <section
-      className={classNames("text-3xl font-pressstart text-breadgray-200")}
+    <h2
+      className={classNames(
+        "text-3xl font-pressstart text-breadgray-200 flex items-center gap-2"
+      )}
     >
       {children}
-    </section>
+    </h2>
   );
 }
