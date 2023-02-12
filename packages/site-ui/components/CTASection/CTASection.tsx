@@ -30,7 +30,7 @@ export function CTASection() {
           "bg-breadgray-700 p-12 flex flex-col gap-8"
         )}
       >
-        <h2 className="text-breadgray-200 font-pressstart text-2xl">
+        <h2 className="text-breadgray-200 font-pressstart text-2xl leading-relaxed">
           Bake $BREAD with us.
         </h2>
         <p>

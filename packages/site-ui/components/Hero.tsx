@@ -1,13 +1,17 @@
 import React, { ReactNode } from "react";
 
 import { classNames } from "@breadchain.xyz/utils";
-import { pageWrap } from "./classStrings";
+import { pageWrap, pageWrapPadding } from "./classStrings";
 
 export function Hero({ children }: { children: ReactNode }) {
   return (
     <section>
       <div
-        className={classNames(pageWrap, "py-16 md:py-24 flex flex-col gap-2")}
+        className={classNames(
+          pageWrap,
+          pageWrapPadding,
+          "py-16 md:py-24 flex flex-col gap-2"
+        )}
       >
         {children}
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 
 import { classNames } from "@breadchain.xyz/utils";
-import { pageWrap } from "../classStrings";
+import { pageWrap, pageWrapPadding } from "../classStrings";
 import { SectionTitle } from "../SectionTitle";
 import { SectionSubTitle } from "../SectionSubtitle";
 import { MemberCard } from "./MemberCard";
@@ -14,7 +14,10 @@ interface IMember {
 
 export function Members({ members }: { members: IMember[] }) {
   return (
-    <section id="projects" className={classNames(pageWrap, "py-16")}>
+    <section
+      id="projects"
+      className={classNames(pageWrap, pageWrapPadding, "py-16")}
+    >
       <div className="flex flex-col gap-4 items-center md:items-start">
         <SectionTitle>Co-operative</SectionTitle>
         <SectionSubTitle>

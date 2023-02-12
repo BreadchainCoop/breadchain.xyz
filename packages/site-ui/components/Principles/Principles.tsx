@@ -1,7 +1,7 @@
 import React from "react";
 
 import { classNames } from "@breadchain.xyz/utils";
-import { pageWrap } from "../classStrings";
+import { pageWrap, pageWrapPadding } from "../classStrings";
 import { SectionTitle } from "../SectionTitle";
 import { SectionSubTitle } from "../SectionSubtitle";
 import { PrincipleCard } from "./PrincipleCard";
@@ -14,7 +14,7 @@ interface IPrinciple {
 
 export function Principles({ principles }: { principles: IPrinciple[] }) {
   return (
-    <section className={classNames(pageWrap, "py-16")}>
+    <section className={classNames(pageWrap, pageWrapPadding, "py-16")}>
       <div className="flex flex-col items-center text-center gap-4">
         <div className="flex flex-col items-center sm:flex-row gap-2">
           <SectionTitle>Currency</SectionTitle>

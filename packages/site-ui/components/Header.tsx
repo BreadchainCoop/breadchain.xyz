@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { classNames } from "@breadchain.xyz/utils";
-import { pageWrap } from "./classStrings";
+import { pageWrap, pageWrapPadding } from "./classStrings";
 import { DesktopNavigation } from "./DesktopNavigation";
 import MobileNavigation from "./MobileNavigation";
 import MobileNavigationToggle from "./MobileNavigation/MobileNavigationToggle";
@@ -24,6 +24,7 @@ export function Header() {
       <div
         className={classNames(
           pageWrap,
+          pageWrapPadding,
           "py-6 md:py-8 flex gap-10 items-center"
         )}
       >

@@ -1,6 +1,5 @@
 import { classNames } from "@breadchain.xyz/utils";
 import React from "react";
-import { pageWrap } from "../classStrings";
 import { CheckmarkIcon, CoinIcon, UsersIcon } from "../Icons";
 import {
   InfoCard,
