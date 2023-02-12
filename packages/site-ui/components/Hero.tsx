@@ -35,23 +35,6 @@ export function HeroCTA({ children }: { children: ReactNode }) {
   return <div className="flex flex-row gap-4 items-center">{children}</div>;
 }
 
-export function HeroCTALink({
-  children,
-  href,
-}: {
-  children: ReactNode;
-  href: string;
-}) {
-  return (
-    <a
-      href={href}
-      className="bg-primary-500 font-bold text-breadpink-300 rounded-full px-6 py-3"
-    >
-      {children}
-    </a>
-  );
-}
-
 export function HeroTagline({ children }: { children: ReactNode }) {
   return (
     <span className="uppercase font-bold font-redhat text-breadpink-100 md:text-xl">

@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 
 import { classNames } from "@breadchain.xyz/utils";
 import { ButtonLink } from "../ButtonLink";
+import { TertiaryLink } from "../TertiaryLink";
 
 export function CTASectionLink({
   children,
@@ -39,7 +40,7 @@ export function CTASection() {
         </p>
         <div className="flex gap-6 items-center">
           <ButtonLink href="#">Get Bread</ButtonLink>
-          <CTASectionLink href="#">Join the guild</CTASectionLink>
+          <TertiaryLink href="#">Join the guild</TertiaryLink>
         </div>
       </div>
     </section>

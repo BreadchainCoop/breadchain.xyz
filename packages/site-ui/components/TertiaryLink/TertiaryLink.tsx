@@ -6,22 +6,22 @@ interface IProps {
   isExternal?: boolean;
 }
 
-export function ButtonLink({ children, href, isExternal }: IProps) {
+export function TertiaryLink({ children, href, isExternal }: IProps) {
   const classes =
-    "rounded inline-block bg-breadpink-400 font-pressstart px-4 py-2.5 md:px-6 md:py-3 text-xs md:text-sm text-neutral-300";
+    "inline-block font-redhat font-bold px-4 py-2.5 md:px-6 md:py-3 text-breadpink-300 hover:text-breadpink-200 active:text-breadpink-200 ";
 
-  if (isExternal)
+  if (isExternal) {
     return (
       <a
         href={href}
         className={classes}
         target="_blank"
-        rel="noopener noreferer"
+        rel="noopener noreferrer"
       >
         {children}
       </a>
     );
-
+  }
   return (
     <a href={href} className={classes}>
       {children}
