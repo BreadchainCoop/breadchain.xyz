@@ -11,7 +11,7 @@ export function MemberCard({
   logoSrc: string;
 }) {
   return (
-    <article className="max-w-sm m-auto md:m-0">
+    <article className="max-w-sm m-auto col-span-3 md:col-span-1 h-full">
       <img className="w-full" src={logoSrc} alt="" />
       {/* <Image src={src} alt="alt text" sizes="" widths={[100, 200]} /> */}
       <div className="p-8 flex flex-col gap-2">

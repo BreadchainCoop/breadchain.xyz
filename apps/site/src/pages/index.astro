@@ -1,6 +1,5 @@
 ---
 import {
-  CheckmarkIcon,
   CTASection,
   Hero,
   HeroCTA,
@@ -33,6 +32,33 @@ const members = [
     logo: "/img/cca.png",
   },
 ];
+
+const principles = [
+  {
+    title: "Economic Democracy",
+    details:
+      "We strive for an economy in which resources are allocated democratically rather than through market forces.",
+    icon: "MESSAGE",
+  },
+  {
+    title: "Transparent Governance",
+    details:
+      "Everyone should have a say and those given power by the community must be held responsible for their decisions for all to see.",
+    icon: "EYE",
+  },
+  {
+    title: "Mutual Aid",
+    details:
+      "We believe in communal solidarity through reciprocal exchange for mutual benefit so everyone can live a dignified life.",
+    icon: "RELOAD",
+  },
+  {
+    title: "Dual Power",
+    details:
+      "We must build parallel tech institutions from the grassroots because technology without direct social intervention only favors those in power.",
+    icon: "VERTICAL_ARROWS",
+  },
+];
 ---
 
 <Layout title="Welcome to Astro.">
@@ -50,6 +76,6 @@ const members = [
   </Hero>
   <InfoCards />
   <Members members={members} />
-  <Principles />
+  <Principles principles={principles} />
   <CTASection />
 </Layout>

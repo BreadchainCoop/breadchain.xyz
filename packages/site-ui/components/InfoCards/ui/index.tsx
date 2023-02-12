@@ -17,7 +17,7 @@ export function InfoCard({
     >
       <article
         className={classNames(
-          "rounded-xl from-[#C463CA] to-[#C463CA00] p-[1px]",
+          "rounded-xl from-[#C463CAa1] to-[#C463CA00] p-[1px]",
           float === "left" ? "bg-gradient-to-l" : "bg-gradient-to-r"
         )}
       >
