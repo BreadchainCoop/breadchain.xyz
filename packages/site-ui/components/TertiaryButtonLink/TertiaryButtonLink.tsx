@@ -6,9 +6,9 @@ interface IProps {
   isExternal?: boolean;
 }
 
-export function ButtonLink({ children, href, isExternal }: IProps) {
+export function TertiaryButtonLink({ children, href, isExternal }: IProps) {
   const classes =
-    "rounded inline-block bg-breadpink-500 font-redhat font-bold px-4 py-2.5 md:px-6 md:py-3 text-breadgray-100 md:text-xl";
+    "rounded-lg inline-block bg-breadgray-600 text-white border-2 border-breadpink-300 font-redhat font-bold text-center px-4 py-2.5 md:px-6 md:py-3 text-neutral-300 md:text-xl";
 
   if (isExternal)
     return (

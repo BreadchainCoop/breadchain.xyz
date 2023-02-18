@@ -21,7 +21,7 @@ export function Hero({
       <div
         className={classNames(
           pageWrapPadding,
-          "py-16 md:py-24 md:max-w-6xl md:m-auto flex flex-col gap-2 max-w-[300px]"
+          "py-16 md:py-24 md:max-w-6xl md:m-auto flex flex-col gap-2 max-w-[18rem] sm:max-w-[26rem]"
         )}
       >
         <HeroTagline>{tagline}</HeroTagline>
@@ -45,7 +45,7 @@ export function Hero({
 
 export function HeroHeading({ children }: { children: ReactNode }) {
   return (
-    <h1 className="font-poppins font-bold text-4xl max-w-[22rem] md:max-w-[32rem] leading-normal tracking-wide text-breadgray-200 md:text-6xl md:leading-relaxed">
+    <h1 className="font-poppins font-bold text-4xl sm:text-5xl max-w-[42rem] md:max-w-[32rem] leading-normal tracking-wide text-breadgray-200 md:text-6xl md:leading-relaxed">
       {children}
     </h1>
   );

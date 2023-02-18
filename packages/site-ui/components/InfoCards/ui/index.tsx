@@ -3,15 +3,14 @@ import React, { ReactNode } from "react";
 
 export function InfoCardGrid({ children }: { children: ReactNode }) {
   return (
-    <section
-      id="about"
+    <div
       className={classNames(
         "m-auto px-4",
         "max-w-6xl py-12 flex flex-col gap-16 md:gap-0 md:flex-row"
       )}
     >
       {children}
-    </section>
+    </div>
   );
 }
 

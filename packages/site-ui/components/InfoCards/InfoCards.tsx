@@ -1,5 +1,7 @@
 import React from "react";
 import { CheckmarkIcon, CoinIcon, UsersIcon } from "../Icons";
+import { SectionTitle } from "../SectionTitle/SectionTitle";
+import { SectionSubtitle } from "../SectionSubtitle/SectionSubtitle";
 import {
   InfoCardGrid,
   InfoCard,
@@ -9,6 +11,8 @@ import {
   InfoCardTextContent,
 } from "./ui";
 import { CardSVGs } from "./ui/svg";
+import { classNames } from "@breadchain.xyz/utils";
+import { pageWrapPadding } from "../classStrings";
 
 const infoCards = [
   {
@@ -33,20 +37,35 @@ const infoCards = [
 
 export function InfoCards() {
   return (
-    <InfoCardGrid>
-      {infoCards.map(({ title, infotext, icon }, i) => {
-        const BackgroundSVG = CardSVGs[i];
-        return (
-          <InfoCard key={`infocard_${i}`}>
-            <BackgroundSVG />
-            <InfoCardIcon>{icon}</InfoCardIcon>
-            <InfoCardTextContent>
-              <InfoCardHeading>{title}</InfoCardHeading>
-              <InfoCardText>{infotext}</InfoCardText>
-            </InfoCardTextContent>
-          </InfoCard>
-        );
-      })}
-    </InfoCardGrid>
+    <section id="about">
+      <div
+        className={classNames(
+          pageWrapPadding,
+          "text-center flex flex-col gap-2 pb-16"
+        )}
+      >
+        <SectionTitle>
+          <span className="font-normal">Get that</span> $BREAD
+        </SectionTitle>
+        <SectionSubtitle>
+          See why $BREAD is the best thing since sliced, well, you know.
+        </SectionSubtitle>
+      </div>
+      <InfoCardGrid>
+        {infoCards.map(({ title, infotext, icon }, i) => {
+          const BackgroundSVG = CardSVGs[i];
+          return (
+            <InfoCard key={`infocard_${i}`}>
+              <BackgroundSVG />
+              <InfoCardIcon>{icon}</InfoCardIcon>
+              <InfoCardTextContent>
+                <InfoCardHeading>{title}</InfoCardHeading>
+                <InfoCardText>{infotext}</InfoCardText>
+              </InfoCardTextContent>
+            </InfoCard>
+          );
+        })}
+      </InfoCardGrid>
+    </section>
   );
 }

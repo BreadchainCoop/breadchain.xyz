@@ -6,7 +6,7 @@ export function SectionTitle({ children }: { children: ReactNode }) {
   return (
     <h2
       className={classNames(
-        "text-3xl font-redhat font-bold text-breadgray-200 flex items-center gap-2"
+        "text-3xl md:text-5xl font-redhat font-bold text-breadgray-200 inline"
       )}
     >
       {children}
