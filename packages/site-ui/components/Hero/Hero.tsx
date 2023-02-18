@@ -20,9 +20,8 @@ export function Hero({
     <section>
       <div
         className={classNames(
-          pageWrap,
           pageWrapPadding,
-          "py-16 md:py-24 flex flex-col gap-2"
+          "py-16 md:py-24 md:max-w-6xl md:m-auto flex flex-col gap-2 max-w-[300px]"
         )}
       >
         <HeroTagline>{tagline}</HeroTagline>
@@ -46,7 +45,7 @@ export function Hero({
 
 export function HeroHeading({ children }: { children: ReactNode }) {
   return (
-    <h1 className="font-pressstart text-2xl max-w-[22rem] md:max-w-[32rem] leading-normal text-breadgray-200 md:text-4xl md:leading-relaxed">
+    <h1 className="font-poppins font-bold text-4xl max-w-[22rem] md:max-w-[32rem] leading-normal tracking-wide text-breadgray-200 md:text-6xl md:leading-relaxed">
       {children}
     </h1>
   );
@@ -54,9 +53,9 @@ export function HeroHeading({ children }: { children: ReactNode }) {
 
 export function HeroSubHeading({ children }: { children: ReactNode }) {
   return (
-    <h1 className="font-redhat text-regular max-w-md text-breadgray-200 md:text-xl font-medium pt-2 pb-16 md:pt-4 md:pb-24">
+    <h2 className="font-poppins tracking-wider max-w-md text-breadgray-200 md:text-xl font-medium pt-2 pb-12 md:pt-4">
       {children}
-    </h1>
+    </h2>
   );
 }
 

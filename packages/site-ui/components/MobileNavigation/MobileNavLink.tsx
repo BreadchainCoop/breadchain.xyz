@@ -20,7 +20,7 @@ export function MobileNavigationLink({
   }
 
   const classes =
-    "font-pressstart text-breadgray-300 hover:text-breadgray-200 active:text-breadgray-200";
+    "font-redhat font-bold text-xl text-breadgray-300 hover:text-breadgray-200 active:text-breadgray-200";
 
   if (isExternal) {
     return (

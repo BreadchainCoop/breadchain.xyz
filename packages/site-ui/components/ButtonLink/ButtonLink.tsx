@@ -8,7 +8,7 @@ interface IProps {
 
 export function ButtonLink({ children, href, isExternal }: IProps) {
   const classes =
-    "rounded inline-block bg-breadpink-400 font-pressstart px-4 py-2.5 md:px-6 md:py-3 text-xs md:text-sm text-neutral-300";
+    "rounded inline-block bg-breadpink-400 font-redhat font-bold px-4 py-2.5 md:px-6 md:py-3 text-neutral-300 md:text-xl";
 
   if (isExternal)
     return (

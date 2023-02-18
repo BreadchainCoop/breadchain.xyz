@@ -23,6 +23,7 @@ module.exports = {
   fontFamily: {
     pressstart: ['"Press Start 2P"', "sans-serif"],
     redhat: ['"Red Hat Text"', "sans-serif"],
+    poppins: ["Poppins", "sans-serif"],
   },
   typography: ({ theme }) => ({
     pink: {

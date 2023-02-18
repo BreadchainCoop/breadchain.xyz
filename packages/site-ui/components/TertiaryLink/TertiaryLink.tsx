@@ -8,7 +8,7 @@ interface IProps {
 
 export function TertiaryLink({ children, href, isExternal }: IProps) {
   const classes =
-    "inline-block font-redhat font-bold px-4 py-2.5 md:px-6 md:py-3 text-breadpink-300 hover:text-breadpink-200 active:text-breadpink-200 ";
+    "inline-block font-redhat font-bold md:text-xl px-4 py-2.5 md:px-6 md:py-3 text-breadpink-300 hover:text-breadpink-200 active:text-breadpink-200 ";
 
   if (isExternal) {
     return (
