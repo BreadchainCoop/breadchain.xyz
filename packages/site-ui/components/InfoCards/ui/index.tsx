@@ -1,34 +1,29 @@
 import { classNames } from "@breadchain.xyz/utils";
 import React, { ReactNode } from "react";
 
-export function InfoCard({
-  children,
-  float,
-}: {
-  children: ReactNode;
-  float: "left" | "right";
-}) {
+export function InfoCardGrid({ children }: { children: ReactNode }) {
   return (
-    <div
+    <section
+      id="about"
       className={classNames(
-        "flex justify-center",
-        float === "left" ? "md:justify-start" : "md:justify-end"
+        "m-auto px-4",
+        "max-w-6xl py-12 flex flex-col gap-16 md:gap-0 md:flex-row"
       )}
     >
+      {children}
+    </section>
+  );
+}
+
+export function InfoCard({ children }: { children: ReactNode }) {
+  return (
+    <div className={classNames("flex justify-center")}>
       <article
         className={classNames(
-          "rounded-xl from-[#C463CAa1] to-[#C463CA00] p-[1px]",
-          float === "left" ? "bg-gradient-to-l" : "bg-gradient-to-r"
+          "px-16 py-14 flex flex-col items-center gap-8 w-full h-full relative"
         )}
       >
-        <div
-          className={classNames(
-            "rounded-xl bg-breadgray-800 px-10 py-8 flex flex-col sm:flex-row md:items-center gap-8 md:gap-16",
-            float === "left" ? "flex-col-reverse" : ""
-          )}
-        >
-          {children}
-        </div>
+        {children}
       </article>
     </div>
   );
@@ -43,7 +38,9 @@ export function InfoCardHeading({ children }: { children: ReactNode }) {
 }
 
 export function InfoCardTextContent({ children }: { children: ReactNode }) {
-  return <div className="flex flex-col gap-2 max-w-2xl">{children}</div>;
+  return (
+    <div className="flex flex-col gap-2 max-w-2xl text-center">{children}</div>
+  );
 }
 
 export function InfoCardText({ children }: { children: ReactNode }) {

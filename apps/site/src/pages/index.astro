@@ -62,23 +62,15 @@ const principles = [
 ---
 
 <Layout title="Welcome to Astro.">
-  <Hero>
-    <HeroTagline>breadchain</HeroTagline>
-    <HeroHeading>The currency for solidarity</HeroHeading>
-    <HeroSubHeading>
-      Get $BREAD and use it anywhere – all while supporting a post-capitalist
-      future.
-    </HeroSubHeading>
-    <HeroCTA>
-      <ButtonLink href="#" isExternal>Get Bread</ButtonLink>
-      <TertiaryLink
-        href="https://breadchain.mirror.xyz/nwQx4CqPAcwZ5zSNB2_K25N1quOF1NGcKaYcS3S33CA"
-        isExternal
-      >
-        Learn more
-      </TertiaryLink>
-    </HeroCTA>
-  </Hero>
+  <Hero
+    heroData={{
+      tagline: "breadchain",
+      heading: "The currency for solidarity",
+      subheading:
+        "Get $BREAD and use it anywhere - all while supporting a post-capitalist future.",
+    }}
+  />
+
   <InfoCards />
   <Members members={members} />
   <Principles principles={principles} />

@@ -1,13 +1,14 @@
-import { classNames } from "@breadchain.xyz/utils";
 import React from "react";
 import { CheckmarkIcon, CoinIcon, UsersIcon } from "../Icons";
 import {
+  InfoCardGrid,
   InfoCard,
   InfoCardHeading,
   InfoCardIcon,
   InfoCardText,
   InfoCardTextContent,
 } from "./ui";
+import { CardSVGs } from "./ui/svg";
 
 const infoCards = [
   {
@@ -32,27 +33,20 @@ const infoCards = [
 
 export function InfoCards() {
   return (
-    <section
-      id="about"
-      className={classNames(
-        "m-auto px-4",
-        "max-w-[60rem] py-12 flex flex-col gap-12 md:gap-20"
-      )}
-    >
+    <InfoCardGrid>
       {infoCards.map(({ title, infotext, icon }, i) => {
-        const float = i % 2 !== 0 ? "left" : "right";
-
+        const BackgroundSVG = CardSVGs[i];
         return (
-          <InfoCard key={`infocard_${i}`} float={float}>
-            {float === "right" && <InfoCardIcon>{icon}</InfoCardIcon>}
+          <InfoCard key={`infocard_${i}`}>
+            <BackgroundSVG />
+            <InfoCardIcon>{icon}</InfoCardIcon>
             <InfoCardTextContent>
               <InfoCardHeading>{title}</InfoCardHeading>
               <InfoCardText>{infotext}</InfoCardText>
             </InfoCardTextContent>
-            {float === "left" && <InfoCardIcon>{icon}</InfoCardIcon>}
           </InfoCard>
         );
       })}
-    </section>
+    </InfoCardGrid>
   );
 }

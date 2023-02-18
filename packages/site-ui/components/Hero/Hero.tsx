@@ -1,9 +1,21 @@
 import React, { ReactNode } from "react";
 
 import { classNames } from "@breadchain.xyz/utils";
-import { pageWrap, pageWrapPadding } from "./classStrings";
+import { pageWrap, pageWrapPadding } from "../classStrings";
+import { ButtonLink } from "../ButtonLink";
+import { TertiaryLink } from "../TertiaryLink";
 
-export function Hero({ children }: { children: ReactNode }) {
+interface IHeroData {
+  tagline: string;
+  heading: string;
+  subheading: string;
+}
+
+export function Hero({
+  heroData: { tagline, subheading, heading },
+}: {
+  heroData: IHeroData;
+}) {
   return (
     <section>
       <div
@@ -13,7 +25,20 @@ export function Hero({ children }: { children: ReactNode }) {
           "py-16 md:py-24 flex flex-col gap-2"
         )}
       >
-        {children}
+        <HeroTagline>{tagline}</HeroTagline>
+        <HeroHeading>{heading}</HeroHeading>
+        <HeroSubHeading>{subheading}</HeroSubHeading>
+        <HeroCTA>
+          <ButtonLink href="https://app.breadchain.xyz" isExternal>
+            Get Bread
+          </ButtonLink>
+          <TertiaryLink
+            href="https://breadchain.mirror.xyz/nwQx4CqPAcwZ5zSNB2_K25N1quOF1NGcKaYcS3S33CA"
+            isExternal
+          >
+            Learn more
+          </TertiaryLink>
+        </HeroCTA>
       </div>
     </section>
   );

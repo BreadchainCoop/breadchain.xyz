@@ -8,6 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "card-pattern-1": "url('/img/infocard-bg-1.svg')",
+        "card-pattern-2": "url('/img/infocard-bg-2.svg')",
+        "card-pattern-3": "url('/img/infocard-bg-3.svg')",
+      },
       ...theme,
     },
   },

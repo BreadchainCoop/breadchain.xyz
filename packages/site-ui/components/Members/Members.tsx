@@ -16,7 +16,7 @@ export function Members({ members }: { members: IMember[] }) {
   return (
     <section
       id="projects"
-      className={classNames(pageWrap, pageWrapPadding, "py-16")}
+      className={classNames(pageWrap, pageWrapPadding, "py-16 pt-64")}
     >
       <div className="flex flex-col gap-4 items-center md:items-start">
         <SectionTitle>Co-operative</SectionTitle>
