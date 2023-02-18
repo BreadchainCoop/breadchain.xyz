@@ -26,9 +26,9 @@ export function PrincipleCard({
 }) {
   return (
     <article className="col-span-2 sm:col-span-1 text-breadgray-100">
-      <div className="py-8 flex flex-col gap-4">
+      <div className="py-8 flex flex-col gap-2">
         <PrincipleIcon iconString={iconString} />
-        <h3 className="font-redhat text-2xl pt-4 font-medium text-breadgray-100">
+        <h3 className="font-redhat text-2xl font-medium text-breadgray-100">
           {title}
         </h3>
         <p>{details}</p>

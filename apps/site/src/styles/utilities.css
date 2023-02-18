@@ -1,1 +1,7 @@
 @tailwind utilities;
+
+@layer utilities {
+  .hero-bg-clip-path {
+    clip-path: url(#heroClipPath);
+  }
+}

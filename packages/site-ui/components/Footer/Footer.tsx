@@ -7,7 +7,7 @@ import { Logo } from "../Logo/Logo";
 
 function FooterSection({ children }: { children: ReactNode }) {
   return (
-    <div className="col-span-1 sm:col-span-2 md:col-span-1 flex flex-col gap-4">
+    <div className="col-span-1 sm:col-span-1 md:col-span-1 flex flex-col gap-4">
       {children}
     </div>
   );
@@ -15,7 +15,7 @@ function FooterSection({ children }: { children: ReactNode }) {
 
 function FooterLogoSection({ children }: { children: ReactNode }) {
   return (
-    <div className="col-span-1 sm:col-span-5 md:col-span-1 flex flex-col gap-4">
+    <div className="col-span-1 sm:col-span-5 md:col-span-1 flex flex-col gap-4 pb-8">
       {children}
     </div>
   );
@@ -31,7 +31,7 @@ function FooterSectionList({ children }: { children: ReactNode }) {
 
 function FooterGrid({ children }: { children: ReactNode }) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-5 gap-6 md:gap-12">
+    <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-12">
       {children}
     </div>
   );
@@ -57,25 +57,17 @@ export function Footer() {
           <FooterSection>
             <FooterSectionTitle>Policies</FooterSectionTitle>
             <FooterSectionList>
-              <Link href="#">About</Link>
-              <Link href="#">Projects</Link>
-              <Link href="#">Values</Link>
+              <Link href="#">Privacy</Link>
+              <Link href="#">Terms</Link>
             </FooterSectionList>
           </FooterSection>
-          <FooterSection>
-            <FooterSectionTitle>Resources</FooterSectionTitle>
-            <FooterSectionList>
-              <Link href="#">About</Link>
-              <Link href="#">Projects</Link>
-              <Link href="#">Values</Link>
-            </FooterSectionList>
-          </FooterSection>
+
           <FooterSection>
             <FooterSectionTitle>Socials</FooterSectionTitle>
             <FooterSectionList>
-              <Link href="#">About</Link>
-              <Link href="#">Projects</Link>
-              <Link href="#">Values</Link>
+              <Link href="#">Twitter</Link>
+              <Link href="#">Discord</Link>
+              <Link href="#">Mirror</Link>
             </FooterSectionList>
           </FooterSection>
         </FooterGrid>

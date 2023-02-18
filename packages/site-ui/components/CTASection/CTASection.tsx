@@ -27,7 +27,7 @@ export function CTASection() {
       <div
         className={classNames(
           "max-w-4xl m-auto",
-          "bg-gradient-to-r from-breadgray-cta-bg to blue-400 px-6 py-12 sm:px-12 flex flex-col gap-8"
+          "bg-gradient-to-r from-breadgray-cta-bg to blue-400 px-6 py-12 sm:px-12 flex flex-col gap-2"
         )}
       >
         <h2 className="text-breadgray-200 font-poppins text-5xl leading-relaxed tracking-wider">
@@ -38,7 +38,7 @@ export function CTASection() {
           baking (minting) bread. If you’re a like-minded project creating a
           more progressive future, join us.
         </p>
-        <div className="flex flex-wrap gap-6 items-center">
+        <div className="flex flex-wrap gap-6 pt-8 items-center">
           <ButtonLink href="https://app.breadchain.xyz" isExternal>
             Get Bread
           </ButtonLink>
