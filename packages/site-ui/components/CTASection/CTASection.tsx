@@ -30,7 +30,7 @@ export function CTASection() {
           "bg-gradient-to-r from-breadgray-cta-bg to blue-400 px-6 py-12 sm:px-12 flex flex-col gap-2"
         )}
       >
-        <h2 className="text-breadgray-200 font-poppins text-5xl leading-relaxed tracking-wider">
+        <h2 className="text-breadgray-200 font-poppins text-4xl md:text-5xl leading-relaxed tracking-wider">
           Bake <span className="font-bold">$BREAD</span> with us.
         </h2>
         <p>
