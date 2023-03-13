@@ -28,7 +28,10 @@ export function Header() {
           "py-6 md:py-8 flex gap-10 items-center"
         )}
       >
-        <Logo />
+        <div className="w-24 md:w-28">
+          <Logo />
+        </div>
+
         <div className="grow">
           <DesktopNavigation />
         </div>
