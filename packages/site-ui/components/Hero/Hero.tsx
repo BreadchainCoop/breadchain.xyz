@@ -19,7 +19,7 @@ export function Hero({
 }) {
   return (
     <section className="relative">
-      <div className="absolute right-0 top-0 bottom-0 h-full w-full flex items-center justify-end">
+      <div className="absolute right-0 top-0 bottom-0 h-full w-full flex items-center justify-end -z-10">
         <MidjourneyImage />
       </div>
 
@@ -52,7 +52,7 @@ export function Hero({
 
 export function HeroHeading({ children }: { children: ReactNode }) {
   return (
-    <h1 className="font-poppins font-bold text-4xl sm:text-5xl max-w-[42rem] md:max-w-[32rem] leading-normal tracking-wide text-breadgray-200 md:text-6xl md:leading-relaxed">
+    <h1 className="font-poppins font-bold text-4xl sm:text-5xl max-w-[42rem] md:max-w-[32rem] leading-normal tracking-wide text-breadgray-200 md:text-6xl md:leading-relaxed drop-shadow-lg">
       {children}
     </h1>
   );
