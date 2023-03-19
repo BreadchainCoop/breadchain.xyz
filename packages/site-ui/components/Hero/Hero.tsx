@@ -26,8 +26,8 @@ export function Hero({
 }) {
   return (
     <section>
-      <div className="relative max-w-6xl m-auto">
-        <div className="absolute right-0 top-0 bottom-0 h-full w-full flex items-center justify-end -z-10">
+      <div className="relative max-w-6xl m-auto overflow-x-clip md:overflow-x-visible">
+        <div className="absolute left-0 right-0 top-0 bottom-0 h-full w-full flex items-center justify-end -z-10">
           <MidjourneyImage />
         </div>
 
