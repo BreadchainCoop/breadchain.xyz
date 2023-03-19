@@ -41,7 +41,7 @@ export function InfoCards() {
       <div
         className={classNames(
           pageWrapPadding,
-          "text-center flex flex-col gap-2 pb-16"
+          "text-center flex flex-col gap-2 py-8"
         )}
       >
         <SectionTitle>
@@ -53,10 +53,10 @@ export function InfoCards() {
       </div>
       <InfoCardGrid>
         {infoCards.map(({ title, infotext, icon }, i) => {
-          const BackgroundSVG = CardSVGs[i];
+          // const BackgroundSVG = CardSVGs[i];
           return (
             <InfoCard key={`infocard_${i}`}>
-              <BackgroundSVG />
+              {/* <BackgroundSVG /> */}
               <InfoCardIcon>{icon}</InfoCardIcon>
               <InfoCardTextContent>
                 <InfoCardHeading>{title}</InfoCardHeading>

@@ -31,7 +31,7 @@ export function PrincipleCard({
         <h3 className="font-redhat text-2xl font-medium text-breadgray-100">
           {title}
         </h3>
-        <p>{details}</p>
+        <p className="max-w-sm m-auto md:w-auto">{details}</p>
       </div>
     </article>
   );

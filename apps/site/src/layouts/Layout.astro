@@ -14,8 +14,20 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/img/bread_32x32.png" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="The currency for solidarity." />
+    <meta name="title" content="BREADCHAIN Cooperative" />
+
+    <meta property="og:url" content="https://breadchain.xyz" />
+    <meta property="og:image" content="/img/breadlogo.png" />
+    <meta property="og:image:height" content="286" />
+    <meta property="og:image:width" content="666" />
+
+    <meta name="twitter:card" content="app" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@breadchain_" />
+    <meta name="twitter:image:alt" content="breadchain logo" />
     <title>{title}</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,7 +45,7 @@ const { title } = Astro.props;
       rel="stylesheet"
     />
   </head>
-  <body class="min-h-screen flex flex-col">
+  <body class="min-h-screen flex flex-col text-breadgray-100">
     <Header client:load />
     <main class="grow">
       <slot />

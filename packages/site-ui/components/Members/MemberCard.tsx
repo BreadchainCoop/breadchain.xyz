@@ -5,10 +5,12 @@ import { TertiaryButtonLink } from "../TertiaryButtonLink";
 export function MemberCard({
   name,
   info,
+  link,
   logoSrc,
 }: {
   name: string;
   info: string;
+  link: string;
   logoSrc: string;
 }) {
   return (
@@ -19,7 +21,7 @@ export function MemberCard({
         <h3 className="font-redhat text-2xl font-medium">{name}</h3>
         <p>{info}</p>
       </div>
-      <TertiaryButtonLink href="#" isExternal>
+      <TertiaryButtonLink href={link} isExternal>
         Learn More
       </TertiaryButtonLink>
     </article>

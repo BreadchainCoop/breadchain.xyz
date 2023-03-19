@@ -1,40 +1,41 @@
 ---
-// import {
-//   CTASection,
-//   Hero,
-//   HeroCTA,
-//   HeroHeading,
-//   HeroSubHeading,
-//   HeroTagline,
-//   InfoCards,
-//   Members,
-//   Principles,
-//   TertiaryLink,
-// } from "@breadchain.xyz/site-ui";
-// import { ButtonLink } from "@breadchain.xyz/site-ui/components/ButtonLink";
+import {
+  CTASection,
+  Hero,
+  InfoCards,
+  Members,
+  Values,
+  ZHeroProps,
+} from "@breadchain.xyz/site-ui";
 
 import Layout from "../layouts/Layout.astro";
-import UnderConstruction from "../layouts/UnderConstruction.astro";
+
+import * as heroDataUnsafe from "../markdown/homepage/hero.md";
+
+const heroData = ZHeroProps.parse(heroDataUnsafe);
 
 const members = [
   {
     name: "PactDAO",
     info: "A NYC-based DAO building dual power through mutual aid, education and organizing.",
     logo: "/img/pact.png",
+    link: "https://pactcollective.xyz/",
   },
   {
     name: "LaborDAO",
     info: "A DAO supporting workers who want to organize, strike and collectively bargain.",
     logo: "/img/labordao.png",
+    link: "https://www.thelabordao.com/",
   },
   {
     name: "Crypto Commons Association",
     info: "An accelerator and Austria-based hub for progressive web3 projects. ",
     logo: "/img/cca.png",
+    link: "https://www.crypto-commons.org/",
   },
 ];
 
-const principles = [
+const values = [
   {
     title: "Economic Democracy",
     details:
@@ -62,19 +63,12 @@ const principles = [
 ];
 ---
 
-<!-- <Layout title="Welcome to Astro.">
-  <Hero
-    heroData={{
-      tagline: "breadchain",
-      heading: "The currency for solidarity",
-      subheading:
-        "Get $BREAD and use it anywhere - all while supporting a post-capitalist future.",
-    }}
-  />
+<Layout title="Breadchain Cooperative.">
+  <Hero heroData={heroData} />
 
   <InfoCards />
   <Members members={members} />
-  <Principles principles={principles} />
+  <Values values={values} />
   <CTASection />
-</Layout> -->
-<UnderConstruction title="breadchain" />
+</Layout>
+<!-- <UnderConstruction title="breadchain" /> -->
