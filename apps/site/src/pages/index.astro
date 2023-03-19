@@ -10,11 +10,16 @@ import {
   Members,
   Principles,
   TertiaryLink,
+  ZHeroProps,
 } from "@breadchain.xyz/site-ui";
 import { ButtonLink } from "@breadchain.xyz/site-ui/components/ButtonLink";
 
 import Layout from "../layouts/Layout.astro";
 // import UnderConstruction from "../layouts/UnderConstruction.astro";
+
+import * as heroDataUnsafe from "../markdown/homepage/hero.md";
+
+const heroData = ZHeroProps.parse(heroDataUnsafe);
 
 const members = [
   {
@@ -63,14 +68,7 @@ const principles = [
 ---
 
 <Layout title="Welcome to Astro.">
-  <Hero
-    heroData={{
-      tagline: "breadchain",
-      heading: "The currency for solidarity",
-      subheading:
-        "Get $BREAD and use it anywhere - all while supporting a post-capitalist future.",
-    }}
-  />
+  <Hero heroData={heroData} />
 
   <InfoCards />
   <Members members={members} />

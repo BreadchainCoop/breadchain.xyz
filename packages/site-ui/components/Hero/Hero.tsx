@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { z } from "zod";
 
 import { classNames } from "@breadchain.xyz/utils";
 import { pageWrap, pageWrapPadding } from "../classStrings";
@@ -6,16 +7,22 @@ import { ButtonLink } from "../ButtonLink";
 import { TertiaryLink } from "../TertiaryLink";
 import { MidjourneyImage } from "./MidjourneyImage";
 
-interface IHeroData {
-  tagline: string;
-  heading: string;
-  subheading: string;
-}
+export const ZHeroProps = z.object({
+  frontmatter: z.object({
+    tagline: z.string(),
+    heading: z.string(),
+    subheading: z.string(),
+  }),
+});
+
+export type THeroProps = z.infer<typeof ZHeroProps>;
 
 export function Hero({
-  heroData: { tagline, subheading, heading },
+  heroData: {
+    frontmatter: { tagline, subheading, heading },
+  },
 }: {
-  heroData: IHeroData;
+  heroData: THeroProps;
 }) {
   return (
     <section className="relative">
