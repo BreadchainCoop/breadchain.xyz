@@ -9,6 +9,7 @@ import { MemberCard } from "./MemberCard";
 interface IMember {
   name: string;
   info: string;
+  link: string;
   logo: any;
 }
 
@@ -30,13 +31,14 @@ export function Members({ members }: { members: IMember[] }) {
         </SectionSubtitle>
       </div>
       <div className="grid grid-cols-3 pt-16 gap-24 md:gap-12 place-items-start">
-        {members.map(({ name, info, logo }, i) => {
+        {members.map(({ name, info, logo, link }, i) => {
           return (
             <MemberCard
               key={`membercard_${i}`}
               name={name}
               info={info}
               logoSrc={logo}
+              link={link}
             />
           );
         })}
