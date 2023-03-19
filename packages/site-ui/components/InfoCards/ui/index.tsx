@@ -6,7 +6,7 @@ export function InfoCardGrid({ children }: { children: ReactNode }) {
     <div
       className={classNames(
         "m-auto px-4",
-        "max-w-6xl py-12 flex flex-col gap-16 md:gap-0 md:flex-row"
+        "max-w-6xl py-8 md:py-12 flex flex-col gap-16 md:gap-0 md:flex-row"
       )}
     >
       {children}
@@ -19,7 +19,7 @@ export function InfoCard({ children }: { children: ReactNode }) {
     <div className={classNames("flex justify-center")}>
       <article
         className={classNames(
-          "px-16 py-14 flex flex-col items-center gap-8 w-full h-full relative"
+          "px-16 py-8 md:py-14 flex flex-col items-center gap-8 w-full h-full relative"
         )}
       >
         {children}

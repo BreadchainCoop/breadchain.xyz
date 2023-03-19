@@ -41,7 +41,7 @@ export function InfoCards() {
       <div
         className={classNames(
           pageWrapPadding,
-          "text-center flex flex-col gap-2 pb-16"
+          "text-center flex flex-col gap-2 py-8"
         )}
       >
         <SectionTitle>

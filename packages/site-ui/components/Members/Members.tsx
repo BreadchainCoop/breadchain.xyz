@@ -16,7 +16,7 @@ export function Members({ members }: { members: IMember[] }) {
   return (
     <section
       id="projects"
-      className={classNames(pageWrap, pageWrapPadding, "py-16 pt-64")}
+      className={classNames(pageWrap, pageWrapPadding, "py-16")}
     >
       <div className="flex flex-col gap-4 items-start">
         <SectionTitle>
@@ -29,7 +29,7 @@ export function Members({ members }: { members: IMember[] }) {
           Learn more about the project you would support.{" "}
         </SectionSubtitle>
       </div>
-      <div className="grid grid-cols-3 pt-16 gap-16 place-items-start">
+      <div className="grid grid-cols-3 pt-16 gap-24 md:gap-12 place-items-start">
         {members.map(({ name, info, logo }, i) => {
           return (
             <MemberCard
