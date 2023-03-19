@@ -45,7 +45,7 @@ const { title } = Astro.props;
       rel="stylesheet"
     />
   </head>
-  <body class="min-h-screen flex flex-col text-breadgray-100 overflow-x-hidden">
+  <body class="min-h-screen flex flex-col text-breadgray-100 overflow-x-clip">
     <Header client:load />
     <main class="grow">
       <slot />
