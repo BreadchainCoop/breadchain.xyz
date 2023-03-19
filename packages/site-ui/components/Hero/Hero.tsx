@@ -25,33 +25,35 @@ export function Hero({
   heroData: THeroProps;
 }) {
   return (
-    <section className="relative">
-      <div className="absolute right-0 top-0 bottom-0 h-full w-full flex items-center justify-end -z-10">
-        <MidjourneyImage />
-      </div>
+    <section>
+      <div className="relative max-w-6xl m-auto">
+        <div className="absolute right-0 top-0 bottom-0 h-full w-full flex items-center justify-end -z-10">
+          <MidjourneyImage />
+        </div>
 
-      <div
-        className={classNames(
-          pageWrapPadding,
-          "py-16 md:py-24 md:max-w-6xl md:m-auto flex flex-col gap-2 max-w-[18rem] sm:max-w-[26rem]"
-        )}
-      >
-        <HeroTagline>
-          <span className="font-semibold">$bread</span>chain
-        </HeroTagline>
-        <HeroHeading>{heading}</HeroHeading>
-        <HeroSubHeading>{subheading}</HeroSubHeading>
-        <HeroCTA>
-          <ButtonLink href="https://app.breadchain.xyz" isExternal>
-            Get Bread
-          </ButtonLink>
-          <TertiaryLink
-            href="https://breadchain.mirror.xyz/nwQx4CqPAcwZ5zSNB2_K25N1quOF1NGcKaYcS3S33CA"
-            isExternal
-          >
-            Learn more
-          </TertiaryLink>
-        </HeroCTA>
+        <div
+          className={classNames(
+            pageWrapPadding,
+            "py-16 md:py-24 flex flex-col gap-2 max-w-[18rem] sm:max-w-[26rem] md:max-w-[42rem]"
+          )}
+        >
+          <HeroTagline>
+            <span className="font-semibold">$bread</span>chain
+          </HeroTagline>
+          <HeroHeading>{heading}</HeroHeading>
+          <HeroSubHeading>{subheading}</HeroSubHeading>
+          <HeroCTA>
+            <ButtonLink href="https://app.breadchain.xyz" isExternal>
+              Get Bread
+            </ButtonLink>
+            <TertiaryLink
+              href="https://breadchain.mirror.xyz/nwQx4CqPAcwZ5zSNB2_K25N1quOF1NGcKaYcS3S33CA"
+              isExternal
+            >
+              Learn more
+            </TertiaryLink>
+          </HeroCTA>
+        </div>
       </div>
     </section>
   );
