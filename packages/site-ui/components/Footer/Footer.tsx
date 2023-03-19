@@ -22,7 +22,7 @@ function SocialsSection({ children }: { children: ReactNode }) {
 
 function FooterLogoSection({ children }: { children: ReactNode }) {
   return (
-    <div className="order-last min-[980px]:order-first flex flex-col items-center gap-4 pt-6 min-[580px]:pt-0">
+    <div className="order-last min-[1075px]:order-first flex flex-col items-center gap-4 pt-6 min-[580px]:pt-0">
       {children}
     </div>
   );
@@ -34,7 +34,7 @@ function FooterSectionTitle({ children }: { children: ReactNode }) {
 
 function FooterSectionList({ children }: { children: ReactNode }) {
   return (
-    <ul className="flex flex-col min-[980px]:flex-row gap-4 min-[980px]:gap-8">
+    <ul className="flex flex-col min-[1075px]:flex-row gap-4 min-[1075px]:gap-8">
       {children}
     </ul>
   );
@@ -42,7 +42,7 @@ function FooterSectionList({ children }: { children: ReactNode }) {
 
 function FooterGrid({ children }: { children: ReactNode }) {
   return (
-    <div className="flex flex-col gap-12 min-[600px]:flex-row min-[580px]:flex-wrap min-[980px]:items-center min-[580px]:justify-around px-4">
+    <div className="flex flex-col gap-12 min-[600px]:flex-row min-[580px]:flex-wrap min-[1075px]:items-center min-[580px]:justify-around px-4">
       {children}
     </div>
   );
@@ -120,6 +120,12 @@ export function Footer() {
               <FooterSectionTitle>Socials</FooterSectionTitle>
             </div>
             <FooterSectionList>
+              <div className="text-center min-[600px]:text-left">
+                <Link isExternal href="https://breadchain.mailchimpsites.com/">
+                  Newsletter
+                </Link>
+              </div>
+
               <div className="text-center min-[600px]:text-left">
                 <Link isExternal href="https://twitter.com/breadchain_">
                   Twitter
