@@ -132,7 +132,7 @@ export function Footer() {
                 </Link>
               </div>
               <div className="text-center min-[600px]:text-left">
-                <Link isExternal href="#">
+                <Link isExternal href="https://cryptoleftists.xyz">
                   Discord
                 </Link>
               </div>
