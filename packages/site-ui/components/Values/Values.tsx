@@ -4,12 +4,12 @@ import { classNames } from "@breadchain.xyz/utils";
 import { pageWrap, pageWrapPadding } from "../classStrings";
 import { SectionTitle } from "../SectionTitle";
 import { SectionSubtitle } from "../SectionSubtitle";
-import { PrincipleCard } from "./PrincipleCard";
+import { ValueCard, ValueIcons } from "./ValueCard";
 
 interface IValue {
   title: string;
   details: string;
-  icon: string;
+  icon: keyof typeof ValueIcons;
 }
 
 export function Values({ values }: { values: IValue[] }) {
@@ -33,11 +33,11 @@ export function Values({ values }: { values: IValue[] }) {
       <div className="max-w-4xl m-auto grid grid-cols-2 pt-16 gap-4 sm:gap-16 md:gap-x-48 text-center">
         {values.map(({ title, details, icon }, i) => {
           return (
-            <PrincipleCard
+            <ValueCard
               key={`principlecard_${i}`}
               title={title}
               details={details}
-              iconString={icon}
+              icon={icon}
             />
           );
         })}

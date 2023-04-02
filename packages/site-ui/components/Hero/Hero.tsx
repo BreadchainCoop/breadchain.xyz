@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { z } from "zod";
 
 import { classNames } from "@breadchain.xyz/utils";
@@ -8,22 +8,14 @@ import { TertiaryLink } from "../TertiaryLink";
 import { MidjourneyImage } from "./MidjourneyImage";
 
 export const ZHeroProps = z.object({
-  frontmatter: z.object({
-    tagline: z.string(),
-    heading: z.string(),
-    subheading: z.string(),
-  }),
+  tagline: z.string(),
+  heading: z.string(),
+  subheading: z.string(),
 });
 
 export type THeroProps = z.infer<typeof ZHeroProps>;
 
-export function Hero({
-  heroData: {
-    frontmatter: { tagline, subheading, heading },
-  },
-}: {
-  heroData: THeroProps;
-}) {
+export function Hero({ tagline, subheading, heading }: THeroProps) {
   return (
     <section>
       <div className="relative max-w-6xl m-auto overflow-x-clip md:overflow-x-visible">
@@ -38,7 +30,7 @@ export function Hero({
           )}
         >
           <HeroTagline>
-            <span className="font-semibold">$bread</span>chain
+            <span className="font-semibold">{tagline}</span>chain
           </HeroTagline>
           <HeroHeading>{heading}</HeroHeading>
           <HeroSubHeading>{subheading}</HeroSubHeading>

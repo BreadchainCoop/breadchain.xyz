@@ -4,16 +4,9 @@ import { classNames } from "@breadchain.xyz/utils";
 import { pageWrap, pageWrapPadding } from "../classStrings";
 import { SectionTitle } from "../SectionTitle";
 import { SectionSubtitle } from "../SectionSubtitle";
-import { MemberCard } from "./MemberCard";
+import { MemberCard, TMemberCardProps } from "./MemberCard";
 
-interface IMember {
-  name: string;
-  info: string;
-  link: string;
-  logo: any;
-}
-
-export function Members({ members }: { members: IMember[] }) {
+export function Members({ members }: { members: TMemberCardProps[] }) {
   return (
     <section
       id="projects"
@@ -37,7 +30,7 @@ export function Members({ members }: { members: IMember[] }) {
               key={`membercard_${i}`}
               name={name}
               info={info}
-              logoSrc={logo}
+              logo={logo}
               link={link}
             />
           );

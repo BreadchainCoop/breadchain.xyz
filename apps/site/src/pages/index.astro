@@ -5,69 +5,19 @@ import {
   InfoCards,
   Members,
   Values,
-  ZHeroProps,
 } from "@breadchain.xyz/site-ui";
 
 import Layout from "../layouts/Layout.astro";
 
-import * as heroDataUnsafe from "../markdown/homepage/hero.md";
-
-const heroData = ZHeroProps.parse(heroDataUnsafe);
-
-const members = [
-  {
-    name: "PactDAO",
-    info: "A NYC-based DAO building dual power through mutual aid, education and organizing.",
-    logo: "/img/pact.png",
-    link: "https://pactcollective.xyz/",
-  },
-  {
-    name: "LaborDAO",
-    info: "A DAO supporting workers who want to organize, strike and collectively bargain.",
-    logo: "/img/labordao.png",
-    link: "https://www.thelabordao.com/",
-  },
-  {
-    name: "Crypto Commons Association",
-    info: "An accelerator and Austria-based hub for progressive web3 projects. ",
-    logo: "/img/cca.png",
-    link: "https://www.crypto-commons.org/",
-  },
-];
-
-const values = [
-  {
-    title: "Economic Democracy",
-    details:
-      "We strive for an economy in which resources are allocated democratically rather than through market forces.",
-    icon: "MESSAGE",
-  },
-  {
-    title: "Transparent Governance",
-    details:
-      "Everyone should have a say and those given power by the community must be held responsible for their decisions for all to see.",
-    icon: "EYE",
-  },
-  {
-    title: "Mutual Aid",
-    details:
-      "We believe in communal solidarity through reciprocal exchange for mutual benefit so everyone can live a dignified life.",
-    icon: "RELOAD",
-  },
-  {
-    title: "Dual Power",
-    details:
-      "We must build parallel tech institutions from the grassroots because technology without direct social intervention only favors those in power.",
-    icon: "VERTICAL_ARROWS",
-  },
-];
+import { tagline, heading, subheading } from "../content/index/hero/_index";
+import { cca, laborDao, pact } from "../content/index/members/_index";
+import { values } from "../content/index/values/_index";
 ---
 
 <Layout title="Breadchain Cooperative.">
-  <Hero heroData={heroData} />
-
+  <Hero tagline={tagline} heading={heading} subheading={subheading} />
   <InfoCards />
-  <Members members={members} />
+  <Members members={[cca, laborDao, pact]} />
   <Values values={values} />
   <CTASection />
 </Layout>

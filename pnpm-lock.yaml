@@ -23,6 +23,7 @@ importers:
       react: ^18.0.0
       react-dom: ^18.0.0
       tailwindcss: ^3.0.24
+      zod: ^3.21.4
     dependencies:
       '@astrojs/image': 0.14.1_astro@2.0.10
       '@astrojs/react': 2.0.2_fxtgt6bjwd6p4cwoordejim2zi
@@ -36,6 +37,7 @@ importers:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       tailwindcss: 3.2.6
+      zod: 3.21.4
     devDependencies:
       prettier-plugin-astro: 0.8.0
 
