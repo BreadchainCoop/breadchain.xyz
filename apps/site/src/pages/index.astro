@@ -9,13 +9,13 @@ import {
 
 import Layout from "../layouts/Layout.astro";
 
-import { tagline, heading, subheading } from "../content/index/hero/_index";
+import { heading, subheading } from "../content/index/hero/_index";
 import { cca, laborDao, pact } from "../content/index/members/_index";
 import { values } from "../content/index/values/_index";
 ---
 
 <Layout title="Breadchain Cooperative.">
-  <Hero tagline={tagline} heading={heading} subheading={subheading} />
+  <Hero heading={heading} subheading={subheading} />
   <InfoCards />
   <Members members={[cca, laborDao, pact]} />
   <Values values={values} />
