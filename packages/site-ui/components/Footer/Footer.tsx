@@ -29,7 +29,9 @@ function FooterLogoSection({ children }: { children: ReactNode }) {
 }
 
 function FooterSectionTitle({ children }: { children: ReactNode }) {
-  return <h3 className="font-medium text-breadgray-100">{children}</h3>;
+  return (
+    <h3 className="font-medium dark:text-breadgray-ultra-white">{children}</h3>
+  );
 }
 
 function FooterSectionList({ children }: { children: ReactNode }) {
@@ -57,7 +59,8 @@ export function Link({
   href: string;
   isExternal?: boolean;
 }) {
-  const classes = "text-breadgray-200 hover:text-breadgray-100";
+  const classes =
+    "dark:text-breadgray-white dark:hover:text-breadgray-ultra-white";
 
   if (isExternal)
     return (

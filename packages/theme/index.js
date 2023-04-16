@@ -26,7 +26,7 @@ module.exports = {
     },
     breadpink: {
       pink: "#FF99E2",
-      "shaded-pink": "#E873D3",
+      shaded: "#E873D3",
 
       100: "#C463CA",
       200: "#FF99E2",

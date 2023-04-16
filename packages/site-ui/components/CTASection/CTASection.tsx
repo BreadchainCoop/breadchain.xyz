@@ -27,10 +27,11 @@ export function CTASection() {
       <div
         className={classNames(
           "max-w-4xl m-auto",
-          "bg-gradient-to-r from-breadgray-cta-bg to blue-400 px-6 py-12 sm:px-12 flex flex-col gap-2"
+
+          "bg-white dark:bg-breadgray-darkest dark:bg-gradient-to-r dark:from-breadgray-cta-bg px-6 py-12 sm:px-12 flex flex-col gap-2"
         )}
       >
-        <h2 className="text-breadgray-200 font-poppins text-4xl md:text-5xl leading-relaxed tracking-wider">
+        <h2 className="font-poppins text-4xl md:text-5xl leading-relaxed tracking-wider">
           Bake <span className="font-bold">$BREAD</span> with us.
         </h2>
         <p>

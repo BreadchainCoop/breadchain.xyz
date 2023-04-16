@@ -1,3 +1,5 @@
+import React from "react";
+
 export function ValuesCenter() {
   return (
     <div className="w-32 h-32 hidden sm:block">
@@ -13,8 +15,8 @@ export function ValuesCenter() {
           height="99.2"
           rx="0.6"
           stroke="url(#paint0_linear_1468_1361)"
-          stroke-opacity="0.5"
-          stroke-width="0.8"
+          strokeOpacity="0.5"
+          strokeWidth="0.8"
         />
         <rect
           x="4.4"
@@ -24,8 +26,8 @@ export function ValuesCenter() {
           rx="0.6"
           transform="rotate(-90 4.4 109.731)"
           stroke="url(#paint1_linear_1468_1361)"
-          stroke-opacity="0.5"
-          stroke-width="0.8"
+          strokeOpacity="0.5"
+          strokeWidth="0.8"
         />
         <rect
           x="111.4"
@@ -35,8 +37,8 @@ export function ValuesCenter() {
           rx="0.6"
           transform="rotate(-90 111.4 109.731)"
           stroke="url(#paint2_linear_1468_1361)"
-          stroke-opacity="0.5"
-          stroke-width="0.8"
+          strokeOpacity="0.5"
+          strokeWidth="0.8"
         />
         <rect
           x="109.6"
@@ -46,8 +48,8 @@ export function ValuesCenter() {
           rx="0.6"
           transform="rotate(-180 109.6 103.6)"
           stroke="url(#paint3_linear_1468_1361)"
-          stroke-opacity="0.5"
-          stroke-width="0.8"
+          strokeOpacity="0.5"
+          strokeWidth="0.8"
         />
         <defs>
           <linearGradient
@@ -58,8 +60,8 @@ export function ValuesCenter() {
             y2="211"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#ED7BC7" />
-            <stop offset="1" stop-color="#ED7BC7" stop-opacity="0" />
+            <stop stopColor="#ED7BC7" />
+            <stop offset="1" stopColor="#ED7BC7" stopOpacity="0" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_1468_1361"
@@ -69,8 +71,8 @@ export function ValuesCenter() {
             y2="210.131"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#ED7BC7" stop-opacity="0" />
-            <stop offset="1" stop-color="#ED7BC7" />
+            <stop stopColor="#ED7BC7" stopOpacity="0" />
+            <stop offset="1" stopColor="#ED7BC7" />
           </linearGradient>
           <linearGradient
             id="paint2_linear_1468_1361"
@@ -80,8 +82,8 @@ export function ValuesCenter() {
             y2="210.131"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#ED7BC7" />
-            <stop offset="1" stop-color="#ED7BC7" stop-opacity="0" />
+            <stop stopColor="#ED7BC7" />
+            <stop offset="1" stopColor="#ED7BC7" stopOpacity="0" />
           </linearGradient>
           <linearGradient
             id="paint3_linear_1468_1361"
@@ -91,8 +93,8 @@ export function ValuesCenter() {
             y2="204"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#ED7BC7" />
-            <stop offset="1" stop-color="#ED7BC7" stop-opacity="0" />
+            <stop stopColor="#ED7BC7" />
+            <stop offset="1" stopColor="#ED7BC7" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>

@@ -53,7 +53,7 @@ export function Hero({ subheading, heading }: THeroProps) {
 
 export function HeroHeading({ children }: { children: ReactNode }) {
   return (
-    <h1 className="font-poppins font-bold text-4xl sm:text-5xl max-w-[42rem] md:max-w-[32rem] leading-normal tracking-wide text-breadgray-200 md:text-6xl md:leading-relaxed drop-shadow-lg">
+    <h1 className="font-poppins font-bold text-4xl sm:text-5xl max-w-[42rem] md:max-w-[32rem] leading-normal tracking-wide  md:text-6xl md:leading-relaxed dark:drop-shadow-lg">
       {children}
     </h1>
   );
@@ -61,7 +61,7 @@ export function HeroHeading({ children }: { children: ReactNode }) {
 
 export function HeroSubHeading({ children }: { children: ReactNode }) {
   return (
-    <h2 className="font-poppins tracking-wider max-w-md text-breadgray-200 md:text-xl font-medium pt-2 pb-12 md:pt-4">
+    <h2 className="font-poppins tracking-wider max-w-md  md:text-xl font-medium pt-2 pb-12 md:pt-4">
       {children}
     </h2>
   );

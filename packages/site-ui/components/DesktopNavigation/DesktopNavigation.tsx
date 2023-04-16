@@ -9,7 +9,7 @@ function DesktopNavigationLink(props: {
   const { children, ...remainingProps } = props;
   return (
     <a
-      className="font-redhat text-breadgray-300 hover:text-breadgray-200 active:text-breadgray-200 font-bold text-xl tracking-wider px-4"
+      className="font-redhat dark:text-breadgray-white dark:hover:text-breadgray-ultra-white text-breadgray-burnt hover:text-breadgray-charcoal active:text-breadgray-violet font-bold text-xl tracking-wider px-4"
       {...remainingProps}
     >
       {children}
