@@ -14,7 +14,7 @@ export type TValueIcons = keyof typeof ValueIcons;
 
 function PrincipleIcon({ icon }: { icon: TValueIcons }) {
   return (
-    <figure className="h-12 text-breadpink-300">{ValueIcons[icon]}</figure>
+    <figure className="h-12 text-breadpink-shaded">{ValueIcons[icon]}</figure>
   );
 }
 
@@ -41,12 +41,10 @@ export function ValueCard({
   icon: keyof typeof ValueIcons;
 }) {
   return (
-    <article className="col-span-2 sm:col-span-1 text-breadgray-100">
+    <article className="col-span-2 sm:col-span-1">
       <div className="py-8 flex flex-col gap-2">
         <PrincipleIcon icon={icon} />
-        <h3 className="font-redhat text-2xl font-medium text-breadgray-100">
-          {title}
-        </h3>
+        <h3 className="font-redhat text-2xl font-medium">{title}</h3>
         <p className="max-w-sm m-auto md:w-auto">{details}</p>
       </div>
     </article>

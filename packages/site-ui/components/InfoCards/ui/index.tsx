@@ -30,7 +30,7 @@ export function InfoCard({ children }: { children: ReactNode }) {
 
 export function InfoCardHeading({ children }: { children: ReactNode }) {
   return (
-    <h1 className="font-redhat font-bold text-2xl max-w-[22rem] md:max-w-[32rem] leading-normal text-breadgray-200 md:leading-relaxed">
+    <h1 className="font-redhat font-bold text-2xl max-w-[22rem] md:max-w-[32rem] leading-normal  md:leading-relaxed">
       {children}
     </h1>
   );
@@ -43,13 +43,9 @@ export function InfoCardTextContent({ children }: { children: ReactNode }) {
 }
 
 export function InfoCardText({ children }: { children: ReactNode }) {
-  return (
-    <p className="font-redhat text-regular text-breadgray-200 max-w-xs">
-      {children}
-    </p>
-  );
+  return <p className="font-redhat text-regular  max-w-xs">{children}</p>;
 }
 
 export function InfoCardIcon({ children }: { children: ReactNode }) {
-  return <div className="text-shadedviolet h-14">{children}</div>;
+  return <div className="text-breadpink-shaded h-14">{children}</div>;
 }

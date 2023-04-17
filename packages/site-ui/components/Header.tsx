@@ -7,6 +7,7 @@ import MobileNavigation from "./MobileNavigation";
 import MobileNavigationToggle from "./MobileNavigation/MobileNavigationToggle";
 import { Logo } from "./Logo/Logo";
 import { ButtonLink } from "./ButtonLink";
+import { ColorToggle } from "./ColorToggle/ColorToggle";
 
 export function Header() {
   const [isMobNavOpen, setIsMobNavOpen] = useState(false);
@@ -32,8 +33,9 @@ export function Header() {
           <Logo />
         </div>
 
-        <div className="grow">
+        <div className="grow flex gap-6">
           <DesktopNavigation />
+          <ColorToggle />
         </div>
         <div className="hidden md:block">
           <ButtonLink href="https://app.breadchain.xyz" isExternal>
