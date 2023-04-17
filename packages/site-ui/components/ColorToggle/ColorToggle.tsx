@@ -83,7 +83,7 @@ function SunIcon() {
       className="w-full h-full fill-current"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#a)">
+      <g clip-path="url(#sun_icon)">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -91,7 +91,7 @@ function SunIcon() {
         />
       </g>
       <defs>
-        <clipPath id="a">
+        <clipPath id="sun_icon">
           <path fill="#fff" d="M0 0h24v24H0z" />
         </clipPath>
       </defs>
