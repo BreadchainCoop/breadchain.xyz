@@ -90,7 +90,7 @@ export function Footer() {
               <Logo />
             </div>
             {/* <p className="text-breadgray-200">Funding post-capitalism</p> */}
-            <h3 className="text-2xl font-medium text-breadgray-100">
+            <h3 className="text-2xl font-medium dark:text-breadgray-ultra-white">
               Breadchain
             </h3>
             <p>Funding post-capitalism</p>

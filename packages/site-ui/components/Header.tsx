@@ -33,11 +33,11 @@ export function Header() {
           <Logo />
         </div>
 
-        <div className="grow">
+        <div className="grow flex gap-6">
           <DesktopNavigation />
+          <ColorToggle />
         </div>
         <div className="hidden md:block">
-          <ColorToggle />
           <ButtonLink href="https://app.breadchain.xyz" isExternal>
             Get Bread
           </ButtonLink>
