@@ -2,7 +2,7 @@ import React from "react";
 
 export function ValuesCenter() {
   return (
-    <div className="w-32 h-32 hidden sm:block">
+    <div className="w-48 h-48 hidden sm:block">
       <svg
         viewBox="0 0 215 215"
         className="w-full h-full fill-none"
