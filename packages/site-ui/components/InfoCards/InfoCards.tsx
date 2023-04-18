@@ -37,7 +37,7 @@ const infoCards = [
 
 export function InfoCards() {
   return (
-    <section id="about">
+    <section id="about" className="pb-48">
       <div
         className={classNames(
           pageWrapPadding,

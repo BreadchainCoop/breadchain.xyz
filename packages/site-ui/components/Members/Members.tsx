@@ -5,14 +5,19 @@ import { pageWrap, pageWrapPadding } from "../classStrings";
 import { SectionTitle } from "../SectionTitle";
 import { SectionSubtitle } from "../SectionSubtitle";
 import { MemberCard, TMemberCardProps } from "./MemberCard";
+import { MembersBackgroundGraphic } from "../Graphics/MembersBackgroundGraphic";
 
 export function Members({ members }: { members: TMemberCardProps[] }) {
   return (
     <section
       id="projects"
-      className={classNames(pageWrap, pageWrapPadding, "py-16")}
+      className={classNames(
+        pageWrap,
+        pageWrapPadding,
+        "relative pb-64 sm:pb-[22rem]"
+      )}
     >
-      <div className="flex flex-col gap-4 items-start">
+      <div className="flex flex-col gap-4 items-start max-w-sm m-auto">
         <SectionTitle>
           Co-operative
           <span className="font-normal inline-block pl-2 md:pl-3">
@@ -35,6 +40,9 @@ export function Members({ members }: { members: TMemberCardProps[] }) {
             />
           );
         })}
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 flex justify-center">
+        <MembersBackgroundGraphic />
       </div>
     </section>
   );

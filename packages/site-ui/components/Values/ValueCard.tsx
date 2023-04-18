@@ -42,7 +42,7 @@ export function ValueCard({
 }) {
   return (
     <article className="col-span-2 sm:col-span-1">
-      <div className="py-8 flex flex-col gap-2">
+      <div className="py-8 flex flex-col gap-2 text-center">
         <PrincipleIcon icon={icon} />
         <h3 className="font-redhat text-2xl font-medium">{title}</h3>
         <p className="max-w-sm m-auto md:w-auto">{details}</p>

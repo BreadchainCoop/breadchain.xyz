@@ -6,6 +6,7 @@ import { SectionTitle } from "../SectionTitle";
 import { SectionSubtitle } from "../SectionSubtitle";
 import { ValueCard, ValueIcons } from "./ValueCard";
 import { ValuesCenter } from "../Graphics";
+import { ValuesBackgroundGraphics, ValuesLarge } from "../Graphics/Values";
 
 interface IValue {
   title: string;
@@ -15,12 +16,13 @@ interface IValue {
 
 export function Values({ values }: { values: IValue[] }) {
   return (
-    <section
-      id="values"
-      className={classNames(pageWrap, pageWrapPadding, "py-16")}
-    >
-      <div className="flex flex-col sm:items-center gap-4 pb-16">
-        <div className="flex flex-col items-start sm:flex-row gap-2">
+    <section id="values" className="pb-32 sm:pb-42 pt-20">
+      <div
+        className={classNames(
+          "flex flex-col sm:items-center gap-4 pb-16 px-4 sm:text-left"
+        )}
+      >
+        <div className="flex flex-col items-start sm:flex-row gap-2 ">
           <SectionTitle>
             <span className="font-normal inline-block pr-2">Currency</span>
             <span>with a conscience</span>
@@ -31,20 +33,20 @@ export function Values({ values }: { values: IValue[] }) {
           missions.
         </SectionSubtitle>
       </div>
-      <div className="max-w-4xl m-auto grid grid-cols-2 gap-4 sm:gap-16 md:gap-x-48 text-center relative">
-        <div className="absolute left-0 right-0 top-0 bottom-0 flex items-center justify-center">
-          <ValuesCenter />
+      <div className={classNames("relative overflow-x-visible px-4")}>
+        <ValuesBackgroundGraphics />
+        <div className="max-w-4xl m-auto grid grid-cols-2 gap-4 sm:gap-16 md:gap-x-48 text-center relative">
+          {values.map(({ title, details, icon }, i) => {
+            return (
+              <ValueCard
+                key={`principlecard_${i}`}
+                title={title}
+                details={details}
+                icon={icon}
+              />
+            );
+          })}
         </div>
-        {values.map(({ title, details, icon }, i) => {
-          return (
-            <ValueCard
-              key={`principlecard_${i}`}
-              title={title}
-              details={details}
-              icon={icon}
-            />
-          );
-        })}
       </div>
     </section>
   );
