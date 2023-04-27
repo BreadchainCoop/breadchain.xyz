@@ -7,11 +7,11 @@ export function CardSVG1() {
       className="absolute top-0 left-0  md:h-auto"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_1335_1386)">
+      <g clipPath="url(#clip0_1335_1386)">
         <mask id="path-1-inside-1_1335_1386" fill="white">
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M42.4242 40.6275L42.4242 368C42.4242 369.104 41.5288 370 40.4242 370H2C0.895433 370 0 369.104 0 368L0 39.7253C0 38.6208 0.895431 37.7253 2 37.7253H39.3945V2C39.3945 0.895432 40.29 0 41.3945 0L398.001 0C399.105 0 400.001 0.895431 400.001 2V38.6275C400.001 39.732 399.105 40.6275 398.001 40.6275L42.4242 40.6275Z"
           />
         </mask>
@@ -48,7 +48,7 @@ export function CardSVG2() {
       className="absolute top-0 left-0  md:h-auto"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_1335_1387)">
+      <g clipPath="url(#clip0_1335_1387)">
         <mask id="path-1-inside-1_1335_1387" fill="white">
           <path d="M0 1.99998C0 0.895413 0.895431 0 2 0L40 0C41.1046 0 42 0.895431 42 2L42 614C42 615.105 41.1046 616 40 616H2C0.89543 616 0 615.105 0 614L0 1.99998Z" />
         </mask>
@@ -85,11 +85,11 @@ export function CardSVG3() {
       className="absolute top-0 left-0  md:h-auto"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_1335_1388)">
+      <g clipPath="url(#clip0_1335_1388)">
         <mask id="path-1-inside-1_1335_1388" fill="white">
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M357.947 1.99999C357.947 0.895423 358.843 0 359.947 0L397.947 0C399.052 0 399.947 0.895431 399.947 2V386.851C399.947 387.955 399.052 388.851 397.947 388.851H361V426C361 427.105 360.105 428 359 428H41C39.8954 428 39 427.105 39 426L39 388.851H2C0.89543 388.851 0 387.955 0 386.851L0 2.00027C0 0.895701 0.895431 0.000278473 2 0.000278473L40 0.000278473C41.1046 0.000278473 42 0.895709 42 2.00028L42 386H357.947V1.99999Z"
           />
         </mask>
