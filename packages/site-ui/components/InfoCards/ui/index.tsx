@@ -19,7 +19,7 @@ export function InfoCard({ children }: { children: ReactNode }) {
     <div className={classNames("flex justify-center")}>
       <article
         className={classNames(
-          "px-16 py-8 md:py-14 flex flex-col items-center gap-8 w-full h-full relative"
+          "px-8 py-8 md:py-14 flex flex-col items-center gap-8 w-full h-full relative"
         )}
       >
         {children}
