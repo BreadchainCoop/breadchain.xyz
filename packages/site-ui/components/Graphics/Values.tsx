@@ -14,7 +14,7 @@ export function ValuesBackgroundGraphics() {
 
 export function ValuesLarge({ isRightSide }: { isRightSide: boolean }) {
   return (
-    <div className="w-auto h-full hidden sm:block">
+    <div className="w-auto h-full hidden sm:block -z-20">
       <svg
         viewBox="0 0 735 735"
         className={classNames(

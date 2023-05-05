@@ -41,9 +41,7 @@ export function Members({ members }: { members: TMemberCardProps[] }) {
           );
         })}
       </div>
-      <div className="absolute bottom-0 left-0 right-0 flex justify-center">
-        <MembersBackgroundGraphic />
-      </div>
+      <MembersBackgroundGraphic />
     </section>
   );
 }
