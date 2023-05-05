@@ -96,7 +96,7 @@ export function Footer() {
             <p>Funding post-capitalism</p>
             <a
               href="mailto:contact@breadchain.xyz"
-              className="text-breadgray-200 underline font-medium hover:text-breadgray-100"
+              className="text-breadgray-charcoal dark:text-breadgray-200 underline font-medium dark:hover:text-breadgray-100 hover:text-breadgray-darkest"
             >
               contact@breadchain.xyz
             </a>
