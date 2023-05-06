@@ -10,9 +10,9 @@ export function Border() {
     >
       <mask id="b" fill="#fff">
         <path
-          fill-rule="evenodd"
+          fillRule="evenodd"
           d="M40.215 37.623V2a2 2 0 0 1 2-2h364.12a2 2 0 0 1 2 2v36.518a2 2 0 0 1-2 2H43.308V367a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V39.623a2 2 0 0 1 2-2h38.215Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
       </mask>
       <path
