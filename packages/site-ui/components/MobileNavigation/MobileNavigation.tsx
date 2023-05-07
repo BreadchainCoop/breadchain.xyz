@@ -3,6 +3,7 @@ import React from "react";
 import { classNames } from "@breadchain.xyz/utils";
 import Overlay from "../Overlay";
 import { MobileNavigationLink } from "./MobileNavLink";
+import { ColorToggle } from "../ColorToggle/ColorToggle";
 
 interface IProps {
   isOpen: boolean;
@@ -13,36 +14,41 @@ export function MobileNavigation({ isOpen, handleNavToggle }: IProps) {
   return (
     <>
       <Overlay closeMenu={() => handleNavToggle()} isOpen={isOpen} />
-      <nav
+      <section
         className={classNames(
-          "fixed right-0 top-0 z-10 flex w-auto transform flex-col gap-12 px-12 pl-12 pt-32 transition-transform md:hidden",
+          "fixed right-0 top-0 z-10 w-auto transform px-12 pl-12 pt-32 transition-transform md:hidden flex flex-col gap-14",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <MobileNavigationLink
-          handleNavToggle={handleNavToggle}
-          href="#about"
-          isOnPage
-        >
-          About
-        </MobileNavigationLink>
+        <nav className="flex flex-col gap-8">
+          <MobileNavigationLink
+            handleNavToggle={handleNavToggle}
+            href="#about"
+            isOnPage
+          >
+            About
+          </MobileNavigationLink>
 
-        <MobileNavigationLink
-          handleNavToggle={handleNavToggle}
-          href="#projects"
-          isOnPage
-        >
-          Projects
-        </MobileNavigationLink>
+          <MobileNavigationLink
+            handleNavToggle={handleNavToggle}
+            href="#projects"
+            isOnPage
+          >
+            Projects
+          </MobileNavigationLink>
 
-        <MobileNavigationLink
-          handleNavToggle={handleNavToggle}
-          href="https://breadchain.mirror.xyz/"
-          isExternal
-        >
-          Blog
-        </MobileNavigationLink>
-      </nav>
+          <MobileNavigationLink
+            handleNavToggle={handleNavToggle}
+            href="https://breadchain.mirror.xyz/"
+            isExternal
+          >
+            Blog
+          </MobileNavigationLink>
+        </nav>
+        <div className="md:hidden">
+          <ColorToggle />
+        </div>
+      </section>
     </>
   );
 }

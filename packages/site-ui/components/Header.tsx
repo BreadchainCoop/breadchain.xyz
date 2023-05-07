@@ -35,7 +35,9 @@ export function Header() {
 
         <div className="grow flex gap-6">
           <DesktopNavigation />
-          <ColorToggle />
+          <div className="hidden md:block">
+            <ColorToggle />
+          </div>
         </div>
         <div className="hidden md:block">
           <ButtonLink href="https://app.breadchain.xyz" isExternal>
