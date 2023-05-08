@@ -1,6 +1,9 @@
 @tailwind base;
 
 @layer base {
+  html {
+    overflow-x: hidden;
+  }
   body {
     @apply bg-breadgray-ultra-white dark:bg-breadgray-darkest;
     @apply text-breadgray-charcoal dark:text-breadgray-white;

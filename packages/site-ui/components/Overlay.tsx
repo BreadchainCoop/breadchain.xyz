@@ -1,14 +1,12 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
 import { MouseEvent } from "react";
 import { classNames } from "@breadchain.xyz/utils";
 
 function Overlay({
-  children,
   isOpen,
   closeMenu,
 }: {
-  children: ReactNode;
   isOpen: boolean;
   closeMenu: () => void;
 }) {
@@ -25,9 +23,7 @@ function Overlay({
         isOpen ? "block opacity-95" : "hidden"
       )}
       onClick={handleClick}
-    >
-      {children}
-    </div>
+    />
   );
 }
 
