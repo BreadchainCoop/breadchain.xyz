@@ -2,7 +2,7 @@ import React from "react";
 
 import { classNames } from "@breadchain.xyz/utils";
 import { pageWrap, pageWrapPadding } from "../classStrings";
-import { SectionTitle } from "../SectionTitle";
+import { SectionTitle, ValuesTitle } from "../SectionTitle";
 import { SectionSubtitle } from "../SectionSubtitle";
 import { ValueCard, ValueIcons } from "./ValueCard";
 import { ValuesCenter } from "../Graphics";
@@ -22,16 +22,16 @@ export function Values({ values }: { values: IValue[] }) {
           "flex flex-col sm:items-center gap-4 pb-16 px-4 sm:text-left"
         )}
       >
-        <div className="flex flex-col items-start sm:flex-row gap-2 ">
-          <SectionTitle>
+        <div className="flex flex-col gap-4 items-start max-w-sm m-auto sm:max-w-full">
+          <ValuesTitle>
             <span className="font-normal inline-block pr-2">Currency</span>
             <span>with a conscience</span>
-          </SectionTitle>
+          </ValuesTitle>
+          <SectionSubtitle>
+            Here are the principles that guide Breadchain projects and their
+            missions.
+          </SectionSubtitle>
         </div>
-        <SectionSubtitle>
-          Here are the principles that guide Breadchain projects and their
-          missions.
-        </SectionSubtitle>
       </div>
       <div className={classNames("relative overflow-x-visible px-4")}>
         <ValuesBackgroundGraphics />

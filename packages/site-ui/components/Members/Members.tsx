@@ -17,13 +17,12 @@ export function Members({ members }: { members: TMemberCardProps[] }) {
         "relative pb-64 sm:pb-[22rem]"
       )}
     >
-      <div className="flex flex-col gap-4 items-start max-w-sm m-auto sm:max-w-full">
+      <div className="flex flex-col gap-4 justify-self-start max-w-sm m-auto md:max-w-full">
         <SectionTitle>
-          Co-operative
-          <span className="font-normal inline-block pl-2 md:pl-3">
-            by design
-          </span>
+          <span>Co-operative</span>
+          <span className="font-normal">by design</span>
         </SectionTitle>
+
         <SectionSubtitle>
           Learn more about the project you would support.{" "}
         </SectionSubtitle>

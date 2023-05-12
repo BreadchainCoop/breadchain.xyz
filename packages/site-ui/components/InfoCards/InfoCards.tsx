@@ -1,6 +1,6 @@
 import React from "react";
 import { CheckmarkIcon, CoinIcon, UsersIcon } from "../Icons";
-import { SectionTitle } from "../SectionTitle/SectionTitle";
+import { InfoCardsTitle, SectionTitle } from "../SectionTitle/SectionTitle";
 import { SectionSubtitle } from "../SectionSubtitle/SectionSubtitle";
 import {
   InfoCardGrid,
@@ -41,16 +41,16 @@ const infoCards = [
 
 export function InfoCards() {
   return (
-    <section id="about" className="pb-48">
+    <section id="about" className="pb-6">
       <div
         className={classNames(
           pageWrapPadding,
           "text-center flex flex-col gap-2 py-8"
         )}
       >
-        <SectionTitle>
+        <InfoCardsTitle>
           <span className="font-normal">Get that</span> $BREAD
-        </SectionTitle>
+        </InfoCardsTitle>
         <SectionSubtitle>
           See why $BREAD is the best thing since sliced, well, you know.
         </SectionSubtitle>
