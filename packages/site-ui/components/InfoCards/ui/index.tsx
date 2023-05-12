@@ -1,12 +1,13 @@
 import { classNames } from "@breadchain.xyz/utils";
-import React, { ReactNode } from "react";
+import React from "react";
+import type { ReactNode } from "react";
 
 export function InfoCardGrid({ children }: { children: ReactNode }) {
   return (
     <div
       className={classNames(
         "m-auto px-4",
-        "max-w-6xl py-8 md:py-12 flex flex-col gap-16 md:gap-0 md:flex-row"
+        "max-w-xl md:max-w-6xl py-8 md:py-12 grid-cols-infocards-sm grid-rows-infocards-sm grid md:gap-0 md:grid-cols-infocards-md md:grid-rows-infocards-md"
       )}
     >
       {children}
@@ -19,7 +20,7 @@ export function InfoCard({ children }: { children: ReactNode }) {
     <div className={classNames("flex justify-center")}>
       <article
         className={classNames(
-          "px-8 py-8 md:py-14 flex flex-col items-center gap-8 w-full h-full relative"
+          "px-8 py-12 md:py-14 flex flex-col items-center gap-8 w-full h-full relative last:pb-24"
         )}
       >
         {children}

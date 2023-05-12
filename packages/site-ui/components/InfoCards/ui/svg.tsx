@@ -4,7 +4,8 @@ export function CardSVG1() {
   return (
     <svg
       viewBox="0 0 400 532"
-      className="absolute top-0 left-0  md:h-auto"
+      className="absolute top-0 left-0 max-w-full h-[600px]"
+      preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clipPath="url(#clip0_1335_1386)">
@@ -45,7 +46,8 @@ export function CardSVG2() {
   return (
     <svg
       viewBox="0 0 400 624"
-      className="absolute top-0 left-0  md:h-auto"
+      className="absolute top-0 left-0 max-w-full  h-[600px]"
+      preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clipPath="url(#clip0_1335_1387)">
@@ -82,8 +84,9 @@ export function CardSVG3() {
   return (
     <svg
       viewBox="0 0 400 443"
-      className="absolute top-0 left-0  md:h-auto"
+      className="absolute top-0 left-0 max-w-full"
       xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
     >
       <g clipPath="url(#clip0_1335_1388)">
         <mask id="path-1-inside-1_1335_1388" fill="white">
