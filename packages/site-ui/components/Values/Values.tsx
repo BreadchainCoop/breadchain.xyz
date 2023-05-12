@@ -38,12 +38,52 @@ export function Values({ values }: { values: IValue[] }) {
         <div className="max-w-4xl m-auto grid grid-cols-2 gap-4 sm:gap-16 md:gap-x-48 text-center relative">
           {values.map(({ title, details, icon }, i) => {
             return (
-              <ValueCard
-                key={`principlecard_${i}`}
-                title={title}
-                details={details}
-                icon={icon}
-              />
+              <>
+                {i !== 0 && (
+                  <div className="col-span-2 h-32 flex justify-center sm:hidden">
+                    <svg
+                      className={classNames(
+                        "w-72 m-auto h-full",
+                        i % 2 === 0 && "transform rotate-180"
+                      )}
+                      viewBox="0 0 100 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="0.4"
+                        y="5.15176"
+                        width="4.33107"
+                        height="99.2"
+                        rx="0.6"
+                        transform="rotate(-90 0.4 5.15176)"
+                        stroke="url(#paint0_linear_1367_1420)"
+                        stroke-opacity="0.5"
+                        stroke-width="0.8"
+                      />
+                      <defs>
+                        <linearGradient
+                          id="paint0_linear_1367_1420"
+                          x1="2.56554"
+                          y1="5.55176"
+                          x2="2.56554"
+                          y2="105.552"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#ED7BC7" stop-opacity="0" />
+                          <stop offset="1" stop-color="#ED7BC7" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                )}
+                <ValueCard
+                  key={`principlecard_${i}`}
+                  title={title}
+                  details={details}
+                  icon={icon}
+                />
+              </>
             );
           })}
         </div>
