@@ -17,7 +17,7 @@ export function MobileNavigation({ isOpen, handleNavToggle }: IProps) {
 
       <nav
         className={classNames(
-          "fixed right-0 top-0 z-10 w-auto transform px-12 pl-12 pt-32 transition-transform md:hidden flex flex-col gap-10",
+          "fixed right-0 top-0 z-10 flex w-auto transform flex-col gap-10 px-12 pl-12 pt-32 transition-transform md:hidden",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >

@@ -45,7 +45,7 @@ export function InfoCards() {
       <div
         className={classNames(
           pageWrapPadding,
-          "text-center flex flex-col gap-2 py-8"
+          "flex flex-col gap-2 py-8 text-center"
         )}
       >
         <InfoCardsTitle>
@@ -57,10 +57,10 @@ export function InfoCards() {
       </div>
       <InfoCardGrid>
         {/* left col */}
-        <div className="hidden md:block col-start-1 col-span-1 row-start-2 row-span-1">
+        <div className="col-span-1 col-start-1 row-span-1 row-start-2 hidden md:block">
           <svg
             viewBox="0 0 50 333"
-            className="w-full h-full"
+            className="h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none"
           >
@@ -88,10 +88,10 @@ export function InfoCards() {
           </svg>
         </div>
         {/* top piece */}
-        <div className="hidden md:block col-start-2 col-span-1 row-start-1 row-span-1">
+        <div className="col-span-1 col-start-2 row-span-1 row-start-1 hidden md:block">
           <svg
             viewBox="0 0 403 42"
-            className="w-full h-full"
+            className="h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none"
           >
@@ -106,10 +106,10 @@ export function InfoCards() {
           </svg>
         </div>
         {/* center left col */}
-        <div className="hidden md:block col-start-3 col-span-1 row-start-2 row-span-3">
+        <div className="col-span-1 col-start-3 row-span-3 row-start-2 hidden md:block">
           <svg
             viewBox="0 0 50 617"
-            className="w-full h-full"
+            className="h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none"
           >
@@ -137,10 +137,10 @@ export function InfoCards() {
           </svg>
         </div>
         {/* center right col */}
-        <div className="hidden md:block col-start-5 col-span-1 row-start-2 row-span-1">
+        <div className="col-span-1 col-start-5 row-span-1 row-start-2 hidden md:block">
           <svg
             viewBox="0 0 50 386"
-            className="w-full h-full"
+            className="h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none"
           >
@@ -168,10 +168,10 @@ export function InfoCards() {
           </svg>
         </div>
         {/* bottom piece */}
-        <div className="hidden md:block col-start-6 col-span-1 row-start-3 row-span-1">
+        <div className="col-span-1 col-start-6 row-span-1 row-start-3 hidden md:block">
           <svg
             viewBox="0 0 407 48"
-            className="w-full h-full"
+            className="h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none"
           >
@@ -187,10 +187,10 @@ export function InfoCards() {
           </svg>
         </div>
         {/* right col */}
-        <div className="hidden md:block col-start-7 col-span-1 row-start-2 row-span-1">
+        <div className="col-span-1 col-start-7 row-span-1 row-start-2 hidden md:block">
           <svg
             viewBox="0 0 50 386"
-            className="w-full h-full"
+            className="h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none"
           >
@@ -218,11 +218,11 @@ export function InfoCards() {
           </svg>
         </div>
 
-        <div className="col-start-2 col-span-1 row-start-2 row-span-1">
+        <div className="col-span-1 col-start-2 row-span-1 row-start-2">
           <InfoCard key={`infocard_${0}`}>
-            <div className="absolute top-0 left-0 md:hidden">
+            <div className="absolute left-0 top-0 md:hidden">
               <svg
-                className="w-44 [@media(min-width:440px)]:w-64 [@media(min-width:600px)]:w-80 h-auto"
+                className="h-auto w-44 [@media(min-width:440px)]:w-64 [@media(min-width:600px)]:w-80"
                 viewBox="0 0 229 208"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -263,7 +263,7 @@ export function InfoCards() {
           </InfoCard>
         </div>
 
-        <div className="col-start-2 md:col-start-4 col-span-1 row-start-4 md:row-start-2 row-span-1">
+        <div className="col-span-1 col-start-2 row-span-1 row-start-4 md:col-start-4 md:row-start-2">
           <InfoCard key={`infocard_${1}`}>
             {/* <BackgroundSVG /> */}
             <InfoCardIcon>{infoCards[1].icon}</InfoCardIcon>
@@ -274,11 +274,11 @@ export function InfoCards() {
           </InfoCard>
         </div>
 
-        <div className="col-start-2 md:col-start-6 col-span-1 row-start-6 md:row-start-2 row-span-1">
+        <div className="col-span-1 col-start-2 row-span-1 row-start-6 md:col-start-6 md:row-start-2">
           <InfoCard key={`infocard_${2}`}>
             <div className="absolute bottom-0 right-0 md:hidden">
               <svg
-                className="w-44 [@media(min-width:440px)]:w-64 [@media(min-width:600px)]:w-80 h-auto"
+                className="h-auto w-44 [@media(min-width:440px)]:w-64 [@media(min-width:600px)]:w-80"
                 viewBox="0 0 229 207"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

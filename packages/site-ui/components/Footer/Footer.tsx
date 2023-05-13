@@ -6,7 +6,7 @@ import { Logo } from "../Logo/Logo";
 
 function FooterSection({ children }: { children: ReactNode }) {
   return (
-    <div className="col-span-1 sm:col-span-1 md:col-span-1 flex flex-col gap-6">
+    <div className="col-span-1 flex flex-col gap-6 sm:col-span-1 md:col-span-1">
       {children}
     </div>
   );
@@ -14,7 +14,7 @@ function FooterSection({ children }: { children: ReactNode }) {
 
 function SocialsSection({ children }: { children: ReactNode }) {
   return (
-    <div className="col-span-1 sm:col-span-1 md:col-span-2 flex flex-col gap-6">
+    <div className="col-span-1 flex flex-col gap-6 sm:col-span-1 md:col-span-2">
       {children}
     </div>
   );
@@ -22,7 +22,7 @@ function SocialsSection({ children }: { children: ReactNode }) {
 
 function FooterLogoSection({ children }: { children: ReactNode }) {
   return (
-    <div className="order-last min-[1075px]:order-first flex flex-col items-center gap-4 pt-6 min-[580px]:pt-0">
+    <div className="order-last flex flex-col items-center gap-4 pt-6 min-[580px]:pt-0 min-[1075px]:order-first">
       {children}
     </div>
   );
@@ -30,13 +30,13 @@ function FooterLogoSection({ children }: { children: ReactNode }) {
 
 function FooterSectionTitle({ children }: { children: ReactNode }) {
   return (
-    <h3 className="font-medium dark:text-breadgray-ultra-white">{children}</h3>
+    <h3 className="dark:text-breadgray-ultra-white font-medium">{children}</h3>
   );
 }
 
 function FooterSectionList({ children }: { children: ReactNode }) {
   return (
-    <ul className="flex flex-col min-[1075px]:flex-row gap-4 min-[1075px]:gap-8">
+    <ul className="flex flex-col gap-4 min-[1075px]:flex-row min-[1075px]:gap-8">
       {children}
     </ul>
   );
@@ -44,7 +44,7 @@ function FooterSectionList({ children }: { children: ReactNode }) {
 
 function FooterGrid({ children }: { children: ReactNode }) {
   return (
-    <div className="flex flex-col gap-12 min-[600px]:flex-row min-[580px]:flex-wrap min-[1075px]:items-center min-[580px]:justify-around px-4">
+    <div className="flex flex-col gap-12 px-4 min-[580px]:flex-wrap min-[580px]:justify-around min-[600px]:flex-row min-[1075px]:items-center">
       {children}
     </div>
   );
@@ -82,7 +82,7 @@ export function Link({
 
 export function Footer() {
   return (
-    <footer className="border-t-[1.5px] border-breadpink-300">
+    <footer className="border-breadpink-300 border-t-[1.5px]">
       <div className={classNames(pageWrap, pageWrapPadding, "pt-12 pb-16")}>
         <FooterGrid>
           <FooterLogoSection>
@@ -90,13 +90,13 @@ export function Footer() {
               <Logo />
             </div>
             {/* <p className="text-breadgray-200">Funding post-capitalism</p> */}
-            <h3 className="text-2xl font-medium dark:text-breadgray-ultra-white">
+            <h3 className="dark:text-breadgray-ultra-white text-2xl font-medium">
               Breadchain
             </h3>
             <p>Funding post-capitalism</p>
             <a
               href="mailto:contact@breadchain.xyz"
-              className="text-breadgray-charcoal dark:text-breadgray-200 underline font-medium dark:hover:text-breadgray-100 hover:text-breadgray-darkest"
+              className="text-breadgray-charcoal dark:text-breadgray-200 dark:hover:text-breadgray-100 hover:text-breadgray-darkest font-medium underline"
             >
               contact@breadchain.xyz
             </a>

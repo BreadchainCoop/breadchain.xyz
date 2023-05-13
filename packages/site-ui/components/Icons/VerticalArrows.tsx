@@ -4,7 +4,7 @@ export function VerticalArrowsIcon() {
   return (
     <svg
       viewBox="0 0 50 50"
-      className="fill-current w-full h-full"
+      className="h-full w-full fill-current"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

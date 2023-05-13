@@ -3,7 +3,7 @@ import React from "react";
 export function MessageIcon() {
   return (
     <svg
-      className="fill-current w-full h-full"
+      className="h-full w-full fill-current"
       viewBox="0 0 51 50"
       xmlns="http://www.w3.org/2000/svg"
     >

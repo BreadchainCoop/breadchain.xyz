@@ -18,15 +18,15 @@ export type THeroProps = z.infer<typeof ZHeroProps>;
 export function Hero({ subheading, heading }: THeroProps) {
   return (
     <section>
-      <div className="relative max-w-6xl m-auto overflow-x-clip md:overflow-x-visible">
-        <div className="absolute left-0 right-0 top-0 bottom-0 h-full w-full flex items-center justify-end -z-10">
+      <div className="relative m-auto max-w-6xl overflow-x-clip md:overflow-x-visible">
+        <div className="absolute left-0 right-0 top-0 bottom-0 -z-10 flex h-full w-full items-center justify-end">
           <MidjourneyImage />
         </div>
 
         <div
           className={classNames(
             pageWrapPadding,
-            "py-16 md:py-24 flex flex-col gap-2 max-w-[18rem] sm:max-w-[26rem] md:max-w-[42rem]"
+            "flex max-w-[18rem] flex-col gap-2 py-16 sm:max-w-[26rem] md:max-w-[42rem] md:py-24"
           )}
         >
           <HeroTagline>
@@ -53,7 +53,7 @@ export function Hero({ subheading, heading }: THeroProps) {
 
 export function HeroHeading({ children }: { children: ReactNode }) {
   return (
-    <h1 className="font-poppins font-bold text-4xl sm:text-5xl max-w-[42rem] md:max-w-[32rem] leading-normal tracking-wide  md:text-6xl md:leading-relaxed dark:drop-shadow-lg">
+    <h1 className="font-poppins max-w-[42rem] text-4xl font-bold leading-normal tracking-wide dark:drop-shadow-lg sm:text-5xl  md:max-w-[32rem] md:text-6xl md:leading-relaxed">
       {children}
     </h1>
   );
@@ -61,19 +61,19 @@ export function HeroHeading({ children }: { children: ReactNode }) {
 
 export function HeroSubHeading({ children }: { children: ReactNode }) {
   return (
-    <h2 className="font-poppins tracking-wider max-w-md  md:text-xl font-medium pt-2 pb-12 md:pt-4">
+    <h2 className="font-poppins max-w-md pt-2  pb-12 font-medium tracking-wider md:pt-4 md:text-xl">
       {children}
     </h2>
   );
 }
 
 export function HeroCTA({ children }: { children: ReactNode }) {
-  return <div className="flex flex-row gap-4 items-center">{children}</div>;
+  return <div className="flex flex-row items-center gap-4">{children}</div>;
 }
 
 export function HeroTagline({ children }: { children: ReactNode }) {
   return (
-    <span className="uppercase font-regular font-redhat text-breadpink-100 md:text-xl">
+    <span className="font-regular font-redhat text-breadpink-100 uppercase md:text-xl">
       {children}
     </span>
   );

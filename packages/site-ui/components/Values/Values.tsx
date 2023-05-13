@@ -16,15 +16,15 @@ interface IValue {
 
 export function Values({ values }: { values: IValue[] }) {
   return (
-    <section id="values" className="pb-32 sm:pb-42 pt-20">
+    <section id="values" className="sm:pb-42 pb-32 pt-20">
       <div
         className={classNames(
-          "flex flex-col sm:items-center gap-4 pb-16 px-4 sm:text-left"
+          "flex flex-col gap-4 px-4 pb-16 sm:items-center sm:text-left"
         )}
       >
-        <div className="flex flex-col gap-4 items-start max-w-sm m-auto sm:max-w-full">
+        <div className="m-auto flex max-w-sm flex-col items-start gap-4 sm:max-w-full">
           <ValuesTitle>
-            <span className="font-normal inline-block pr-2">Currency</span>
+            <span className="inline-block pr-2 font-normal">Currency</span>
             <span>with a conscience</span>
           </ValuesTitle>
           <SectionSubtitle>
@@ -35,16 +35,16 @@ export function Values({ values }: { values: IValue[] }) {
       </div>
       <div className={classNames("relative overflow-x-visible px-4")}>
         <ValuesBackgroundGraphics />
-        <div className="max-w-4xl m-auto grid grid-cols-2 gap-4 sm:gap-16 md:gap-x-48 text-center relative">
+        <div className="relative m-auto grid max-w-4xl grid-cols-2 gap-4 text-center sm:gap-16 md:gap-x-48">
           {values.map(({ title, details, icon }, i) => {
             return (
               <>
                 {i !== 0 && (
-                  <div className="col-span-2 h-32 flex justify-center sm:hidden">
+                  <div className="col-span-2 flex h-32 justify-center sm:hidden">
                     <svg
                       className={classNames(
-                        "w-72 m-auto h-full",
-                        i % 2 === 0 && "transform rotate-180"
+                        "m-auto h-full w-72",
+                        i % 2 === 0 && "rotate-180 transform"
                       )}
                       viewBox="0 0 100 6"
                       fill="none"

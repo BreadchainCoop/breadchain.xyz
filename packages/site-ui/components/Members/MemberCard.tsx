@@ -13,9 +13,9 @@ export type TMemberCardProps = z.infer<typeof ZMemberCardProps>;
 
 export function MemberCard({ name, info, link, logo }: TMemberCardProps) {
   return (
-    <article className="max-w-sm m-auto col-span-3 md:col-span-1 h-full flex flex-col">
+    <article className="col-span-3 m-auto flex h-full max-w-sm flex-col md:col-span-1">
       <img className="w-full" src={logo} alt="" />
-      <div className="p-8 pb-12 flex flex-col gap-2 grow">
+      <div className="flex grow flex-col gap-2 p-8 pb-12">
         <h3 className="font-redhat text-2xl font-medium">{name}</h3>
         <p>{info}</p>
       </div>

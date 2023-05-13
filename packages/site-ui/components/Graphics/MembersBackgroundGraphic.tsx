@@ -2,9 +2,9 @@ import React from "react";
 
 export function MembersBackgroundGraphic() {
   return (
-    <div className="absolute bottom-0 left-0 right-0 flex justify-center -z-20">
+    <div className="absolute bottom-0 left-0 right-0 -z-20 flex justify-center">
       <svg
-        className="w-[32rem] sm:w-[44rem] h-auto"
+        className="h-auto w-[32rem] sm:w-[44rem]"
         viewBox="0 0 736 735"
         xmlns="http://www.w3.org/2000/svg"
       >

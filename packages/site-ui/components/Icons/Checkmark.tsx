@@ -3,7 +3,7 @@ import React from "react";
 export function CheckmarkIcon() {
   return (
     <svg
-      className="w-full h-full fill-current"
+      className="h-full w-full fill-current"
       viewBox="0 0 63 47"
       xmlns="http://www.w3.org/2000/svg"
     >

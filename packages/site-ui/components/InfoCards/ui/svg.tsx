@@ -4,7 +4,7 @@ export function CardSVG1() {
   return (
     <svg
       viewBox="0 0 400 532"
-      className="absolute top-0 left-0 max-w-full h-[600px]"
+      className="absolute top-0 left-0 h-[600px] max-w-full"
       preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -46,7 +46,7 @@ export function CardSVG2() {
   return (
     <svg
       viewBox="0 0 400 624"
-      className="absolute top-0 left-0 max-w-full  h-[600px]"
+      className="absolute top-0 left-0 h-[600px]  max-w-full"
       preserveAspectRatio="none"
       xmlns="http://www.w3.org/2000/svg"
     >

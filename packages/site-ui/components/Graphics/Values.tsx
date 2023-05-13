@@ -14,14 +14,14 @@ export function ValuesBackgroundGraphics() {
 
 export function ValuesLarge({ isRightSide }: { isRightSide: boolean }) {
   return (
-    <div className="w-auto h-full hidden sm:block -z-20">
+    <div className="-z-20 hidden h-full w-auto sm:block">
       <svg
         viewBox="0 0 735 735"
         className={classNames(
-          "w-full h-full",
+          "h-full w-full",
           isRightSide
-            ? "transform rotate-180 translate-x-28"
-            : "transform -translate-x-28"
+            ? "translate-x-28 rotate-180 transform"
+            : "-translate-x-28 transform"
         )}
         xmlns="http://www.w3.org/2000/svg"
       >

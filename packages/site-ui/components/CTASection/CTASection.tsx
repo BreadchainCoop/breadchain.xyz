@@ -14,7 +14,7 @@ export function CTASectionLink({
   return (
     <a
       href={href}
-      className="bg-primary-500 font-bold text-breadpink-300 rounded-full px-6 py-3"
+      className="bg-primary-500 text-breadpink-300 rounded-full px-6 py-3 font-bold"
     >
       {children}
     </a>
@@ -23,15 +23,15 @@ export function CTASectionLink({
 
 export function CTASection() {
   return (
-    <section className="pt-16 pb-32 px-4 sm:px-6 md:px-8">
+    <section className="px-4 pt-16 pb-32 sm:px-6 md:px-8">
       <div
         className={classNames(
-          "max-w-4xl m-auto",
+          "m-auto max-w-4xl",
 
-          "bg-white dark:bg-breadgray-darkest dark:bg-gradient-to-r dark:from-breadgray-cta-bg px-6 py-12 sm:px-12 flex flex-col gap-2"
+          "dark:bg-breadgray-darkest dark:from-breadgray-cta-bg flex flex-col gap-2 bg-white px-6 py-12 dark:bg-gradient-to-r sm:px-12"
         )}
       >
-        <h2 className="font-poppins text-4xl md:text-5xl leading-relaxed tracking-wider">
+        <h2 className="font-poppins text-4xl leading-relaxed tracking-wider md:text-5xl">
           Bake <span className="font-bold">$BREAD</span> with us.
         </h2>
         <p>
@@ -39,7 +39,7 @@ export function CTASection() {
           baking (minting) bread. If you’re a like-minded project creating a
           more progressive future, join us.
         </p>
-        <div className="flex flex-wrap gap-6 pt-8 items-center">
+        <div className="flex flex-wrap items-center gap-6 pt-8">
           <ButtonLink href="https://app.breadchain.xyz" isExternal>
             Get Bread
           </ButtonLink>

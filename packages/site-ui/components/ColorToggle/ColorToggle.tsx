@@ -33,7 +33,7 @@ export function ColorToggle() {
         <button className="flex items-center gap-2" onClick={handleColorToggle}>
           <div
             className={classNames(
-              "w-6 h-6",
+              "h-6 w-6",
               colorMode === "LIGHT"
                 ? "text-breadgray-grey"
                 : "text-breadpink-shaded"
@@ -41,12 +41,12 @@ export function ColorToggle() {
           >
             <MoonIcon />
           </div>
-          <div className="w-[1px] text-breadgray-light-grey opacity-60">
+          <div className="text-breadgray-light-grey w-[1px] opacity-60">
             <Divider />
           </div>
           <div
             className={classNames(
-              "w-6 h-6",
+              "h-6 w-6",
               colorMode === "LIGHT"
                 ? "text-breadpink-shaded"
                 : "text-breadgray-grey"
@@ -64,7 +64,7 @@ function MoonIcon() {
   return (
     <svg
       viewBox="0 0 24 24"
-      className="w-full h-full fill-current"
+      className="h-full w-full fill-current"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -80,7 +80,7 @@ function SunIcon() {
   return (
     <svg
       viewBox="0 0 24 24"
-      className="w-full h-full fill-current"
+      className="h-full w-full fill-current"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clipPath="url(#sun_icon)">

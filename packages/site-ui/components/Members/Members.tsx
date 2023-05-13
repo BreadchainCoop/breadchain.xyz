@@ -17,7 +17,7 @@ export function Members({ members }: { members: TMemberCardProps[] }) {
         "relative pb-64 sm:pb-[22rem]"
       )}
     >
-      <div className="flex flex-col gap-4 justify-self-start max-w-sm m-auto md:max-w-full">
+      <div className="m-auto flex max-w-sm flex-col gap-4 justify-self-start md:max-w-full">
         <SectionTitle>
           <span>Co-operative</span>
           <span className="font-normal">by design</span>
@@ -27,7 +27,7 @@ export function Members({ members }: { members: TMemberCardProps[] }) {
           Learn more about the project you would support.{" "}
         </SectionSubtitle>
       </div>
-      <div className="grid grid-cols-3 pt-16 gap-24 md:gap-12 place-items-start">
+      <div className="grid grid-cols-3 place-items-start gap-24 pt-16 md:gap-12">
         {members.map(({ name, info, logo, link }, i) => {
           return (
             <MemberCard
