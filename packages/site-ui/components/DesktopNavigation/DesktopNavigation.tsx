@@ -23,7 +23,7 @@ export function DesktopNavigation() {
       <DesktopNavigationLink href="#about">About</DesktopNavigationLink>
       <DesktopNavigationLink href="#projects">Projects</DesktopNavigationLink>
       <DesktopNavigationLink
-        href="https://mirror.xyz"
+        href="https://breadchain.mirror.xyz/"
         target="_blank"
         rel="noopener noreferer"
       >
