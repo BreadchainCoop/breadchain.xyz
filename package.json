@@ -7,7 +7,7 @@
     "site": "pnpm --filter @breadchain.xyz/site",
     "app": "pnpm --filter @breadchain.xyz/app",
     "site-ui": "pnpm --filter @breadchain.xyz/site-ui",
-    "site:build": "pnpm site install && pnpm site run build",
+    "site:build": "pnpm install && pnpm site run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

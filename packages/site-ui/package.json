@@ -16,11 +16,11 @@
     "@astrojs/tailwind": "^3.0.1",
     "@breadchain.xyz/utils": "workspace:*",
     "@types/react": "18.0.27",
-    "astro": "^2.0.10",
+    "astro": "^2.5.0",
     "next": "13.1.6",
     "prettier-plugin-tailwindcss": "^0.2.8",
     "react": "18.2.0",
-    "react-dom": "^18.0.0",
+    "react-dom": "^18.2.0",
     "typescript": "4.9.5"
   },
   "dependencies": {
