@@ -1,6 +1,6 @@
 import React from "react";
 import { CheckmarkIcon, CoinIcon, UsersIcon } from "../Icons";
-import { InfoCardsTitle, SectionTitle } from "../SectionTitle/SectionTitle";
+import { InfoCardsTitle } from "../SectionTitle/SectionTitle";
 import { SectionSubtitle } from "../SectionSubtitle/SectionSubtitle";
 import {
   InfoCardGrid,
@@ -10,10 +10,9 @@ import {
   InfoCardText,
   InfoCardTextContent,
 } from "./ui";
-import { CardSVG1, CardSVG2, CardSVG3, CardSVGs } from "./ui/svg";
+import { CardSVG1, CardSVG2, CardSVG3 } from "./ui/svg";
 import { classNames } from "@breadchain.xyz/utils";
 import { pageWrapPadding } from "../classStrings";
-import { CenterCol, LeftCol, RightCol } from "../Graphics/InfoCardBackground";
 
 const infoCards = [
   {
