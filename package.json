@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "site": "pnpm --filter @breadchain.xyz/site",
+    "app": "pnpm --filter @breadchain.xyz/app",
     "site-ui": "pnpm --filter @breadchain.xyz/site-ui",
     "site:build": "pnpm install && pnpm site run build",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.8"
   }
 }
