@@ -9,7 +9,7 @@ function DesktopNavigationLink(props: {
   const { children, ...remainingProps } = props;
   return (
     <a
-      className="font-redhat text-breadgray-300 hover:text-breadgray-200 active:text-breadgray-200 font-bold text-xl tracking-wider px-4"
+      className="font-redhat dark:text-breadgray-white dark:hover:text-breadgray-ultra-white text-breadgray-burnt hover:text-breadgray-charcoal active:text-breadgray-violet flex items-center px-2 text-xl font-bold leading-none tracking-wider min-[810px]:px-4"
       {...remainingProps}
     >
       {children}
@@ -19,11 +19,11 @@ function DesktopNavigationLink(props: {
 
 export function DesktopNavigation() {
   return (
-    <nav className="gap-6 hidden md:flex">
+    <nav className="hidden gap-2 md:flex lg:gap-6">
       <DesktopNavigationLink href="#about">About</DesktopNavigationLink>
       <DesktopNavigationLink href="#projects">Projects</DesktopNavigationLink>
       <DesktopNavigationLink
-        href="https://mirror.xyz"
+        href="https://breadchain.mirror.xyz/"
         target="_blank"
         rel="noopener noreferer"
       >

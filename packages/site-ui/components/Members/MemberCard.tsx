@@ -1,23 +1,21 @@
 import React from "react";
-import { Image } from "@astrojs/image/components";
 import { TertiaryButtonLink } from "../TertiaryButtonLink";
+import { z } from "zod";
 
-export function MemberCard({
-  name,
-  info,
-  link,
-  logoSrc,
-}: {
-  name: string;
-  info: string;
-  link: string;
-  logoSrc: string;
-}) {
+export const ZMemberCardProps = z.object({
+  name: z.string(),
+  info: z.string(),
+  link: z.string(),
+  logo: z.string(),
+});
+
+export type TMemberCardProps = z.infer<typeof ZMemberCardProps>;
+
+export function MemberCard({ name, info, link, logo }: TMemberCardProps) {
   return (
-    <article className="max-w-sm m-auto col-span-3 md:col-span-1 h-full flex flex-col text-breadgray-100">
-      <img className="w-full" src={logoSrc} alt="" />
-      {/* <Image src={src} alt="alt text" sizes="" widths={[100, 200]} /> */}
-      <div className="p-8 pb-12 flex flex-col gap-2 grow">
+    <article className="col-span-3 m-auto flex h-full max-w-sm flex-col md:col-span-1">
+      <img className="w-full" src={logo} alt="" />
+      <div className="flex grow flex-col gap-2 p-8 pb-12">
         <h3 className="font-redhat text-2xl font-medium">{name}</h3>
         <p>{info}</p>
       </div>

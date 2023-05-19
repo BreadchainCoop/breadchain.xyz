@@ -1,6 +1,17 @@
 module.exports = {
   colors: {
     breadgray: {
+      "ultra-white": "#F8F8F8",
+      white: "#E5E5E5",
+      "light-grey": "#D4D4D4",
+      grey: "#A3A3A3",
+      rye: "#525252",
+      toast: "#464646",
+      burnt: "#343434",
+      "og-dark": "#2E2E2E",
+      charcoal: "#242424",
+      darkest: "#272727",
+
       100: "#F8F8F8",
       200: "#E5E5E5",
       300: "#D4D4D4",
@@ -14,13 +25,19 @@ module.exports = {
       "cta-bg": "#2c2c2c",
     },
     breadpink: {
+      pink: "#FF99E2",
+      shaded: "#E873D3",
+
       100: "#C463CA",
       200: "#FF99E2",
       300: "#E873D3",
       400: "#A416AD",
       500: "#D04EC5",
     },
-    shadedviolet: "#D04EC5",
+    breadviolet: {
+      shaded: "#D04EC5",
+      violet: "#A416AD",
+    },
     "button-border": "#2E2E2E",
   },
   fontFamily: {
