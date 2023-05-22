@@ -29,9 +29,7 @@ export function Header() {
           "flex items-center gap-6 py-6 md:py-8 lg:gap-10"
         )}
       >
-        <div className="w-24 md:w-28">
-          <Logo />
-        </div>
+        <Logo />
 
         <div className="flex grow gap-4 lg:gap-6">
           <DesktopNavigation />

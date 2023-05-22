@@ -49,6 +49,9 @@ module.exports = {
     'hero-image': '432px',
 
   },
+  "borderRadius": {
+    "cta": "0.3125rem"
+  },
   typography: ({ theme }) => ({
     pink: {
       css: {
