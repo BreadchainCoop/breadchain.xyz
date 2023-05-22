@@ -47,6 +47,9 @@ module.exports = {
   },
   screens: {
     'hero-image': '432px',
+    'footer-sm': '580px',
+    'footer-md': '600px',
+    'footer-lg': '1075px',
 
   },
   "borderRadius": {
