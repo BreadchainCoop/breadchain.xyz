@@ -75,7 +75,7 @@ export function HeroTagline({ children }: { children: ReactNode }) {
   return (
     <div>
 
-      <span className="inline-block font-regular font-redhat bg-gradient-to-r from-breadpink-400 from-20% to-breadpink-500 to-100% uppercase md:text-xl text-transparent bg-clip-text">
+      <span className="inline-block font-regular font-redhat bg-gradient-to-r from-breadpink-400 dark:from-[#ED7BC7] from-20% to-breadpink-500 dark:to-[#F2A8D9] to-100% uppercase md:text-xl text-transparent bg-clip-text">
         {children}
       </span>
     </div>
