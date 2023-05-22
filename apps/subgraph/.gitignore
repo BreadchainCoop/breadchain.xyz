@@ -1,0 +1,10 @@
+generated/
+build/
+node_modules/
+
+.env
+
+cache/
+data/
+
+notes.txt

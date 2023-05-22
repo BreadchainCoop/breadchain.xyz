@@ -1,0 +1,42 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Contract
+    network: matic
+    source:
+      address: "0x11d9efDf4Ab4A3bfabf5C7089F56AA4F059AA14C"
+      abi: Contract
+      startBlock: 269820254
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Approval
+        - Burned
+        - ClaimedRewards
+        - ClaimedYield
+        - Minted
+        - OwnershipTransferred
+        - Transfer
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Burned(address,uint256)
+          handler: handleBurned
+        - event: ClaimedRewards(address[],uint256[])
+          handler: handleClaimedRewards
+        - event: ClaimedYield(uint256)
+          handler: handleClaimedYield
+        - event: Minted(address,uint256)
+          handler: handleMinted
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: ./src/contract.ts
