@@ -17,6 +17,7 @@
     "@breadchain.xyz/utils": "workspace:*",
     "@types/react": "18.0.27",
     "astro": "^2.5.0",
+    "classnames": "^2.3.2",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "^18.2.0",

@@ -9,11 +9,16 @@ const GET_ECONOMY = gql`
       burned
       transfers
     }
-    transfers(where: { from: "0x8a35D1EB766f4f0Cb3Bb34760B7628f3e04c1c0d" }) {
-      blockTimestamp
-      from
-      to
-      value
+    account(id: "0x8a35D1EB766f4f0Cb3Bb34760B7628f3e04c1c0d") {
+      balances {
+        token {
+          id
+        }
+        amount
+      }
+    }
+    accounts {
+      id
     }
   }
 `;
@@ -23,7 +28,8 @@ export default function EconomyDisplay() {
 
   const reducedData = useMemo(() => {
     if (data) {
-      console.log(data.transfers.length);
+      // console.log(data.transfers.length);
+      console.log(data.accounts.length);
       // console.log(data.approvals.length);
       return data;
     }

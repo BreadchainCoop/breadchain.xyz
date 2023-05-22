@@ -45,6 +45,10 @@ module.exports = {
     redhat: ['"Red Hat Text"', "sans-serif"],
     poppins: ["Poppins", "sans-serif"],
   },
+  screens: {
+    'hero-image': '432px',
+
+  },
   typography: ({ theme }) => ({
     pink: {
       css: {

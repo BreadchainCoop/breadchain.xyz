@@ -1,7 +1,7 @@
+import classNames from "classnames";
 import React from "react";
 
 import { MouseEvent } from "react";
-import { classNames } from "@breadchain.xyz/utils";
 
 function Overlay({
   isOpen,
@@ -30,4 +30,5 @@ function Overlay({
 Overlay.defaultProps = {
   children: null,
 };
+
 export default Overlay;

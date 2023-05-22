@@ -2,7 +2,7 @@ import React from "react";
 import type { ReactNode } from "react";
 import { z } from "zod";
 
-import { classNames } from "@breadchain.xyz/utils";
+import classNames from "classnames";
 import { pageWrap, pageWrapPadding } from "../classStrings";
 import { ButtonLink } from "../ButtonLink";
 import { TertiaryLink } from "../TertiaryLink";

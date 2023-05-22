@@ -9,8 +9,8 @@ export function LeftCol() {
     >
       <mask id="b" fill="#fff">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M47 38.206V2a2 2 0 0 1 2-2h399a2 2 0 0 1 2 2v37.222a2 2 0 0 1-2 2H50V369a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V40.206a2 2 0 0 1 2-2h45Z"
         />
       </mask>
@@ -28,8 +28,8 @@ export function LeftCol() {
           y2="423.27"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CC43A5" />
-          <stop offset="1" stop-color="#FF99E2" stop-opacity="0" />
+          <stop stopColor="#CC43A5" />
+          <stop offset="1" stopColor="#FF99E2" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>
@@ -62,8 +62,8 @@ export function CenterCol() {
           y2="51.706"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF99E2" stop-opacity="0" />
-          <stop offset="1" stop-color="#CC43A5" />
+          <stop stopColor="#FF99E2" stopOpacity="0" />
+          <stop offset="1" stopColor="#CC43A5" />
         </linearGradient>
       </defs>
     </svg>
@@ -75,8 +75,8 @@ export function RightCol() {
     <svg viewBox="0 0 500 429" xmlns="http://www.w3.org/2000/svg">
       <mask id="b" fill="#fff">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M0 2a2 2 0 0 1 2-2h46a2 2 0 0 1 2 2v379.443h400V2a2 2 0 0 1 2-2h46a2 2 0 0 1 2 2v381.406a2 2 0 0 1-2 2h-44V427a2 2 0 0 1-2 2H49a2 2 0 0 1-2-2v-41.594H2a2 2 0 0 1-2-2V2Z"
         />
       </mask>
@@ -94,8 +94,8 @@ export function RightCol() {
           y2="487.153"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CC43A5" />
-          <stop offset="1" stop-color="#FF99E2" stop-opacity="0" />
+          <stop stopColor="#CC43A5" />
+          <stop offset="1" stopColor="#FF99E2" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

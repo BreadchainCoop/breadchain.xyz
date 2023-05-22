@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-import { classNames } from "@breadchain.xyz/utils";
+import classNames from "classnames";
 import { pageWrap, pageWrapPadding } from "../classStrings";
 import { Logo } from "../Logo/Logo";
 
@@ -50,7 +50,7 @@ function FooterGrid({ children }: { children: ReactNode }) {
   );
 }
 
-export function Link({
+export function FooterLink({
   children,
   href,
   isExternal,
@@ -107,13 +107,13 @@ export function Footer() {
             </div>
             <FooterSectionList>
               <div className="text-center min-[600px]:text-left">
-                <Link href="#about">About</Link>
+                <FooterLink href="#about">About</FooterLink>
               </div>
               <div className="text-center min-[600px]:text-left">
-                <Link href="#projects">Projects</Link>
+                <FooterLink href="#projects">Projects</FooterLink>
               </div>
               <div className="text-center min-[600px]:text-left">
-                <Link href="#values">Values</Link>
+                <FooterLink href="#values">Values</FooterLink>
               </div>
             </FooterSectionList>
           </FooterSection>
@@ -124,33 +124,33 @@ export function Footer() {
             </div>
             <FooterSectionList>
               <div className="text-center min-[600px]:text-left">
-                <Link isExternal href="https://breadchain.mailchimpsites.com/">
+                <FooterLink isExternal href="https://breadchain.mailchimpsites.com/">
                   Newsletter
-                </Link>
+                </FooterLink>
               </div>
 
               <div className="text-center min-[600px]:text-left">
-                <Link isExternal href="https://twitter.com/breadchain_">
+                <FooterLink isExternal href="https://twitter.com/breadchain_">
                   Twitter
-                </Link>
+                </FooterLink>
               </div>
               <div className="text-center min-[600px]:text-left">
-                <Link isExternal href="https://cryptoleftists.xyz">
+                <FooterLink isExternal href="https://cryptoleftists.xyz">
                   Discord
-                </Link>
+                </FooterLink>
               </div>
               <div className="text-center min-[600px]:text-left">
-                <Link isExternal href="https://breadchain.mirror.xyz/">
+                <FooterLink isExternal href="https://breadchain.mirror.xyz/">
                   Mirror
-                </Link>
+                </FooterLink>
               </div>
               <div className="text-center min-[600px]:text-left">
-                <Link
+                <FooterLink
                   isExternal
                   href="https://opencollective.com/breadchain-cooperative"
                 >
                   Open Collective
-                </Link>
+                </FooterLink>
               </div>
             </FooterSectionList>
           </SocialsSection>

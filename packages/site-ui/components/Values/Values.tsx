@@ -1,12 +1,10 @@
 import React from "react";
+import classNames from "classnames";
 
-import { classNames } from "@breadchain.xyz/utils";
-import { pageWrap, pageWrapPadding } from "../classStrings";
-import { SectionTitle, ValuesTitle } from "../SectionTitle";
+import { ValuesTitle } from "../SectionTitle";
 import { SectionSubtitle } from "../SectionSubtitle";
 import { ValueCard, ValueIcons } from "./ValueCard";
-import { ValuesCenter } from "../Graphics";
-import { ValuesBackgroundGraphics, ValuesLarge } from "../Graphics/Values";
+import { ValuesBackgroundGraphics } from "../Graphics/Values";
 
 interface IValue {
   title: string;
@@ -58,8 +56,8 @@ export function Values({ values }: { values: IValue[] }) {
                         rx="0.6"
                         transform="rotate(-90 0.4 5.15176)"
                         stroke="url(#paint0_linear_1367_1420)"
-                        stroke-opacity="0.5"
-                        stroke-width="0.8"
+                        strokeOpacity="0.5"
+                        strokeWidth="0.8"
                       />
                       <defs>
                         <linearGradient
@@ -70,8 +68,8 @@ export function Values({ values }: { values: IValue[] }) {
                           y2="105.552"
                           gradientUnits="userSpaceOnUse"
                         >
-                          <stop stop-color="#ED7BC7" stop-opacity="0" />
-                          <stop offset="1" stop-color="#ED7BC7" />
+                          <stop stopColor="#ED7BC7" stopOpacity="0" />
+                          <stop offset="1" stopColor="#ED7BC7" />
                         </linearGradient>
                       </defs>
                     </svg>

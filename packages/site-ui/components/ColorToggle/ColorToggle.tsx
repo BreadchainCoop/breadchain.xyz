@@ -1,4 +1,4 @@
-import { classNames } from "@breadchain.xyz/utils";
+import classNames from "classnames";
 import React, { useEffect, useState } from "react";
 
 type TColorMode = "LIGHT" | "DARK";
