@@ -53,7 +53,7 @@ export function Hero({ subheading, heading }: THeroProps) {
 
 export function HeroHeading({ children }: { children: ReactNode }) {
   return (
-    <h1 className="font-poppins max-w-[42rem] text-4xl font-bold leading-normal tracking-wide dark:drop-shadow-lg sm:text-5xl  md:max-w-[32rem] md:text-6xl md:leading-relaxed dark:text-breadgray-ultra-white">
+    <h1 className="font-poppins max-w-[42rem] text-4xl font-bold leading-normal sm:leading-normal tracking-wide dark:drop-shadow-lg sm:text-5xl  md:max-w-[32rem] md:text-6xl  dark:text-breadgray-ultra-white">
       {children}
     </h1>
   );
