@@ -73,8 +73,11 @@ export function HeroCTA({ children }: { children: ReactNode }) {
 
 export function HeroTagline({ children }: { children: ReactNode }) {
   return (
-    <span className="font-regular font-redhat text-breadpink-100 uppercase md:text-xl">
-      {children}
-    </span>
+    <div>
+
+      <span className="inline-block font-regular font-redhat bg-gradient-to-r from-breadpink-400 from-20% to-breadpink-500 to-100% uppercase md:text-xl text-transparent bg-clip-text">
+        {children}
+      </span>
+    </div>
   );
 }
