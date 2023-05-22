@@ -11,7 +11,6 @@ module.exports = {
       "og-dark": "#2E2E2E",
       charcoal: "#242424",
       darkest: "#272727",
-
       100: "#F8F8F8",
       200: "#E5E5E5",
       300: "#D4D4D4",
@@ -27,7 +26,6 @@ module.exports = {
     breadpink: {
       pink: "#FF99E2",
       shaded: "#E873D3",
-
       100: "#C463CA",
       200: "#FF99E2",
       300: "#E873D3",
