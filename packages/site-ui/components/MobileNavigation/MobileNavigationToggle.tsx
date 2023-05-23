@@ -9,9 +9,9 @@ function MobileNavigationToggle({ handleClick }: { handleClick: () => void }) {
     >
 
       <svg width="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6.0625 14.5H23.9375" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M6.0625 7.25H23.9375" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M6.0625 21.75H23.9375" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M6.0625 14.5H23.9375" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M6.0625 7.25H23.9375" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M6.0625 21.75H23.9375" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
 
     </button>
