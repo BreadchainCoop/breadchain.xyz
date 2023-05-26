@@ -1,6 +1,6 @@
-import EconomyDisplay from "@/components/EconomyDisplay";
-import Layout from "@/components/layout";
-import UserDisplay from "../components/UserDisplay";
+import EconomyDisplay from "@/modules/dashboard/components/EconomyDisplay";
+import UserDisplay from "@/modules/dashboard/components/UserDisplay";
+import Layout from "@/modules/core/components/Layout";
 
 export default function Home() {
   return (

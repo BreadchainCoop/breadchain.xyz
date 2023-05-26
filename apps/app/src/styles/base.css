@@ -5,8 +5,9 @@
     overflow-x: hidden;
   }
   body {
-    @apply bg-breadgray-ultra-white dark:bg-breadgray-darkest;
-    @apply text-breadgray-charcoal dark:text-breadgray-white;
+    @apply bg-breadgray-darkest;
+    /* @apply bg-breadgray-ultra-white dark:bg-breadgray-darkest; */
+    @apply text-breadgray-grey dark:text-breadgray-white;
     @apply font-redhat;
   }
 }
