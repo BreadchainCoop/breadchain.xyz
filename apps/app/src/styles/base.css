@@ -1,0 +1,12 @@
+@tailwind base;
+
+@layer base {
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    @apply bg-breadgray-darkest;
+    @apply text-breadgray-grey dark:text-breadgray-white;
+    @apply font-redhat;
+  }
+}
