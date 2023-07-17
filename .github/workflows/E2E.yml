@@ -2,6 +2,9 @@ name: build breadchain.xyz
 on:
   pull_request:
     branches: [development]
+  push:
+    branches: [development]
+
 jobs:
   test:
     timeout-minutes: 60

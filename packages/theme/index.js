@@ -11,7 +11,6 @@ module.exports = {
       "og-dark": "#2E2E2E",
       charcoal: "#242424",
       darkest: "#272727",
-
       100: "#F8F8F8",
       200: "#E5E5E5",
       300: "#D4D4D4",
@@ -27,7 +26,6 @@ module.exports = {
     breadpink: {
       pink: "#FF99E2",
       shaded: "#E873D3",
-
       100: "#C463CA",
       200: "#FF99E2",
       300: "#E873D3",
@@ -44,6 +42,16 @@ module.exports = {
     pressstart: ['"Press Start 2P"', "sans-serif"],
     redhat: ['"Red Hat Text"', "sans-serif"],
     poppins: ["Poppins", "sans-serif"],
+  },
+  screens: {
+    'hero-image': '432px',
+    'footer-sm': '580px',
+    'footer-md': '600px',
+    'footer-lg': '1075px',
+
+  },
+  "borderRadius": {
+    "cta": "0.3125rem"
   },
   typography: ({ theme }) => ({
     pink: {

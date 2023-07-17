@@ -31,8 +31,8 @@ export function CardSVG1() {
           y2="416.039"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CC43A5" />
-          <stop offset="1" stop-color="#FF99E2" stop-opacity="0" />
+          <stop stopColor="#CC43A5" />
+          <stop offset="1" stopColor="#FF99E2" stop-opacity="0" />
         </linearGradient>
         <clipPath id="clip0_1335_1386">
           <rect width="400" height="532" fill="white" />
@@ -69,8 +69,8 @@ export function CardSVG2() {
           y2="37.2983"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF99E2" stop-opacity="0" />
-          <stop offset="1" stop-color="#CC43A5" />
+          <stop stopColor="#FF99E2" stop-opacity="0" />
+          <stop offset="1" stopColor="#CC43A5" />
         </linearGradient>
         <clipPath id="clip0_1335_1387">
           <rect width="400" height="624" fill="white" />
@@ -111,8 +111,8 @@ export function CardSVG3() {
           y2="486.42"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#CC43A5" />
-          <stop offset="1" stop-color="#FF99E2" stop-opacity="0" />
+          <stop stopColor="#CC43A5" />
+          <stop offset="1" stopColor="#FF99E2" stop-opacity="0" />
         </linearGradient>
         <clipPath id="clip0_1335_1388">
           <rect width="400" height="443" fill="white" />

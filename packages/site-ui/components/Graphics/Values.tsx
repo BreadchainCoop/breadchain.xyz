@@ -1,4 +1,4 @@
-import { classNames } from "@breadchain.xyz/utils";
+import classNames from "classnames";
 import React from "react";
 import { ValuesCenter } from ".";
 
@@ -26,7 +26,7 @@ export function ValuesLarge({ isRightSide }: { isRightSide: boolean }) {
         xmlns="http://www.w3.org/2000/svg"
       >
         <g opacity=".5">
-          <mask id="values_large_b" fill="#fff">
+          <mask id="values_large_b">
             <path
               fillRule="evenodd"
               clipRule="evenodd"

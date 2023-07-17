@@ -11,7 +11,7 @@ import {
   InfoCardTextContent,
 } from "./ui";
 import { CardSVG1, CardSVG2, CardSVG3 } from "./ui/svg";
-import { classNames } from "@breadchain.xyz/utils";
+import classNames from "classnames";
 import { pageWrapPadding } from "../classStrings";
 
 const infoCards = [
@@ -80,8 +80,8 @@ export function InfoCards() {
                 y2="82.2176"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#CC43A5" />
-                <stop offset="1" stop-color="#FF99E2" stop-opacity="0" />
+                <stop stopColor="#CC43A5" />
+                <stop offset="1" stopColor="#FF99E2" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>
@@ -129,8 +129,8 @@ export function InfoCards() {
                 y2="51.7064"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#FF99E2" stop-opacity="0" />
-                <stop offset="1" stop-color="#CC43A5" />
+                <stop stopColor="#FF99E2" stopOpacity="0" />
+                <stop offset="1" stopColor="#CC43A5" />
               </linearGradient>
             </defs>
           </svg>
@@ -160,8 +160,8 @@ export function InfoCards() {
                 y2="151.445"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#CC43A5" />
-                <stop offset="1" stop-color="#FF99E2" stop-opacity="0" />
+                <stop stopColor="#CC43A5" />
+                <stop offset="1" stopColor="#FF99E2" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>
@@ -180,7 +180,7 @@ export function InfoCards() {
             <path
               d="M1 45.9999L1 2.44336H-1L-1 45.9999H1ZM2 1.44336L405 1.44336V-0.556641L2 -0.556641V1.44336ZM406 2.44336V45.9999H408V2.44336H406ZM405 46.9999L1.99999 46.9999V48.9999L405 48.9999V46.9999ZM406 45.9999C406 46.5522 405.552 46.9999 405 46.9999V48.9999C406.657 48.9999 408 47.6568 408 45.9999H406ZM405 1.44336C405.552 1.44336 406 1.89107 406 2.44336H408C408 0.78651 406.657 -0.556641 405 -0.556641V1.44336ZM1 2.44336C1 1.89107 1.44771 1.44336 2 1.44336V-0.556641C0.343147 -0.556641 -1 0.786502 -1 2.44336H1ZM-1 45.9999C-1 47.6568 0.343133 48.9999 1.99999 48.9999V46.9999C1.44771 46.9999 1 46.5522 1 45.9999H-1Z"
               fill="#CC43A5"
-              fill-opacity="0.1"
+              fillOpacity="0.1"
               mask="url(#path-1-inside-1_1664_1434)"
             />
           </svg>
@@ -210,8 +210,8 @@ export function InfoCards() {
                 y2="161.027"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#CC43A5" />
-                <stop offset="1" stop-color="#FF99E2" stop-opacity="0" />
+                <stop stopColor="#CC43A5" />
+                <stop offset="1" stopColor="#FF99E2" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>
@@ -228,8 +228,8 @@ export function InfoCards() {
               >
                 <mask id="path-1-inside-1_1667_1429" fill="white">
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M14 13C14 14.1046 14.8954 15 16 15L227 15C228.105 15 229 14.1046 229 13V2C229 0.895431 228.105 0 227 0L16 0C14.8954 0 14 0.89543 14 2V13ZM2 15C0.895431 15 0 15.8954 0 17L0 206C0 207.105 0.89543 208 2 208H13C14.1046 208 15 207.105 15 206L15 17C15 15.8954 14.1046 15 13 15H2Z"
                   />
                 </mask>
@@ -247,8 +247,8 @@ export function InfoCards() {
                     y2="242.528"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#CC43A5" />
-                    <stop offset="1" stop-color="#FF99E2" stop-opacity="0" />
+                    <stop stopColor="#CC43A5" />
+                    <stop offset="1" stopColor="#FF99E2" stopOpacity="0" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -284,8 +284,8 @@ export function InfoCards() {
               >
                 <mask id="path-1-inside-1_1667_1493" fill="white">
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M214.486 193.392C214.486 192.288 213.591 191.392 212.486 191.392L1.99908 191.392C0.894507 191.392 -0.000924349 192.288 -0.000924349 193.392V204.392C-0.000924349 205.497 0.894507 206.392 1.99908 206.392L212.486 206.392C213.591 206.392 214.486 205.497 214.486 204.392V193.392ZM227 193.079C228.105 193.079 229 192.183 229 191.079V2.00009C229 0.89552 228.105 8.81214e-05 227 8.81214e-05H216C214.895 8.81214e-05 214 0.89552 214 2.00009V191.079C214 192.183 214.895 193.079 216 193.079H227Z"
                   />
                 </mask>
@@ -303,8 +303,8 @@ export function InfoCards() {
                     y2="-27.5283"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop stop-color="#CC43A5" />
-                    <stop offset="1" stop-color="#FF99E2" stop-opacity="0" />
+                    <stop stopColor="#CC43A5" />
+                    <stop offset="1" stopColor="#FF99E2" stopOpacity="0" />
                   </linearGradient>
                 </defs>
               </svg>

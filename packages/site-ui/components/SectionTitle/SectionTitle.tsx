@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-import { classNames } from "@breadchain.xyz/utils";
+import classNames from "classnames";
 
 export function SectionTitle({ children }: { children: ReactNode }) {
   return (

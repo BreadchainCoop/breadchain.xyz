@@ -1,6 +1,6 @@
 import React from "react";
 
-import { classNames } from "@breadchain.xyz/utils";
+import classNames from "classnames";
 import { pageWrap, pageWrapPadding } from "../classStrings";
 import { SectionTitle } from "../SectionTitle";
 import { SectionSubtitle } from "../SectionSubtitle";

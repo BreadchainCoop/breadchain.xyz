@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-import { classNames } from "@breadchain.xyz/utils";
+import classNames from "classnames";
 import { pageWrap, pageWrapPadding } from "../classStrings";
 import { Logo } from "../Logo/Logo";
 
@@ -22,7 +22,7 @@ function SocialsSection({ children }: { children: ReactNode }) {
 
 function FooterLogoSection({ children }: { children: ReactNode }) {
   return (
-    <div className="order-last flex flex-col items-center gap-4 pt-6 min-[580px]:pt-0 min-[1075px]:order-first">
+    <div className="order-last flex flex-col items-center gap-2 pt-6 footer-sm:pt-0 footer-lg:order-first">
       {children}
     </div>
   );
@@ -30,13 +30,13 @@ function FooterLogoSection({ children }: { children: ReactNode }) {
 
 function FooterSectionTitle({ children }: { children: ReactNode }) {
   return (
-    <h3 className="dark:text-breadgray-ultra-white font-medium">{children}</h3>
+    <h3 className="dark:text-breadgray-ultra-white font-medium footer-md:text-left">{children}</h3>
   );
 }
 
 function FooterSectionList({ children }: { children: ReactNode }) {
   return (
-    <ul className="flex flex-col gap-4 min-[1075px]:flex-row min-[1075px]:gap-8">
+    <ul className="flex flex-col gap-4 footer-lg:flex-row footer-lg:gap-8">
       {children}
     </ul>
   );
@@ -44,13 +44,13 @@ function FooterSectionList({ children }: { children: ReactNode }) {
 
 function FooterGrid({ children }: { children: ReactNode }) {
   return (
-    <div className="flex flex-col gap-12 px-4 min-[580px]:flex-wrap min-[580px]:justify-around min-[600px]:flex-row min-[1075px]:items-center">
+    <div className="flex flex-col gap-12 px-4 footer-sm:flex-wrap footer-sm:justify-around footer-md:flex-row-reverse footer-lg:items-center">
       {children}
     </div>
   );
 }
 
-export function Link({
+export function FooterLink({
   children,
   href,
   isExternal,
@@ -86,71 +86,72 @@ export function Footer() {
       <div className={classNames(pageWrap, pageWrapPadding, "pt-12 pb-16")}>
         <FooterGrid>
           <FooterLogoSection>
-            <div className="w-24">
-              <Logo />
+            <div className="flex flex-row gap-4">
+              <div className="w-8">
+                <Logo />
+              </div>
+              <h3 className="dark:text-breadgray-ultra-white text-2xl font-bold">
+                Breadchain
+              </h3>
             </div>
-            {/* <p className="text-breadgray-200">Funding post-capitalism</p> */}
-            <h3 className="dark:text-breadgray-ultra-white text-2xl font-medium">
-              Breadchain
-            </h3>
             <p>Funding post-capitalism</p>
             <a
               href="mailto:contact@breadchain.xyz"
-              className="text-breadgray-charcoal dark:text-breadgray-200 dark:hover:text-breadgray-100 hover:text-breadgray-darkest font-medium underline"
+              className="text-breadgray-charcoal  dark:text-breadgray-200 dark:hover:text-breadgray-100 hover:text-breadgray-darkest font-medium underline"
             >
               contact@breadchain.xyz
             </a>
           </FooterLogoSection>
           <FooterSection>
-            <div className="text-center min-[600px]:text-left">
+            <div className="text-center footer-md:text-left">
               <FooterSectionTitle>Navigate</FooterSectionTitle>
             </div>
             <FooterSectionList>
-              <div className="text-center min-[600px]:text-left">
-                <Link href="#about">About</Link>
+              <div className="text-center footer-md:text-left">
+                <FooterLink href="#about">About</FooterLink>
               </div>
-              <div className="text-center min-[600px]:text-left">
-                <Link href="#projects">Projects</Link>
+              <div className="text-center footer-md:text-left">
+                <FooterLink href="#projects">Projects</FooterLink>
               </div>
-              <div className="text-center min-[600px]:text-left">
-                <Link href="#values">Values</Link>
+              <div className="text-center footer-md:text-left">
+                <FooterLink href="#values">Values</FooterLink>
               </div>
             </FooterSectionList>
           </FooterSection>
 
           <SocialsSection>
-            <div className="text-center min-[600px]:text-left">
+            <div className="text-center footer-md:text-left">
               <FooterSectionTitle>Socials</FooterSectionTitle>
             </div>
             <FooterSectionList>
-              <div className="text-center min-[600px]:text-left">
-                <Link isExternal href="https://breadchain.mailchimpsites.com/">
+              <div className="text-center footer-md:text-left">
+                <FooterLink isExternal href="https://breadchain.mailchimpsites.com/">
                   Newsletter
-                </Link>
+                </FooterLink>
               </div>
 
-              <div className="text-center min-[600px]:text-left">
-                <Link isExternal href="https://twitter.com/breadchain_">
+              <div className="text-center footer-md:text-left">
+                <FooterLink isExternal href="https://twitter.com/breadchain_">
                   Twitter
-                </Link>
+                </FooterLink>
               </div>
-              <div className="text-center min-[600px]:text-left">
-                <Link isExternal href="https://cryptoleftists.xyz">
+              <div className="text-center footer-md:text-left">
+                <FooterLink isExternal href="https://cryptoleftists.xyz">
                   Discord
-                </Link>
+                </FooterLink>
               </div>
-              <div className="text-center min-[600px]:text-left">
-                <Link isExternal href="https://breadchain.mirror.xyz/">
+              <div className="text-center footer-md:text-left">
+                <FooterLink isExternal href="https://breadchain.mirror.xyz/">
                   Mirror
-                </Link>
+                </FooterLink>
               </div>
-              <div className="text-center min-[600px]:text-left">
-                <Link
+              <div className="text-center footer-md:text-left">
+                <FooterLink
                   isExternal
                   href="https://opencollective.com/breadchain-cooperative"
                 >
                   Open Collective
-                </Link>
+                </FooterLink>
               </div>
             </FooterSectionList>
           </SocialsSection>

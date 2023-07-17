@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-import { classNames } from "@breadchain.xyz/utils";
+import classNames from "classnames";
 import { ButtonLink } from "../ButtonLink";
 import { TertiaryLink } from "../TertiaryLink";
 
@@ -26,7 +26,7 @@ export function CTASection() {
     <section className="px-4 pt-16 pb-32 sm:px-6 md:px-8">
       <div
         className={classNames(
-          "m-auto max-w-4xl",
+          "m-auto max-w-4xl rounded-cta",
 
           "dark:bg-breadgray-darkest dark:from-breadgray-cta-bg flex flex-col gap-2 bg-white px-6 py-12 dark:bg-gradient-to-r sm:px-12"
         )}

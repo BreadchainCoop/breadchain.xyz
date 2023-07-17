@@ -1,6 +1,6 @@
 import React from "react";
 
-import { classNames } from "@breadchain.xyz/utils";
+import classNames from "classnames";
 import Overlay from "../Overlay";
 import { MobileNavigationLink } from "./MobileNavLink";
 import { ColorToggle } from "../ColorToggle/ColorToggle";

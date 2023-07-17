@@ -29,8 +29,8 @@ export function MembersBackgroundGraphic() {
             y2="444"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FF99E2" />
-            <stop offset="1" stop-color="#FF99E2" stop-opacity="0" />
+            <stop stopColor="#FF99E2" />
+            <stop offset="1" stopColor="#FF99E2" stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
