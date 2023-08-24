@@ -13,7 +13,6 @@
     "@astrojs/image": "^0.14.1",
     "@astrojs/react": "^2.0.2",
     "@astrojs/tailwind": "^3.0.1",
-    "@breadchain.xyz/shared-ui": "workspace:*",
     "@breadchain.xyz/site-ui": "workspace:*",
     "@breadchain.xyz/theme": "workspace:*",
     "@types/react": "^18.0.21",
