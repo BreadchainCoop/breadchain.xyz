@@ -1,6 +1,6 @@
 ---
 name: Crypto Commons Association
-info: An accelerator and Austria-based hub for progressive web3 projects.
+info: An organization producing research and events related to decentralized technologies and the commons.
 link: https://www.crypto-commons.org/
 logo: /img/cca.png
 ---
