@@ -30,7 +30,11 @@ export function ColorToggle() {
   return (
     <section>
       {colorMode && (
-        <button className="flex items-center gap-2" onClick={handleColorToggle}>
+        <button
+          className="flex items-center gap-2 px-4 py-2"
+          onClick={handleColorToggle}
+          aria-hidden="true"
+        >
           <div
             className={classNames(
               "h-6 w-6",

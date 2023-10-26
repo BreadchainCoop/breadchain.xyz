@@ -7,6 +7,12 @@
   body {
     @apply bg-breadgray-ultra-white dark:bg-breadgray-darkest;
     @apply text-breadgray-charcoal dark:text-breadgray-white;
-    @apply font-redhat;
+    @apply font-redhat;    
+  }
+  * {
+    @apply focus:outline focus:outline-4 focus:outline-green-400 focus:outline-offset-4 rounded ;
+  }
+  .transition-display {
+    transition: display 1000ms;
   }
 }
