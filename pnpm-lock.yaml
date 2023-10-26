@@ -105,6 +105,12 @@ importers:
       '@breadchain.xyz/theme':
         specifier: workspace:*
         version: link:../../packages/theme
+      '@fontsource/poppins':
+        specifier: ^5.0.8
+        version: 5.0.8
+      '@fontsource/red-hat-text':
+        specifier: ^5.0.15
+        version: 5.0.15
       '@types/react':
         specifier: ^18.0.21
         version: 18.0.27
@@ -1344,6 +1350,14 @@ packages:
   /@eslint/js@8.40.0:
     resolution: {integrity: sha512-ElyB54bJIhXQYVKjDSvCkPO1iU1tSAeVQJbllWJq1XQSmmA4dgFk8CbiBGpiOPxleE48vDogxCtmMYku4HSVLA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
+
+  /@fontsource/poppins@5.0.8:
+    resolution: {integrity: sha512-P8owfYWluoUY5Nyzk4gT/L6LmLmseP6ezFWhj6VBUa5pRIdnCvNJpoQ6i/vhekjtJOfqX6nKlB+LCttoUl2GQQ==}
+    dev: false
+
+  /@fontsource/red-hat-text@5.0.15:
+    resolution: {integrity: sha512-tZyPPMGC/lhfRIaqwurvPTiwqe/eMiyxE+dqfuA6YH17CSUkhWVPR+4i437KZ2GNzIYAupBIW+9DHKFjQyg0WQ==}
     dev: false
 
   /@graphql-codegen/cli@4.0.0(@babel/core@7.22.1)(@types/node@20.1.3)(graphql@16.6.0):

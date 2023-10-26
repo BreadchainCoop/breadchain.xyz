@@ -11,7 +11,7 @@ function MobileNavigationToggle({
   const [isKeypress, setIsKeypress] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
-  function handleKeyDown(event) {
+  function handleKeyDown() {
     setIsKeypress(true);
   }
 
@@ -26,13 +26,17 @@ function MobileNavigationToggle({
   return (
     <button
       onClick={handleClickHere}
-      onKeyDown={(event) => handleKeyDown(event)}
+      onKeyDown={() => handleKeyDown()}
       type="button"
       className={classNames(
         " h-10 w-10 rounded stroke-neutral-500 p-1 dark:fill-neutral-500 dark:stroke-neutral-500 dark:hover:fill-neutral-300 dark:hover:stroke-neutral-300 md:hidden"
         // navIsOpen && "hidden"
       )}
       ref={buttonRef}
+      aria-expanded={navIsOpen}
+      // aria-haspopup="true"
+      aria-controls="mobile-navigation"
+      aria-label="mobile navigation toggle"
       // tabIndex={navIsOpen ? -1 : 0}
       // aria-hidden={navIsOpen}
     >

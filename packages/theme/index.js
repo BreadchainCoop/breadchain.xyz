@@ -39,19 +39,18 @@ module.exports = {
     "button-border": "#2E2E2E",
   },
   fontFamily: {
-    pressstart: ['"Press Start 2P"', "sans-serif"],
-    redhat: ['"Red Hat Text"', "sans-serif"],
-    poppins: ["Poppins", "sans-serif"],
+    // pressstart: ["var(--font-pressstart)", "sans-serif"],
+    redhat: ["var(--font-redhat)", "sans-serif"],
+    poppins: ["var(--font-poppins)", "sans-serif"],
   },
   screens: {
-    'hero-image': '432px',
-    'footer-sm': '580px',
-    'footer-md': '600px',
-    'footer-lg': '1075px',
-
+    "hero-image": "432px",
+    "footer-sm": "580px",
+    "footer-md": "600px",
+    "footer-lg": "1075px",
   },
-  "borderRadius": {
-    "cta": "0.3125rem"
+  borderRadius: {
+    cta: "0.3125rem",
   },
   typography: ({ theme }) => ({
     pink: {
