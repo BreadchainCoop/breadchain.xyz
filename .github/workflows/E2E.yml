@@ -21,7 +21,7 @@ jobs:
           run: yarn install
 
       - name: Install Dependencies
-        run: pnpm install
+        run: pnpm site install
 
       - name: Lint
         run: pnpm site run lint
@@ -45,7 +45,7 @@ jobs:
           version: 8.8.0
 
       - name: Install Dependencies
-        run: pnpm install
+        run: pnpm site install
 
       - name: Run build
         run: pnpm site run build
@@ -69,7 +69,7 @@ jobs:
           version: 8.8.0
 
       - name: Install Dependencies
-        run: pnpm install
+        run: pnpm sites install
 
       - name: Run build
         run: pnpm site run build
