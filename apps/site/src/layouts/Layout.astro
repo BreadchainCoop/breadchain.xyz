@@ -1,6 +1,11 @@
 ---
 import { Header, Footer } from "@breadchain.xyz/site-ui";
 import "../styles/index.css";
+import "@fontsource/red-hat-text/400.css";
+import "@fontsource/red-hat-text/500.css";
+import "@fontsource/red-hat-text/600.css";
+import "@fontsource/red-hat-text/700.css";
+import "@fontsource/poppins/700.css";
 
 export interface Props {
   title: string;
@@ -29,23 +34,11 @@ const { title } = Astro.props;
     <meta name="twitter:creator" content="@breadchain_" />
     <meta name="twitter:image:alt" content="breadchain logo" />
     <title>{title}</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="DNS-prefetch" href="//fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
   </head>
-  <body class="min-h-screen flex flex-col overflow-x-hidden">
+  <body class="flex min-h-screen flex-col overflow-x-hidden">
     <Header client:load />
     <main class="grow">
       <slot />

@@ -17,6 +17,8 @@
     "@astrojs/tailwind": "^3.0.1",
     "@breadchain.xyz/site-ui": "workspace:*",
     "@breadchain.xyz/theme": "workspace:*",
+    "@fontsource/poppins": "^5.0.8",
+    "@fontsource/red-hat-text": "^5.0.15",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "astro": "^2.5.0",
