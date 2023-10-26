@@ -13,6 +13,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.8.0
+
       - name: Setup node
         uses: actions/setup-node@v3
         with:
@@ -32,6 +37,11 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.8.0
 
       - name: Setup node
         uses: actions/setup-node@v3
@@ -58,17 +68,17 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.8.0
+
       - name: Setup node
         uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: "pnpm"
           # run: pnpm site install
-
-      # - name: Setup pnpm
-      #   uses: pnpm/action-setup@v2
-      #   with:
-      #     version: 8.8.0
 
       - name: Install Dependencies
         run: pnpm sites install
