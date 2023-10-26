@@ -19,14 +19,14 @@ export function Hero({ subheading, heading }: THeroProps) {
   return (
     <section>
       <div className="relative m-auto max-w-6xl overflow-x-clip md:overflow-x-visible">
-        <div className="absolute left-0 right-0 top-0 bottom-0 -z-10 flex h-full w-full items-center justify-end">
+        <div className="absolute bottom-0 left-0 right-0 top-0 -z-10 flex h-full w-full items-center justify-end">
           <MidjourneyImage />
         </div>
 
         <div
           className={classNames(
             pageWrapPadding,
-            "flex max-w-[18rem] flex-col gap-2 py-16 sm:max-w-[26rem] md:max-w-[42rem] md:py-24"
+            "py-t flex max-w-[18rem] flex-col gap-2 sm:max-w-[26rem] md:max-w-[42rem] md:pt-24"
           )}
         >
           <HeroTagline>
@@ -34,6 +34,13 @@ export function Hero({ subheading, heading }: THeroProps) {
           </HeroTagline>
           <HeroHeading>{heading}</HeroHeading>
           <HeroSubHeading>{subheading}</HeroSubHeading>
+        </div>
+        <div
+          className={classNames(
+            pageWrapPadding,
+            "flex flex-col gap-2 pb-16 md:pb-24"
+          )}
+        >
           <HeroCTA>
             <ButtonLink href="https://app.breadchain.xyz" isExternal>
               Get Bread
@@ -53,7 +60,7 @@ export function Hero({ subheading, heading }: THeroProps) {
 
 export function HeroHeading({ children }: { children: ReactNode }) {
   return (
-    <h1 className="font-poppins max-w-[42rem] text-4xl font-bold leading-normal sm:leading-normal tracking-wide dark:drop-shadow-lg sm:text-5xl  md:max-w-[32rem] md:text-6xl md:leading-normal  dark:text-breadgray-ultra-white">
+    <h1 className="font-poppins dark:text-breadgray-ultra-white max-w-[42rem] text-4xl font-bold leading-normal tracking-wide dark:drop-shadow-lg sm:text-5xl  sm:leading-normal md:max-w-[32rem] md:text-6xl  md:leading-normal">
       {children}
     </h1>
   );
@@ -61,7 +68,7 @@ export function HeroHeading({ children }: { children: ReactNode }) {
 
 export function HeroSubHeading({ children }: { children: ReactNode }) {
   return (
-    <h2 className="font-poppins max-w-md pt-2  pb-12 font-medium tracking-wider md:pt-4 md:text-xl">
+    <h2 className="font-poppins max-w-md pb-12  pt-2 font-medium tracking-wider md:pt-4 md:text-xl">
       {children}
     </h2>
   );
@@ -74,8 +81,7 @@ export function HeroCTA({ children }: { children: ReactNode }) {
 export function HeroTagline({ children }: { children: ReactNode }) {
   return (
     <div>
-
-      <span className="inline-block font-regular font-redhat bg-gradient-to-r from-breadpink-400 dark:from-[#ED7BC7] from-20% to-breadpink-500 dark:to-[#F2A8D9] to-100% uppercase md:text-xl text-transparent bg-clip-text">
+      <span className="font-regular font-redhat from-breadpink-400 to-breadpink-500 inline-block bg-gradient-to-r from-20% to-100% bg-clip-text uppercase text-transparent dark:from-[#ED7BC7] dark:to-[#F2A8D9] md:text-xl">
         {children}
       </span>
     </div>

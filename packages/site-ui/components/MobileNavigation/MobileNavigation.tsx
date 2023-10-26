@@ -84,6 +84,7 @@ export function MobileNavigation({
       <Overlay closeMenu={() => handleNavToggle("CLICK")} isOpen={isOpen} />
 
       <nav
+        id="mobile-navigation"
         className={classNames(
           "transition-display transition-delay-400 fixed right-0 top-0 z-10 flex w-auto transform flex-col gap-10 px-12 pl-12 transition-transform delay-100  md:hidden",
           isOpen ? "fixed translate-x-0" : "hidden translate-x-full"
