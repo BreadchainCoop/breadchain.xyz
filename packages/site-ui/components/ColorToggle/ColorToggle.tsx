@@ -31,9 +31,9 @@ export function ColorToggle() {
     <section>
       {colorMode && (
         <button
+          aria-label="toggle light and dark mode"
           className="flex items-center gap-2 px-4 py-2"
           onClick={handleColorToggle}
-          aria-hidden="true"
         >
           <div
             className={classNames(

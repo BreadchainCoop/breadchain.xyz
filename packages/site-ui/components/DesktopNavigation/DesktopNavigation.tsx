@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 function DesktopNavigationLink(props: {
   children: ReactNode;
@@ -9,7 +9,7 @@ function DesktopNavigationLink(props: {
   const { children, ...remainingProps } = props;
   return (
     <a
-      className="font-redhat dark:text-breadgray-white dark:hover:text-breadgray-ultra-white text-breadgray-burnt hover:text-breadgray-charcoal active:text-breadgray-violet flex items-center px-2 text-xl font-bold leading-none tracking-wider min-[810px]:px-4"
+      className="font-redhat dark:text-breadgray-light-grey dark:hover:text-breadgray-white text-breadgray-toast hover:text-breadgray-burnt active:text-breadgray-violet flex items-center px-2 text-xl font-bold leading-none tracking-wider min-[810px]:px-4"
       {...remainingProps}
     >
       {children}

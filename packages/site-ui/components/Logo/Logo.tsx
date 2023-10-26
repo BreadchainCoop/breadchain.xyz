@@ -5,6 +5,7 @@ export function Logo() {
     <a
       href="/"
       className="flex h-full w-full items-center justify-center px-4 py-2"
+      aria-label="home"
     >
       <img
         className="w-full"

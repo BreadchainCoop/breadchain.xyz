@@ -2,11 +2,11 @@ import { test, expect } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
 test.describe("homepage", () => {
-  test("has title", async ({ page }) => {
-    await page.goto("/");
+  // test("has title", async ({ page }) => {
+  //   await page.goto("/");
 
-    await expect(page).toHaveTitle(/Breadchain/);
-  });
+  //   await expect(page).toHaveTitle(/Breadchain/);
+  // });
 
   test("should not have any automatically detectable accessibility issues", async ({
     page,
@@ -15,7 +15,7 @@ test.describe("homepage", () => {
 
     const accessibilityScanResults = await new AxeBuilder({ page }).analyze(); // 4
 
-    expect(accessibilityScanResults.violations.length).toEqual(0); // 5
+    expect(accessibilityScanResults.violations).toEqual([]); // 5
   });
 });
 

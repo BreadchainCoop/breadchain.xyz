@@ -19,7 +19,7 @@ import {
   MobileNavigationLinkWithRef,
 } from "./MobileNavLink";
 import { ColorToggle } from "../ColorToggle/ColorToggle";
-import { ToggleType } from "../Header";
+import type { ToggleType } from "../Header";
 import MobileNavigationToggle from "./MobileNavigationToggle";
 
 /*
