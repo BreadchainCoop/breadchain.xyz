@@ -17,11 +17,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: "yarn"
-          run: yarn install
+          cache: "pnpm"
+          run: pnpm site install
 
-      - name: Install Dependencies
-        run: pnpm site install
+      # - name: Install Dependencies
+      #   run: pnpm site install
 
       - name: Lint
         run: pnpm site run lint
@@ -38,14 +38,15 @@ jobs:
         with:
           node-version: 18
           cache: "pnpm"
+          run: pnpm site install
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8.8.0
+      # - name: Setup pnpm
+      #   uses: pnpm/action-setup@v2
+      #   with:
+      #     version: 8.8.0
 
-      - name: Install Dependencies
-        run: pnpm site install
+      # - name: Install Dependencies
+      #   run: pnpm site install
 
       - name: Run build
         run: pnpm site run build
@@ -62,14 +63,15 @@ jobs:
         with:
           node-version: 18
           cache: "pnpm"
+          run: pnpm site install
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8.8.0
+      # - name: Setup pnpm
+      #   uses: pnpm/action-setup@v2
+      #   with:
+      #     version: 8.8.0
 
-      - name: Install Dependencies
-        run: pnpm sites install
+      # - name: Install Dependencies
+      #   run: pnpm sites install
 
       - name: Run build
         run: pnpm site run build
