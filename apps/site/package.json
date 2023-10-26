@@ -8,6 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "playwright": "playwright",
     "playwright:test": "playwright test"
   },
   "dependencies": {

@@ -6,47 +6,93 @@ on:
     branches: [development]
 
 jobs:
-  test:
-    timeout-minutes: 60
+  linting:
+    name: ESLint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: Install Node.js
+      - name: Setup node
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: "yarn"
+          run: yarn install
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Lint
+        run: pnpm site run lint
+
+  build:
+    name: Next Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "pnpm"
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 8.8.0
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - name: Install Dependencies
+        run: pnpm install
 
-      - uses: actions/cache@v3
-        name: Setup pnpm cache
+      - name: Run build
+        run: pnpm site run build
+
+  test:
+    name: Playwright Testss
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
-          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          node-version: 18
+          cache: "pnpm"
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8.8.0
 
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Build Site
+      - name: Run build
         run: pnpm site run build
 
+      # - name: Get pnpm store directory
+      #   id: pnpm-cache
+      #   shell: bash
+      #   run: |
+      #     echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      # - uses: actions/cache@v3
+      #   name: Setup pnpm cache
+      #   with:
+      #     path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+      #     key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-pnpm-store-
+
       - name: Install Playwright Browsers
-        run: pnpm playwright install --with-deps
+        run: pnpm site playwright install --with-deps
 
       - name: Run Playwright tests
-        run: pnpm exec playwright test
+        run: pnpm site playwright test
 
       - uses: actions/upload-artifact@v3
         if: always()
