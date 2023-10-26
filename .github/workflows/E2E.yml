@@ -62,7 +62,7 @@ jobs:
         run: pnpm site run build
 
   test:
-    name: Playwright Testss
+    name: Playwright Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -81,7 +81,7 @@ jobs:
           # run: pnpm site install
 
       - name: Install Dependencies
-        run: pnpm sites install
+        run: pnpm site install
 
       - name: Run build
         run: pnpm site run build
