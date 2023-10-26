@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import classNames from "classnames";
 import { pageWrap, pageWrapPadding } from "./classStrings";
@@ -9,19 +9,23 @@ import { Logo } from "./Logo/Logo";
 import { ButtonLink } from "./ButtonLink";
 import { ColorToggle } from "./ColorToggle/ColorToggle";
 
+export type ToggleType = "CLICK" | "KEYPRESS" | null;
+
 export function Header() {
   const [isMobNavOpen, setIsMobNavOpen] = useState(false);
+  const [toggleType, setToggleType] = useState<ToggleType>(null);
 
-  const handleNavToggle = () => {
+  const handleNavToggle = (type: ToggleType | undefined) => {
+    if (type) setToggleType(type);
     setIsMobNavOpen(!isMobNavOpen);
   };
 
+  function clearToggleType() {
+    setToggleType(null);
+  }
+
   return (
     <header>
-      <MobileNavigation
-        isOpen={isMobNavOpen}
-        handleNavToggle={handleNavToggle}
-      />
       <div
         className={classNames(
           pageWrap,
@@ -29,7 +33,7 @@ export function Header() {
           "flex items-center gap-6 py-6 md:py-8 lg:gap-10"
         )}
       >
-        <div className="w-24 md:w-28">
+        <div className="w-28 md:w-32">
           <Logo />
         </div>
 
@@ -45,8 +49,13 @@ export function Header() {
           </ButtonLink>
         </div>
         {/* <ButtonLink href="https://app.breadchain.xyz">Get Bread</ButtonLink> */}
-        <MobileNavigationToggle handleClick={handleNavToggle} />
       </div>
+      <MobileNavigation
+        isOpen={isMobNavOpen}
+        handleNavToggle={handleNavToggle}
+        toggleType={toggleType}
+        clearToggleType={clearToggleType}
+      />
     </header>
   );
 }

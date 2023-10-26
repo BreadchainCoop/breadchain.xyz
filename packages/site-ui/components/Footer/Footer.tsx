@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 import classNames from "classnames";
 import { pageWrap, pageWrapPadding } from "../classStrings";
@@ -109,15 +109,15 @@ export function Footer() {
               <FooterSectionTitle>Navigate</FooterSectionTitle>
             </div>
             <FooterSectionList>
-              <div className="footer-md:text-left text-center">
+              <li className="footer-md:text-left text-center">
                 <FooterLink href="#about">About</FooterLink>
-              </div>
-              <div className="footer-md:text-left text-center">
+              </li>
+              <li className="footer-md:text-left text-center">
                 <FooterLink href="#projects">Projects</FooterLink>
-              </div>
-              <div className="footer-md:text-left text-center">
+              </li>
+              <li className="footer-md:text-left text-center">
                 <FooterLink href="#values">Values</FooterLink>
-              </div>
+              </li>
             </FooterSectionList>
           </FooterSection>
 
@@ -126,38 +126,38 @@ export function Footer() {
               <FooterSectionTitle>Socials</FooterSectionTitle>
             </div>
             <FooterSectionList>
-              <div className="footer-md:text-left text-center">
+              <li className="footer-md:text-left text-center">
                 <FooterLink
                   isExternal
                   href="https://breadchain.mailchimpsites.com/"
                 >
                   Newsletter
                 </FooterLink>
-              </div>
+              </li>
 
-              <div className="footer-md:text-left text-center">
+              <li className="footer-md:text-left text-center">
                 <FooterLink isExternal href="https://twitter.com/breadchain_">
                   Twitter
                 </FooterLink>
-              </div>
-              <div className="footer-md:text-left text-center">
+              </li>
+              <li className="footer-md:text-left text-center">
                 <FooterLink isExternal href="https://cryptoleftists.xyz">
                   Discord
                 </FooterLink>
-              </div>
-              <div className="footer-md:text-left text-center">
+              </li>
+              <li className="footer-md:text-left text-center">
                 <FooterLink isExternal href="https://breadchain.mirror.xyz/">
                   Mirror
                 </FooterLink>
-              </div>
-              <div className="footer-md:text-left text-center">
+              </li>
+              <li className="footer-md:text-left text-center">
                 <FooterLink
                   isExternal
                   href="https://opencollective.com/breadchain-cooperative"
                 >
                   Open Collective
                 </FooterLink>
-              </div>
+              </li>
             </FooterSectionList>
           </SocialsSection>
         </FooterGrid>

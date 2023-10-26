@@ -30,7 +30,11 @@ export function ColorToggle() {
   return (
     <section>
       {colorMode && (
-        <button className="flex items-center gap-2" onClick={handleColorToggle}>
+        <button
+          aria-label="toggle light and dark mode"
+          className="flex items-center gap-2 px-4 py-2"
+          onClick={handleColorToggle}
+        >
           <div
             className={classNames(
               "h-6 w-6",
