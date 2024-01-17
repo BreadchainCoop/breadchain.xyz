@@ -10,14 +10,14 @@ import {
 import Layout from "../layouts/Layout.astro";
 
 import { heading, subheading } from "../content/index/hero/_index";
-import { cca, laborDao, pact } from "../content/index/members/_index";
+import { cca, laborDao, symbiota } from "../content/index/members/_index";
 import { values } from "../content/index/values/_index";
 ---
 
 <Layout title="Breadchain Cooperative.">
   <Hero heading={heading} subheading={subheading} />
   <InfoCards />
-  <Members members={[cca, laborDao, pact]} />
+  <Members members={[cca, laborDao, symbiota]} />
   <Values values={values} />
   <CTASection />
 </Layout>
