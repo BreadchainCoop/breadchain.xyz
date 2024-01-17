@@ -217,7 +217,7 @@ export function InfoCards() {
           </svg>
         </div>
 
-        <div className="col-span-1 col-start-2 row-span-1 row-start-2">
+        <div className="col-span-3 col-start-1 row-span-1 row-start-2 md:col-span-1 md:col-start-2">
           <InfoCard key={`infocard_${0}`}>
             <div className="absolute left-0 top-0 md:hidden">
               <svg
@@ -262,7 +262,7 @@ export function InfoCards() {
           </InfoCard>
         </div>
 
-        <div className="col-span-1 col-start-2 row-span-1 row-start-4 md:col-start-4 md:row-start-2">
+        <div className="col-span-3 col-start-1 row-span-1 row-start-4 md:col-span-1 md:col-start-4 md:row-start-2">
           <InfoCard key={`infocard_${1}`}>
             {/* <BackgroundSVG /> */}
             <InfoCardIcon>{infoCards[1].icon}</InfoCardIcon>
@@ -273,7 +273,7 @@ export function InfoCards() {
           </InfoCard>
         </div>
 
-        <div className="col-span-1 col-start-2 row-span-1 row-start-6 md:col-start-6 md:row-start-2">
+        <div className="col-span-3 col-start-1 row-span-1 row-start-6 md:col-span-1 md:col-start-6 md:row-start-2">
           <InfoCard key={`infocard_${2}`}>
             <div className="absolute bottom-0 right-0 md:hidden">
               <svg

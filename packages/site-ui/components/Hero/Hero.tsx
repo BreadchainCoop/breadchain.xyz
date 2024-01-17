@@ -26,7 +26,7 @@ export function Hero({ subheading, heading }: THeroProps) {
         <div
           className={classNames(
             pageWrapPadding,
-            "py-t flex max-w-[18rem] flex-col gap-2 sm:max-w-[26rem] md:max-w-[42rem] md:pt-24"
+            "flex max-w-[18rem] flex-col gap-2 pt-6 sm:max-w-[26rem] md:max-w-[42rem] md:pt-20"
           )}
         >
           <HeroTagline>

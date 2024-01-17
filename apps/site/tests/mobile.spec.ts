@@ -9,10 +9,10 @@ test.describe("mobile - homepage", () => {
   test("should not have any automatically detectable accessibility issues", async ({
     page,
   }) => {
-    await page.goto("/"); // 3
+    await page.goto("/");
 
-    const accessibilityScanResults = await new AxeBuilder({ page }).analyze(); // 4
+    const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
 
-    expect(accessibilityScanResults.violations).toEqual([]); // 5
+    expect(accessibilityScanResults.violations).toEqual([]);
   });
 });

@@ -15,7 +15,7 @@
     @apply font-redhat;    
   }
   * {
-    @apply focus:outline focus:outline-4 focus:outline-green-400 focus:outline-offset-4 rounded ;
+    @apply focus-visible:outline focus-visible:outline-4 focus-visible:outline-green-400 focus-visible:outline-offset-4 rounded ;
   }
   .transition-display {
     transition: display 1000ms;
