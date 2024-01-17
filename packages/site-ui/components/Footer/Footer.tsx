@@ -1,3 +1,4 @@
+import React from "react";
 import type { ReactNode } from "react";
 
 import classNames from "classnames";
@@ -88,14 +89,18 @@ export function Footer() {
       <div className={classNames(pageWrap, pageWrapPadding, "pb-16 pt-12")}>
         <FooterGrid>
           <FooterLogoSection>
-            <div className="flex flex-row gap-4">
-              <div className="w-10 pb-0.5">
+            <a
+              href="/"
+              className="flex flex-row items-center gap-4"
+              aria-label="home"
+            >
+              <div className="w-10">
                 <Logo />
               </div>
               <h3 className="dark:text-breadgray-ultra-white text-2xl font-bold">
                 Breadchain
               </h3>
-            </div>
+            </a>
             <p>Funding post-capitalism</p>
             <a
               href="mailto:contact@breadchain.xyz"
