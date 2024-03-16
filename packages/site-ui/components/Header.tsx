@@ -5,7 +5,7 @@ import { pageWrap, pageWrapPadding } from "./classStrings";
 import { DesktopNavigation } from "./DesktopNavigation";
 import MobileNavigation from "./MobileNavigation";
 import MobileNavigationToggle from "./MobileNavigation/MobileNavigationToggle";
-import { Logo } from "./Logo/Logo";
+import { NewLogo } from "./Logo/NewLogo";
 import { ButtonLink } from "./ButtonLink";
 import { ColorToggle } from "./ColorToggle/ColorToggle";
 
@@ -34,7 +34,7 @@ export function Header() {
         )}
       >
         <div className="w-24 md:w-28">
-          <Logo />
+          <NewLogo />
         </div>
 
         <div className="flex grow gap-4 lg:gap-6">
