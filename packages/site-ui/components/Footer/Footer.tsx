@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 import classNames from "classnames";
 import { pageWrap, pageWrapPadding } from "../classStrings";
-import { Logo } from "../Logo/Logo";
+import { NewLogo } from "../Logo/NewLogo";
 
 function FooterSection({ children }: { children: ReactNode }) {
   return (
@@ -94,12 +94,12 @@ export function Footer() {
               className="flex flex-row items-center gap-4"
               aria-label="home"
             >
-              <div className="w-10">
-                <Logo />
+              <div className="flex gap-4">
+                <NewLogo />
+                <h3 className="dark:text-breadgray-ultra-white text-2xl font-bold">
+                  Breadchain
+                </h3>
               </div>
-              <h3 className="dark:text-breadgray-ultra-white text-2xl font-bold">
-                Breadchain
-              </h3>
             </a>
             <p>Funding post-capitalism</p>
             <a
