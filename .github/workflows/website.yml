@@ -2,17 +2,20 @@ name: Website CI
 on:
   workflow_dispatch:
   pull_request:
-    branches: [development]
+    branches:
+      - main
+      - development
     paths:
-      - "/apps/site/**"
-      - "/packages/theme/**"
-      - "/packages/site-ui/**"
+      - "apps/site/**"
+      - "packages/theme/**"
+      - "packages/site-ui/**"
   push:
-    branches: [development]
+    branches:
+      - development
     paths:
-      - "/apps/site/**"
-      - "/packages/theme/**"
-      - "/packages/site-ui/**"
+      - "apps/site/**"
+      - "packages/theme/**"
+      - "packages/site-ui/**"
 
 jobs:
   linting:
