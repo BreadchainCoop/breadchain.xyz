@@ -10,7 +10,8 @@ on:
       - "packages/theme/**"
       - "packages/site-ui/**"
   push:
-    branches: [development]
+    branches:
+      - development
     paths:
       - "apps/site/**"
       - "packages/theme/**"
