@@ -1,9 +1,13 @@
-name: build breadchain.xyz
+name: Webiste CI
 on:
   pull_request:
     branches: [development]
   push:
     branches: [development]
+  paths:
+    - "/apps/site/**"
+    - "/packages/theme/**"
+    - "/packages/site-ui/**"
 
 jobs:
   linting:
@@ -23,7 +27,6 @@ jobs:
         with:
           node-version: 20
           cache: "pnpm"
-          # run: pnpm site install
 
       - name: Install Dependencies
         run: pnpm site install
