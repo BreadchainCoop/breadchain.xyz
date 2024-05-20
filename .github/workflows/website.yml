@@ -1,17 +1,17 @@
 name: Webiste CI
 on:
   pull_request:
-    branches: [development]
     paths:
       - "/apps/site/**"
       - "/packages/theme/**"
       - "/packages/site-ui/**"
+    branches: [development]
   push:
-    branches: [development]
     paths:
       - "/apps/site/**"
       - "/packages/theme/**"
       - "/packages/site-ui/**"
+    branches: [development]
 
 jobs:
   linting:
