@@ -2,15 +2,19 @@ name: App CI
 on:
   workflow_dispatch:
   pull_request:
-    branches: [development]
+    branches:
+      - main
+      - development
     paths:
-      - "/apps/app/**"
-      - "/packages/theme/**"
+      - "apps/app/**"
+      - "packages/theme/**"
   push:
-    branches: [development]
+    branches:
+      - main
+      - development
     paths:
-      - "/apps/app/**"
-      - "/packages/theme/**"
+      - "apps/app/**"
+      - "packages/theme/**"
 
 jobs:
   linting:
