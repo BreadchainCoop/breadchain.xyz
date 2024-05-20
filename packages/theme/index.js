@@ -1,3 +1,5 @@
+// testing shared module triggers both workflows
+
 module.exports = {
   colors: {
     breadgray: {
