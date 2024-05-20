@@ -1,8 +1,8 @@
 name: Webiste CI
 on:
   pull_request:
-    paths:
     branches: [development]
+    paths:
       - "/apps/site/**"
       - "/packages/theme/**"
       - "/packages/site-ui/**"
