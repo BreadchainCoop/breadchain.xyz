@@ -4,8 +4,23 @@ import { WRAPPER_CLASSES } from "../utils";
 import { ButtonLink } from "./ButtonLink";
 import { DesktopNavigation } from "./DesktopNavigation";
 import { ColorToggle } from "./ColorToggle";
+import { MobileNavigation } from "./MobileNavigation";
+import { useState } from "react";
+import type { ToggleType } from "./MobileNavigationToggle";
 
 export function Header() {
+  const [isMobNavOpen, setIsMobNavOpen] = useState(false);
+  const [toggleType, setToggleType] = useState<ToggleType>(null);
+
+  const handleNavToggle = (type: ToggleType | undefined) => {
+    if (type) setToggleType(type);
+    setIsMobNavOpen(!isMobNavOpen);
+  };
+
+  function clearToggleType() {
+    setToggleType(null);
+  }
+
   return (
     <header>
       <div
@@ -31,12 +46,12 @@ export function Header() {
         </div>
         {/* <ButtonLink href="https://app.breadchain.xyz">Get Bread</ButtonLink> */}
       </div>
-      {/* <MobileNavigation
+      <MobileNavigation
         isOpen={isMobNavOpen}
         handleNavToggle={handleNavToggle}
         toggleType={toggleType}
         clearToggleType={clearToggleType}
-      /> */}
+      />
     </header>
   );
 }
