@@ -3,7 +3,11 @@
   "private": true,
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "exports": {
+    "./data": "./data/index.ts",
+    "./icons": "./icons/index.tsx",
+    ".": "./index.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

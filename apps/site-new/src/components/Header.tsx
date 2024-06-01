@@ -1,12 +1,14 @@
+import { useState } from "react";
 import clsx from "clsx";
-import { LogoSVG } from "@breadchain.xyz/shared";
-import { WRAPPER_CLASSES } from "../utils";
+
+import { LogoSVG } from "@breadchain.xyz/shared/icons";
+
 import { ButtonLink } from "./ButtonLink";
 import { DesktopNavigation } from "./DesktopNavigation";
 import { ColorToggle } from "./ColorToggle";
 import { MobileNavigation } from "./MobileNavigation";
-import { useState } from "react";
 import type { ToggleType } from "./MobileNavigationToggle";
+import { WRAPPER_CLASSES } from "../utils";
 
 export function Header() {
   const [isMobNavOpen, setIsMobNavOpen] = useState(false);
@@ -20,7 +22,6 @@ export function Header() {
   function clearToggleType() {
     setToggleType(null);
   }
-
   return (
     <header>
       <div

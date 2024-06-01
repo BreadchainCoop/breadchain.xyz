@@ -5,7 +5,7 @@ type MemberProject = {
   description: string;
 };
 
-export const MemberProjects: Array<MemberProject> = [
+export const memberProjects: Array<MemberProject> = [
   {
     name: "Crypto Commons Association",
     account: "0xdF3e18d64BC6A983f673Ab319CCaE4f1a57C7097",

@@ -7,10 +7,10 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@breadchain/*": ["packages/*/src"]
-    }
+    "baseUrl": "."
+    // "paths": {
+    //   "@breadchain/*": ["packages/**/*"]
+    // }
   },
-  "include": ["src/**/*"]
+  "include": ["data/**/*", "icons/**/*"]
 }

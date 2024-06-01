@@ -1,2 +1,2 @@
-export * from "./src/Icons";
-export * from "./src/Data";
+export * from "./data";
+export * from "./icons";
