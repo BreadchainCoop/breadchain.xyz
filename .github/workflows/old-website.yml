@@ -6,17 +6,17 @@ on:
       - main
       - development
     paths:
-      - "apps/website/**"
+      - "apps/site/**"
       - "packages/theme/**"
-      - "packages/shared/**"
+      - "packages/site-ui/**"
   push:
     branches:
       - main
       - development
     paths:
-      - "apps/website/**"
+      - "apps/site/**"
       - "packages/theme/**"
-      - "packages/shared/**"
+      - "packages/site-ui/**"
 
 jobs:
   linting:
