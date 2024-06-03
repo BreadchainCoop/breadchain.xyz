@@ -1,4 +1,4 @@
-name: Website CI
+name: Website CI OLD
 on:
   workflow_dispatch:
   pull_request:
