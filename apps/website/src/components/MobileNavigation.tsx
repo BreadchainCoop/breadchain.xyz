@@ -66,7 +66,6 @@ export function MobileNavigation({
   clearToggleType,
 }: IProps) {
   const firstElement = useRef<HTMLAnchorElement>(null);
-  const lastElement = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!firstElement.current) {
@@ -102,7 +101,6 @@ export function MobileNavigation({
           isOpen ? "fixed translate-x-0" : "hidden translate-x-full"
         )}
       >
-        {/* <button className="">toggle</button> */}
         <menu
           aria-hidden={!isOpen}
           aria-label="Site Navigation"

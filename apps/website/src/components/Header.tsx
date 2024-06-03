@@ -45,7 +45,6 @@ export function Header() {
             Get Bread
           </ButtonLink>
         </div>
-        {/* <ButtonLink href="https://app.breadchain.xyz">Get Bread</ButtonLink> */}
       </div>
       <MobileNavigation
         isOpen={isMobNavOpen}

@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import { ButtonLink } from "./ButtonLink";
 import { TertiaryLink } from "./TertiaryLink";
 

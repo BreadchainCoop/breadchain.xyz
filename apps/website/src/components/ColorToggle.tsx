@@ -1,5 +1,4 @@
-import clsx from "clsx";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 type TColorMode = "LIGHT" | "DARK";
 

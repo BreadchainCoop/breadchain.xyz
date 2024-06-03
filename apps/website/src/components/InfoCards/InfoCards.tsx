@@ -1,4 +1,4 @@
-import { WRAPPER_CLASSES, WRAPPER_PADDING } from "../../utils";
+import { WRAPPER_PADDING } from "../../utils";
 import { CheckmarkIcon, CoinIcon, UsersIcon } from "../Icons";
 import {
   InfoCardGrid,
