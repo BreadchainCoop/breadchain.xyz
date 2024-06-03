@@ -93,7 +93,7 @@ export function ValuesSection() {
                   </div>
                 )}
                 <ValueCard
-                  key={`principlecard_${i}`}
+                  key={`valuescard_${i}`}
                   title={title}
                   details={details}
                   icon={icon}
