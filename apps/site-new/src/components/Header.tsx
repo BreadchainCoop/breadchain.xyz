@@ -30,7 +30,7 @@ export function Header() {
           "flex items-center gap-6 py-6 md:py-8 lg:gap-10"
         )}
       >
-        <div className="w-8">
+        <div className="w-8 h-8">
           <LogoSVG />
         </div>
 
