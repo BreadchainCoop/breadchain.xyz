@@ -1,0 +1,19 @@
+@tailwind base;
+
+:root {
+  --font-redhat: "Red Hat Text";
+  --font-poppins: "Poppins";
+}
+
+@layer base {
+  html {
+    overflow-x: hidden;
+  }
+
+  * {
+    @apply focus-visible:outline focus-visible:outline-4 focus-visible:outline-green-400 focus-visible:outline-offset-4 rounded ;
+  }
+  .transition-display {
+    transition: display 1000ms;
+  }
+}

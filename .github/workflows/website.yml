@@ -6,17 +6,17 @@ on:
       - main
       - development
     paths:
-      - "apps/site/**"
+      - "apps/website/**"
       - "packages/theme/**"
-      - "packages/site-ui/**"
+      - "packages/shared/**"
   push:
     branches:
       - main
       - development
     paths:
-      - "apps/site/**"
+      - "apps/website/**"
       - "packages/theme/**"
-      - "packages/site-ui/**"
+      - "packages/shared/**"
 
 jobs:
   linting:
@@ -38,13 +38,13 @@ jobs:
           cache: "pnpm"
 
       - name: Install Dependencies
-        run: pnpm site install
+        run: pnpm website install
 
       - name: Lint
-        run: pnpm site run lint
+        run: pnpm website run lint
 
   build:
-    name: Next Build
+    name: Astro Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -60,67 +60,46 @@ jobs:
         with:
           node-version: 20
           cache: "pnpm"
-          # run: pnpm site install
-
-      # - name: Setup pnpm
-      #   uses: pnpm/action-setup@v2
-      #   with:
-      #     version: 8.8.0
 
       - name: Install Dependencies
-        run: pnpm site install
+        run: pnpm website install
 
       - name: Run build
-        run: pnpm site run build
+        run: pnpm website run build
 
-  test:
-    name: Playwright Tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+  # test:
+  #   name: Playwright Tests
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout repo
+  #       uses: actions/checkout@v3
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8.8.0
+  #     - name: Setup pnpm
+  #       uses: pnpm/action-setup@v2
+  #       with:
+  #         version: 8.8.0
 
-      - name: Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-          cache: "pnpm"
-          # run: pnpm site install
+  #     - name: Setup node
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: 20
+  #         cache: "pnpm"
 
-      - name: Install Dependencies
-        run: pnpm site install
+  #     - name: Install Dependencies
+  #       run: pnpm website install
 
-      - name: Run build
-        run: pnpm site run build
+  #     - name: Run build
+  #       run: pnpm website run build
 
-      # - name: Get pnpm store directory
-      #   id: pnpm-cache
-      #   shell: bash
-      #   run: |
-      #     echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+  #     - name: Install Playwright Browsers
+  #       run: pnpm site playwright install --with-deps
 
-      # - uses: actions/cache@v3
-      #   name: Setup pnpm cache
-      #   with:
-      #     path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
-      #     key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-pnpm-store-
+  #     - name: Run Playwright tests
+  #       run: pnpm site playwright test
 
-      - name: Install Playwright Browsers
-        run: pnpm site playwright install --with-deps
-
-      - name: Run Playwright tests
-        run: pnpm site playwright test
-
-      - uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: playwright-report
-          path: apps/site/playwright-report/
-          retention-days: 30
+  #     - uses: actions/upload-artifact@v3
+  #       if: always()
+  #       with:
+  #         name: playwright-report
+  #         path: apps/site/playwright-report/
+  #         retention-days: 30
