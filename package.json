@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "site": "pnpm --filter @breadchain.xyz/site",
+    "website": "pnpm --filter @breadchain.xyz/website",
     "app": "pnpm --filter @breadchain.xyz/app",
     "site-ui": "pnpm --filter @breadchain.xyz/site-ui",
     "site:build": "pnpm install && pnpm site run build",
