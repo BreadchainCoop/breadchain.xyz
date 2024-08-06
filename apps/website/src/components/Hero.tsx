@@ -33,7 +33,7 @@ export function Hero() {
               Get Bread
             </ButtonLink>
             <TertiaryLink
-              href="https://breadchain.mirror.xyz/nwQx4CqPAcwZ5zSNB2_K25N1quOF1NGcKaYcS3S33CA"
+              href="https://breadchain.notion.site/4d496b311b984bd9841ef9c192b9c1c7?v=2eb1762e6b83440f8b0556c9917f86ca"
               isExternal
             >
               Learn more
