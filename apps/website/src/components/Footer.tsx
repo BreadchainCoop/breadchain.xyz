@@ -45,7 +45,7 @@ function FooterSectionList({ children }: { children: ReactNode }) {
 
 function FooterGrid({ children }: { children: ReactNode }) {
   return (
-    <div className="footer-sm:flex-wrap footer-sm:justify-around footer-md:flex-row-reverse footer-lg:items-center flex flex-col gap-12 px-4">
+    <div className="flex flex-col-reverse gap-12 footer-sm:flex-wrap footer-sm:justify-around footer-md:flex-row-reverse footer-lg:flex-row footer-lg:items-center  px-4">
       {children}
     </div>
   );

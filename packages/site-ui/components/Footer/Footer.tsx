@@ -23,7 +23,7 @@ function SocialsSection({ children }: { children: ReactNode }) {
 
 function FooterLogoSection({ children }: { children: ReactNode }) {
   return (
-    <div className="footer-sm:pt-0 footer-lg:order-first order-last flex flex-col items-center gap-2 pt-6">
+    <div className="footer-sm:pt-0 footer-lg:order-first  flex flex-col items-center gap-2 pt-6">
       {children}
     </div>
   );
@@ -47,7 +47,7 @@ function FooterSectionList({ children }: { children: ReactNode }) {
 
 function FooterGrid({ children }: { children: ReactNode }) {
   return (
-    <div className="footer-sm:flex-wrap footer-sm:justify-around footer-md:flex-row-reverse footer-lg:items-center flex flex-col gap-12 px-4">
+    <div className="footer-sm:flex-wrap footer-sm:justify-around footer-md:flex-row footer-lg:items-center flex flex-col gap-12 px-4">
       {children}
     </div>
   );
@@ -97,7 +97,7 @@ export function Footer() {
               <div className="flex gap-4">
                 <NewLogo />
                 <h3 className="dark:text-breadgray-ultra-white text-2xl font-bold">
-                  Breadchain
+                  Breadchaintttttttttttt
                 </h3>
               </div>
             </a>
