@@ -2,6 +2,8 @@ export type MemberProjectKeys =
   | "cca"
   | "laborDao"
   | "symbiota"
+  | "citizenWallet"
+  | "refiDao"
   | "breadchainCore"
   | "breadchainTreasury";
 
@@ -35,6 +37,20 @@ export const memberProjects: {
     homepage: "https://symbiota.coop",
     description:
       "A collective of event-focused organisations devoted to new forms of culture and enquiry, structured as a not-for-profit worker co-operative.",
+  },
+  citizenWallet: {
+    name: "Citizen Wallet",
+    account: "0x9c8C8513974d22E8eA9F74f2860833Db107111E6",
+    homepage: "https://citizenwallet.xyz/",
+    description:
+      "Citizen Wallet provides tools for communities to manage local currencies. We focus on simplicity, seamless onboarding, and accessibility—even for those without phones or apps.",
+  },
+  refiDao: {
+    name: "ReFi DAO",
+    account: "0x68060388C7D97B4bF779a2Ead46c86e5588F073f",
+    homepage: "https://www.refidao.com/",
+    description:
+      "A global network driving the Regenerative Finance (ReFi) movement, leveraging Web3 to regenerate ecosystems and foster economic systems that prioritize ecological and social well-being.",
   },
   breadchainCore: {
     name: "Breadchain Core",

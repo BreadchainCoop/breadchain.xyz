@@ -1,48 +1,100 @@
 import clsx from "clsx";
 import { WRAPPER_CLASSES } from "../utils";
 import { TertiaryButtonLink } from "./TertiaryButtonLink";
+import React, { useCallback, useState, useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import { LinkIcon } from "./Icons/LinkIcon";
 
 import { memberProjects } from "@breadchain.xyz/shared";
 
-const { cca, laborDao, symbiota } = memberProjects;
+const { cca, laborDao, symbiota, citizenWallet, refiDao } = memberProjects;
 
 const homepageProjects = [
-  { ...cca, bannerSrc: "cca_banner.png" },
   { ...laborDao, bannerSrc: "labordao_banner.png" },
+  { ...cca, bannerSrc: "cca_banner.png" },
   { ...symbiota, bannerSrc: "symbiota_banner.png" },
+  { ...citizenWallet, bannerSrc: "citizen_wallet.png" },
+  { ...refiDao, bannerSrc: "refi_dao.png" },
 ];
 
+const navBtnClasses =
+  "opacity-0 md:opacity-100 h-[100px] rounded-xl px-4 border dark:border-breadgray-rye border-breadgray-grey disabled:border-breadgray-rye md:disabled:opacity-30 enabled:hover:border-none enabled:hover:dark:bg-breadpink-600 enabled:hover:bg-breadpink-200 mx-auto";
+
 export function MembersSection() {
+  const [prevIsActive, setPrevIsActive] = useState(false);
+  const [nextIsActive, setNextIsActive] = useState(true);
+  const [emblaRef, emblaApi] = useEmblaCarousel({});
+
+  const scrollPrev = () => {
+    if (emblaApi) {
+      emblaApi.scrollPrev();
+      setPrevIsActive(emblaApi.canScrollPrev());
+      setNextIsActive(emblaApi.canScrollNext());
+    }
+  };
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) {
+      emblaApi.scrollNext();
+      setPrevIsActive(emblaApi.canScrollPrev());
+      setNextIsActive(emblaApi.canScrollNext());
+    }
+  }, [emblaApi]);
+
   return (
-    <section
-      id="projects"
-      className={clsx(WRAPPER_CLASSES, "relative pb-64 sm:pb-[22rem]")}
-    >
-      <div className="m-auto flex max-w-sm flex-col gap-4 justify-self-start md:max-w-full">
-        <h2 className="font-redhat m-auto flex w-full max-w-sm flex-col text-left text-5xl font-bold sm:max-w-full md:flex-row md:gap-4">
-          <span>Co-operative</span>
-          <span className="font-normal">by design</span>
-        </h2>
-        <div className="w-full">
-          Learn more about the project you would support.
+    <section id="values" className="sm:pb-42 pb-32 pt-20">
+      <div className="flex flex-col gap-4 px-4 pb-16 sm:items-center sm:text-left">
+        <div className="m-auto flex max-w-sm flex-col items-start gap-4 sm:max-w-full">
+          <h2 className="font-redhat flex w-full max-w-sm flex-col gap-3 text-left text-4xl font-bold sm:max-w-full sm:text-5xl md:flex-row md:gap-0">
+            <span className="inline-block pr-2 font-normal">Co-operative</span>
+            <span>by design</span>
+          </h2>
+          <div className="w-full">
+            Learn more about the people we get baked with.
+          </div>
         </div>
       </div>
-      <div className="grid grid-cols-3 place-items-start gap-24 pt-16 md:gap-12">
-        {homepageProjects.map(
-          ({ name, description, homepage, bannerSrc }, i) => {
-            return (
-              <MemberCard
-                key={`membercard_${i}`}
-                name={name}
-                info={description}
-                bannerSrc={bannerSrc}
-                link={homepage}
-              />
-            );
-          }
-        )}
+
+      <div className="embla grid grid-cols-9 items-center mx-auto">
+        <button
+          disabled={!prevIsActive}
+          className={clsx(navBtnClasses, "embla__prev")}
+          onClick={scrollPrev}
+        >
+          <PrevButton isActive={prevIsActive} />
+        </button>
+        <div
+          className="embla__viewport col-span-7 overflow-x-hidden"
+          ref={emblaRef}
+        >
+          <div className="embla__container items-stretch gap-6 flex">
+            {homepageProjects.map(
+              ({ name, description, homepage, bannerSrc }, i) => {
+                return (
+                  <div
+                    key={`membercard_${i}`}
+                    className="embla__slide flex-[0_0_87%] md:flex-[0_0_30%] min-w-0"
+                  >
+                    <MemberCard
+                      name={name}
+                      info={description}
+                      bannerSrc={bannerSrc}
+                      link={homepage}
+                    />
+                  </div>
+                );
+              }
+            )}
+          </div>
+        </div>
+        <button
+          disabled={!nextIsActive}
+          className={clsx(navBtnClasses, "embla__next")}
+          onClick={scrollNext}
+        >
+          <NextButton isActive={nextIsActive} />
+        </button>
       </div>
-      <MembersBackgroundGraphic />
     </section>
   );
 }
@@ -59,16 +111,64 @@ export function MemberCard({
   bannerSrc: string;
 }) {
   return (
-    <article className="col-span-3 m-auto flex h-full max-w-sm flex-col md:col-span-1">
+    <article className="col-span-3 flex h-full max-w-sm flex-col md:col-span-1">
       <img className="w-full" src={bannerSrc} alt="" />
-      <div className="flex grow flex-col gap-2 p-8 pb-12">
+      <div className="flex grow flex-col gap-2 py-2">
         <h3 className="font-redhat text-2xl font-medium">{name}</h3>
-        <p>{info}</p>
+        <p className="">{info}</p>
       </div>
-      <TertiaryButtonLink href={link} isExternal>
-        Learn More
-      </TertiaryButtonLink>
+      <div>
+        <TertiaryButtonLink href={link} isExternal>
+          <div className="flex items-center gap-2">
+            Learn More <LinkIcon />
+          </div>
+        </TertiaryButtonLink>
+      </div>
     </article>
+  );
+}
+
+export function NextButton({ isActive }: { isActive: boolean | undefined }) {
+  return (
+    <svg
+      width="16"
+      height="28"
+      viewBox="0 0 16 28"
+      className={clsx(
+        "fill-current dark:text-breadgray-ultra-white",
+        isActive && "text-breadviolet-violet",
+        !isActive && "text-breadgray-grey"
+      )}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0 0L1.74846e-07 4L4 4L4 -1.74846e-07L0 0ZM8 8L8 4L4 4L4 8L8 8ZM12 12L12 8L8 8L8 12L12 12ZM12 16L16 16L16 12L12 12L12 16ZM8 20L8 16L12 16L12 20L8 20ZM4 24L8 24L8 20L4 20L4 24ZM4 24L1.04907e-06 24L1.22392e-06 28L4 28L4 24Z"
+      />
+    </svg>
+  );
+}
+
+export function PrevButton({ isActive }: { isActive: boolean | undefined }) {
+  return (
+    <svg
+      width="16"
+      height="28"
+      viewBox="0 0 16 28"
+      className={clsx(
+        "fill-current dark:text-breadgray-ultra-white",
+        isActive && "text-breadviolet-violet",
+        !isActive && "text-breadgray-grey"
+      )}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M16 28L16 24L12 24L12 28L16 28ZM8 20L8 24L12 24L12 20L8 20ZM4 16L4 20L8 20L8 16L4 16ZM4 12L2.54292e-07 12L4.29134e-07 16L4 16L4 12ZM8 8L8 12L4 12L4 8L8 8ZM12 4L8 4L8 8L12 8L12 4ZM12 4L16 4L16 0L12 1.74845e-07L12 4Z"
+      />
+    </svg>
   );
 }
 

@@ -29,10 +29,11 @@ module.exports = {
       pink: "#FF99E2",
       shaded: "#E873D3",
       100: "#C463CA",
-      200: "#FF99E2",
+      200: "#FFCCF1",
       300: "#E873D3",
       400: "#A416AD",
       500: "#D04EC5",
+      600: "#402639",
     },
     breadviolet: {
       shaded: "#D04EC5",
