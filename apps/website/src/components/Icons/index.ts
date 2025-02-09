@@ -5,3 +5,4 @@ export * from "./Message";
 export * from "./Eye";
 export * from "./Reload";
 export * from "./VerticalArrows";
+export * from "./LinkIcon";

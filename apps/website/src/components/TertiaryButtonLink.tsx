@@ -10,7 +10,7 @@ export function TertiaryButtonLink({
   isExternal?: boolean;
 }) {
   const classes =
-    "rounded-lg inline-block dark:bg-breadgray-600 dark:text-white border-2 border-breadpink-300 font-redhat font-bold text-center px-4 py-2.5 md:px-6 md:py-3 md:text-xl";
+    "flex justify-center items-center rounded-lg inline-block bg-breadpink-200 dark:bg-breadpink-600 text-breadviolet-violet dark:text-breadpink-shaded border border-transparent hover:border-breadpink-300 font-redhat font-bold text-center px-4 py-2.5 md:px-6 md:py-3 md:text-xl";
 
   if (isExternal)
     return (
