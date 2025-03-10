@@ -42,7 +42,7 @@ export function MembersSection() {
   }, [emblaApi]);
 
   return (
-    <section id="values" className="sm:pb-42 pb-32 pt-20">
+    <section id="projects" className="sm:pb-42 pb-32 pt-20">
       <div className="embla grid grid-cols-9 items-center mx-auto">
         <button
           disabled={!prevIsActive}
