@@ -42,19 +42,7 @@ export function MembersSection() {
   }, [emblaApi]);
 
   return (
-    <section id="values" className="sm:pb-42 pb-32 pt-20">
-      <div className="flex flex-col gap-4 px-4 pb-16 sm:items-center sm:text-left">
-        <div className="m-auto flex max-w-sm flex-col items-start gap-4 sm:max-w-full">
-          <h2 className="font-redhat flex w-full max-w-sm flex-col gap-3 text-left text-4xl font-bold sm:max-w-full sm:text-5xl md:flex-row md:gap-0">
-            <span className="inline-block pr-2 font-normal">Co-operative</span>
-            <span>by design</span>
-          </h2>
-          <div className="w-full">
-            Learn more about the people we get baked with.
-          </div>
-        </div>
-      </div>
-
+    <section id="projects" className="sm:pb-42 pb-32 pt-20">
       <div className="embla grid grid-cols-9 items-center mx-auto">
         <button
           disabled={!prevIsActive}
@@ -63,30 +51,41 @@ export function MembersSection() {
         >
           <PrevButton isActive={prevIsActive} />
         </button>
-        <div
-          className="embla__viewport col-span-7 overflow-x-hidden"
-          ref={emblaRef}
-        >
-          <div className="embla__container items-stretch gap-6 flex">
-            {homepageProjects.map(
-              ({ name, description, homepage, bannerSrc }, i) => {
-                return (
-                  <div
-                    key={`membercard_${i}`}
-                    className="embla__slide flex-[0_0_87%] md:flex-[0_0_30%] min-w-0"
-                  >
-                    <MemberCard
-                      name={name}
-                      info={description}
-                      bannerSrc={bannerSrc}
-                      link={homepage}
-                    />
-                  </div>
-                );
-              }
-            )}
+        <div className="col-span-7">
+          <div className="pb-14">
+            <h2 className="font-redhat flex w-full flex-col gap-3 text-left text-4xl py-4 font-bold sm:max-w-full sm:text-5xl md:flex-row md:gap-0">
+              <span className="inline-block pr-2 font-normal">
+                Co-operative
+              </span>
+              <span>by design</span>
+            </h2>
+            <div className="w-full">
+              Learn more about the people we get baked with.
+            </div>
+          </div>
+          <div className="embla__viewport overflow-x-hidden" ref={emblaRef}>
+            <div className="embla__container items-stretch gap-6 flex">
+              {homepageProjects.map(
+                ({ name, description, homepage, bannerSrc }, i) => {
+                  return (
+                    <div
+                      key={`membercard_${i}`}
+                      className="embla__slide flex-[0_0_87%] md:flex-[0_0_30%] min-w-0"
+                    >
+                      <MemberCard
+                        name={name}
+                        info={description}
+                        bannerSrc={bannerSrc}
+                        link={homepage}
+                      />
+                    </div>
+                  );
+                }
+              )}
+            </div>
           </div>
         </div>
+
         <button
           disabled={!nextIsActive}
           className={clsx(navBtnClasses, "embla__next")}
