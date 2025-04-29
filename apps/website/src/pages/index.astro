@@ -4,13 +4,15 @@ import { InfoCards } from "../components/InfoCards/InfoCards";
 import { MembersSection } from "../components/MembersSection";
 import { ValuesSection } from "../components/ValuesSection";
 import { CTASection } from "../components/CTASection";
+import { NewsletterSection } from "../components/NewsletterSection";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Breadchain Cooperative.">
-  <Hero />
+  <Hero client:load />
   <InfoCards />
   <MembersSection client:load />
   <ValuesSection />
   <CTASection />
+  <NewsletterSection client:load />
 </Layout>
