@@ -39,6 +39,10 @@ module.exports = {
       shaded: "#D04EC5",
       violet: "#A416AD",
     },
+    status: {
+      success: "#9EC958",
+      error: "#CF2800",
+    },
     "button-border": "#2E2E2E",
   },
   fontFamily: {

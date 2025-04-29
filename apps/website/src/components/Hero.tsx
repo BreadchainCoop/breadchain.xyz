@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import { WRAPPER_CLASSES } from "../utils";
 import { ButtonLink } from "./ButtonLink";
 import { TertiaryLink } from "./TertiaryLink";
+import { Link } from "./Link";
+import { Email } from "./Icons/Email";
 
 export function Hero() {
   return (
@@ -39,6 +41,14 @@ export function Hero() {
               Learn more
             </TertiaryLink>
           </HeroCTA>
+          <div className="pt-4">
+            <Link href="#newsletter" isInternal={true}>
+              <div className="flex flex-row items-center gap-3">
+                <Email />
+                <span>Join our newsletter</span>
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
