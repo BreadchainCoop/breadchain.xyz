@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-
+import { useRef } from "react";
 function DesktopNavigationLink(props: {
   children: ReactNode;
   href: string;
@@ -7,10 +7,21 @@ function DesktopNavigationLink(props: {
   target?: string;
 }) {
   const { children, ...remainingProps } = props;
+  const targetRef = useRef<HTMLElement | null>(null);
+
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const targetId = remainingProps.href.slice(1);
+    targetRef.current = document.getElementById(targetId);
+    if (targetRef.current) {
+      targetRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <a
       className="font-redhat dark:text-breadgray-light-grey dark:hover:text-breadgray-white text-breadgray-toast hover:text-breadgray-burnt active:text-breadgray-violet flex items-center px-2 text-xl font-bold leading-none tracking-wider min-[810px]:px-4"
       {...remainingProps}
+      onClick={handleClick}
     >
       {children}
     </a>
